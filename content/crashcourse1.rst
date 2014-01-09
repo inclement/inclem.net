@@ -194,15 +194,15 @@ widgets.
            l = Label(text='Hello!',
                      font_size=150)
 
- Note here that the floatlayout and scatter don't have any special
- properties set, but we could do stuff like disable the scatter's
- touch interaction at this point if we wanted to.
+Note here that the floatlayout and scatter don't have any special
+properties set, but we could do stuff like disable the scatter's
+touch interaction at this point if we wanted to.
 
- At this point we have three widgets - different to before where we
- only had a single button! We can only return one of these widgets to
- be the application's root widget, so
- the others will have to be child widgets added to one of the other
- ones. We do this by adding each widget to a different widget above it.
+At this point we have three widgets - different to before where we
+only had a single button! We can only return one of these widgets to
+be the application's root widget, so
+the others will have to be child widgets added to one of the other
+ones. We do this by adding each widget to a different widget above it.
 
 .. code-block:: python
 
@@ -217,11 +217,11 @@ widgets.
            s.add_widget(l)
            return f
 
- Now everything is added below the floatlayout, which is returned to
- become the application's root widget - it will fill the screen (though
- it has no visual representation so we won't be able to see it), but
- we *will* be able to see the label that we should be able to move
- around by interacting with the scatter that contains it.
+Now everything is added below the floatlayout, which is returned to
+become the application's root widget - it will fill the screen (though
+it has no visual representation so we won't be able to see it), but
+we *will* be able to see the label that we should be able to move
+around by interacting with the scatter that contains it.
  
 Lets try it! If you run the application you should see something like
 the following:
