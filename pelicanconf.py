@@ -31,7 +31,8 @@ LINKS = (('kivy.org', 'http://kivy.org/#home'),
 # Social widget
 # SOCIAL = (('You can add links in your config file', '#'),
 #           ('Another social link', '#'),)
-SOCIAL = (('youtube', 'https://www.youtube.com/kivycrashcourse'), )
+SOCIAL = (('youtube', 'https://www.youtube.com/kivycrashcourse'),
+          ('github', 'https://github.com/inclement'))
 
 DEFAULT_PAGINATION = False
 
