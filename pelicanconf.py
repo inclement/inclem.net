@@ -17,7 +17,7 @@ TRANSLATION_FEED_ATOM = None
 
 PLUGINS = ['pelican_youtube', ]
 
-STATIC_PATHS = ['media', ]
+STATIC_PATHS = ['media', 'images', ]
 
 #PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 

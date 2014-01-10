@@ -135,7 +135,9 @@ interesting - a nice blue button sized to fill the window, which you
 can click (that'll make the button lighter), and which you can run and
 dance and play with or whatever.
 
-.. image:: {filename}/images/1_simple_button_app.png
+.. image:: {filename}/images/kivycrashcourse/1_simple_button_app.png
+   :alt: Image of Kivy button displayed by our app.
+   :align: center
 
 At this point you already have an app worth playing with. You can
 change the values of the properties we defined (text,
@@ -227,4 +229,30 @@ Lets try it! If you run the application you should see something like
 the following:
 
 IMAGE
+
+The text doesn't all fit in the screen because the initial position of
+the label is in the bottom left corner, and the text doesn't entirely
+fit within the `Label` widget (a full explanation will come in a later
+post). It doesn't matter though, because you should be able to drag
+the text to the centre of the screen! This is all automatically
+handled by the scatter widget containing the label.
+
+IMAGE
+
+On the desktop you can also right click to interact with multitouch
+emulation. Each right click creates a red dot representing an emulated
+touch. By creating and dragging multiple touches on the label you can
+recreate the inbuilt gestures of rotation and pinching to zoom. If you
+use a scatter widget on a touch device, you can of course do the same
+thing with normal touch interaction.
+
+That's it for this first entry in the Kivy crash course, going
+straight from an empty file to a fully working kivy app that already
+supports dynamic touch interaction. The next entry will cover how to
+compile this app (no changes whatsoever!) straight into an android apk
+that you can run on most android devices.
+
+You can download the finished code from the crash course
+`github repository <https://github.com/inclement/kivycrashcourse/blob/master/video1-making_a_simple_app/after.py>`_.
+
 
