@@ -137,6 +137,7 @@ dance and play with or whatever.
 
 .. image:: {filename}/images/kivycrashcourse/1_simple_button_app.png
    :alt: Image of Kivy button displayed by our app.
+   :width: 65ex
    :align: center
 
 At this point you already have an app worth playing with. You can
@@ -228,7 +229,10 @@ around by interacting with the scatter that contains it.
 Lets try it! If you run the application you should see something like
 the following:
 
-IMAGE
+.. image:: {filename}/images/kivycrashcourse/1_final_app_init.png
+   :alt: Finished app with label in bottom left.
+   :width: 65ex
+   :align: center
 
 The text doesn't all fit in the screen because the initial position of
 the label is in the bottom left corner, and the text doesn't entirely
@@ -237,7 +241,10 @@ post). It doesn't matter though, because you should be able to drag
 the text to the centre of the screen! This is all automatically
 handled by the scatter widget containing the label.
 
-IMAGE
+.. image:: {filename}/images/kivycrashcourse/1_final_app_modified.png
+   :alt: Finished app with label moved and rotated.
+   :width: 65ex
+   :align: center
 
 On the desktop you can also right click to interact with multitouch
 emulation. Each right click creates a red dot representing an emulated
