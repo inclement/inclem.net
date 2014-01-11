@@ -24,15 +24,14 @@ STATIC_PATHS = ['media', 'images', ]
 # Blogroll
 LINKS = (('kivy.org', 'http://kivy.org/#home'),
          ('python.org', 'http://python.org/'))
-# LINKS =  (('Pelican', 'http://getpelican.com/'),
-#           ('Python.org', 'http://python.org/'),
-#           ('Jinja2', 'http://jinja.pocoo.org/'),
 
 # Social widget
-# SOCIAL = (('You can add links in your config file', '#'),
-#           ('Another social link', '#'),)
 SOCIAL = (('youtube', 'https://www.youtube.com/kivycrashcourse'),
           ('github', 'https://github.com/inclement'))
+
+GITHUB_URL = 'https://github.com/inclement/inclem.net'
+
+THEME = 'notmyidea'
 
 DEFAULT_PAGINATION = False
 
