@@ -40,3 +40,4 @@ RELATIVE_URLS = True
 
 OUTPUT_RETENTION = (".git", )
 
+TYPOGRIFY = True
