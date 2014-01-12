@@ -1,7 +1,7 @@
 Kivy Crash Course 2 - Building an Android APK
 #############################################
 
-:date: 2013-01-13 11:34
+:date: 2014-01-12 11:34
 :tags: kivy, crash course, python, android
 :category: Kivy Crash Course
 :slug: kivy-crash-course-2_building_an_android_apk

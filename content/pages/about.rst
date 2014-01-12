@@ -13,6 +13,11 @@ These pages are constructed using `Pelican
 Python. The source is all publicly available `on github
 <https://github.com/inclement/inclem.net>`_.
 
+The website theme is a modified version of `TuxLite ZF
+<https://github.com/getpelican/pelican-themes/tree/master/tuxlite_zf>`_. You
+can find my modifications `here
+<https://github.com/inclement/pelican-inclemnet-theme>`_.
+
 
 Contact
 =======
