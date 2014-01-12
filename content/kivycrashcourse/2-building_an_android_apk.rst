@@ -11,6 +11,8 @@ Kivy Crash Course 2 - Building an Android APK
 Introduction
 ============
 
+(`Original video <https://www.youtube.com/watch?v=t8N_8WkALdE>`_)
+
 In this writeup of my second Kivy Crash Course video, I describe how
 to use the `buildozer <https://github.com/kivy/buildozer>`_ tool to
 compile a Kivy application into a fully functional standalone Android

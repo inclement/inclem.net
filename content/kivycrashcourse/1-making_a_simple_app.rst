@@ -10,6 +10,8 @@ Kivy Crash Course 1 - Making a simple App
 Introduction
 ============
 
+(`Original video <https://www.youtube.com/watch?v=F7UKmK9eQLY>`_)
+
 This is the first entry in my Kivy Crash Course, originally a series
 of short (~10 minutes or less) youtube videos introducing how to
 create an app using the kivy graphical framework, how to use different
