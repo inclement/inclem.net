@@ -6,7 +6,6 @@ Kivy Crash Course 2 - Building an Android APK
 :category: Kivy Crash Course
 :slug: kivy-crash-course-2_building_an_android_apk
 :author: Alexander Taylor
-:summary: Kivy crash course 2 - Building an Android APK
 
 
 Introduction

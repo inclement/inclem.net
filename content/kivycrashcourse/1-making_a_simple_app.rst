@@ -6,7 +6,6 @@ Kivy Crash Course 1 - Making a simple App
 :category: Kivy Crash Course
 :slug: kivy-crash-course-1_making-a-simple-app
 :author: Alexander Taylor
-:summary: Kivy crash course 1 - Making a simple App
           
 Introduction
 ============
