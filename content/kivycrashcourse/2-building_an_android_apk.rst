@@ -16,7 +16,7 @@ In this writeup of my second Kivy Crash Course video, I describe how
 to use the `buildozer <https://github.com/kivy/buildozer>`_ tool to
 compile a Kivy application into a fully functional standalone Android
 APK. For reference, you can find the original video `here
-<https://www.youtube.com/watch?v=t8N_8WkALdE>`_.
+<https://www.youtube.com/watch?v=t8N_8WkALdE>`__.
 
 This particular article may have some overlap/redundancy with the main
 Kivy documentation on buildozer, but I wanted to write it up anyway as
@@ -57,6 +57,11 @@ it useful to ask questions or report problems at:
 
 This information can also be found on the `Kivy website
 <http://kivy.org/docs/contact.html>`_. 
+
+I'm also happy to hear about problems with this article, it's only a
+quick write-up based on my own experiences and I'd like to improve it
+to be more general if possible. You can let me know at
+`alexanderjohntaylor@gmail.com <mailto:alexanderjohntaylor@gmail.com>`_.
 
 Different ways to build
 -----------------------
@@ -228,7 +233,7 @@ included by default. Most pure-python modules will be installed via
 pip if listed here, though modules with compilation steps need a
 special compilation recipe in python-for-android. You can see the list
 of existing recipes `here
-<https://github.com/kivy/python-for-android/tree/master/recipes>`_. None
+<https://github.com/kivy/python-for-android/tree/master/recipes>`__. None
 of this is important to our simple app, and we can leave only the
 default entry 'kivy', but it's worth being aware of.
 
@@ -335,4 +340,21 @@ just run:
 
    adb logcat
 
-Both of these will output the logcat log straight to your terminal.
+Both of these will output the logcat log straight to your
+terminal. This includes any standard output of your Python code, such
+as print statements, plus any standard Python tracebacks and
+errors. This is obviously extremely useful for working out what's
+going wrong!
+
+There are also logcat applications in the play store that can show the
+log from on the device. I think they generally require root nowadays,
+but they may be useful if you don't have a computer handy.
+
+That's everything for this article. It's a pretty quick guide, but I
+hope it covers everything you need to quickly and easily build your
+first Android APK with buildozer. Once it's all working, you can
+rebuild your app whenever you like with `buildozer android debug`, and
+it only takes a few seconds!
+
+In the next article I'll go back to covering the features of kivy
+itself, starting with some more interesting widget interactions.

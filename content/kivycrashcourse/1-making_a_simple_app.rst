@@ -51,7 +51,7 @@ from kivy.
 
 .. code-block:: python
 
-    from kivy.app import App
+   from kivy.app import App
 
 The `App` is the base of any Kivy application, and we'll start making
 our own Kivy program by defining our own `App` subclass.
