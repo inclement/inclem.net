@@ -12,6 +12,12 @@ on Amazon's `Android store
 or access the source code directly `on Github
 <https://github.com/inclement/noGo>`_.
 
+.. image:: {filename}/images/noGo.png
+   :alt: Screenshot of noGo displaying a reviewed pro game.
+   :align: center
+   :width: 300px
+
+
 Features include:
 
 - Ability to create, record and view go games.
