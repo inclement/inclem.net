@@ -29,9 +29,11 @@ LINKS = (('kivy.org', 'http://kivy.org/#home'),
 SOCIAL = (('youtube', 'https://www.youtube.com/kivycrashcourse'),
           ('github', 'https://github.com/inclement'))
 
-GITHUB_URL = 'https://github.com/inclement/inclem.net'
+# Uncomment for 'fork me on github' banner
+#GITHUB_URL = 'https://github.com/inclement/inclem.net'
 
-THEME = 'notmyidea'
+#THEME = 'notmyidea'
+THEME = '../pelican-inclemnet-theme/'
 
 DEFAULT_PAGINATION = False
 
