@@ -15,7 +15,7 @@ FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
-PLUGINS = ['pelican_youtube', ]
+#PLUGINS = ['pelican_youtube', ]
 
 STATIC_PATHS = ['media', 'images', ]
 
