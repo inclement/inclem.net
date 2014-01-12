@@ -10,7 +10,7 @@ from `Google Play
 on Amazon's `Android store
 <http://www.amazon.com/Alexander-Taylor-noGo/dp/B00EZZMLCG/ref=sr_1_2?ie=UTF8&qid=1389561523&sr=8-2&keywords=nogo+android>`_,
 or access the source code directly `on Github
-<https://github.com/inclement/noGo>`_.
+<https://github.com/inclement/noGo>`_. noGo is written entirely in Python, using the Kivy graphical framework.
 
 .. image:: {filename}/images/noGo.png
    :alt: Screenshot of noGo displaying a reviewed pro game.
