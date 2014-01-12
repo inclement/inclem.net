@@ -120,10 +120,12 @@ buildozer/python-for-android to work. I think the main ones are:
 
 - git, the version control software.
 - A java jdk, openjdk7 should be good.
-- pip, the python packing tool.
+- pip, the python package management tool.
+- virtualenv, used internally by python-for-android
 
-Both are standard and popular, and should be available in the
-repositories of most Linux distros or easy to install on OS X.
+All are standard and popular, and should be available in the
+repositories of most Linux distros or easy to install on OS X. You can
+probably install virtualenv via pip.
 
 At this point we can finally get around to installing buildozer
 itself. You should be able to do this via pip (remember to prefix with
@@ -149,8 +151,188 @@ your system.
 Now you can go to your app directory, wherever you saved your Kivy
 application, such as the simple moving text program I made in the
 `previous article
-<{filename}/kivycrashcourse/1-making_a_simple_app.rst>`_. The 
-first vital point is that you *must* name your main python file
+<{filename}/kivycrashcourse/1-making_a_simple_app.rst>`_. The first
+vital point is that you *must* name your main python file
 `main.py`. That's because Android app will look for and run this file
-when you start the app. You can use other python files and folders if
-you want, but this `main.py` must exist and will always be the entry point.
+when you start the app. You can spread the rest of your app across
+other python files and folders if you want, but this `main.py` must
+exist and will always be the entry point.
+
+The second step is to create a basic buildozer.spec file, a
+configuration file containing all the different parameters to use when
+building your app. You can create the file using buildozer itself:
+
+.. code-block:: bash
+
+   buildozer init
+
+This creates a file called buildozer.spec in the current directory,
+populated with default values. 
+
+Populating your buildozer.spec
+------------------------------
+
+Before creating the APK you'll need to go through your buildozer.spec
+and set some of the values appropriately. In this section I'll quickly
+explain some of the important values. This list is *not* exhaustive,
+you can view more information in the comments of the file itself or in
+buildozer and Kivy's own documentation, but it'll be plenty to compile
+a simple app.
+
+You should at least quickly skim through these settings, you *must*
+change at least the version settings or your compilation will fail.
+
+**title**: The name of your app, this will appear in (for instance)
+your app drawer. I used 'Kivy Crash Course 2'.
+
+**package.name**: A simple string identifier (no spaces etc.), which
+along with `package.domain` should be a unique identifier. I used 'kivycrash2'.
+
+**package.domain**: Not a real domain name, but along with
+`package.name` should be a unique identifier. Using the default
+org.test is fine for now, or more generally you might use a reversed
+form of your own domain name.
+
+**source.dir**: The directory containing your source code, including
+the main.py file. The default '.' should be fine, this means 'the
+current directory'.
+
+**source.include_exts**: Buildozer will automatically include source
+files with these extensions in your APK. That means you obviously want
+to include py files so your python is loaded. By default, buildozer
+includes a few image formats, 'kv' which is kv language (covered in a
+future article). You can leave this as the default for now.
+
+**source.exclude_exts**, **source.exclude_dirs**,
+**source.exclude_patterns**: More options for controlling what files
+are built into the APK. These are commented out by default, which is
+fine for us.
+
+**version.regex**, **version.filename**: These comprise the default
+way to find your APK's declared version. Buildozer looks in the given
+filename (your main.py by default) for a string of the form
+`__version__ = 'some_version'`. I did not add such a string in our
+simple app from the first article, so you should *delete or comment
+out* these two settings tokens as they will fail when they try to find
+the version string.
+
+**version**: This is another way to set your app version, and is
+commented out by default. Unless you added a `__version__` string (see
+above), you should *uncomment* this line. The actual version number or
+string isn't important, I left it at 1.0 for now.
+
+**requirements**: This should be a comma separated list of
+non-standard python modules to include in your app. You don't need to
+change this to use most modules in the standard library, they are
+included by default. Most pure-python modules will be installed via
+pip if listed here, though modules with compilation steps need a
+special compilation recipe in python-for-android. You can see the list
+of existing recipes `here
+<https://github.com/kivy/python-for-android/tree/master/recipes>`_. None
+of this is important to our simple app, and we can leave only the
+default entry 'kivy', but it's worth being aware of.
+
+**presplash.filename**: The filename pointing at the image that will
+be used on kivy's loading screen appearing when an app is first
+run. It is commented out by default (which means it just uses the Kivy
+logo), and that's fine for us now so you don't need to change it.
+
+**icon.filename**: The filename pointing at the image to use as your
+app icon in (for instance) your app drawer or launcher. Again, it's
+commented out by default and just uses the Kivy logo, which is fine
+for now so you don't need to change it.
+
+**orientation**: The orientation of your app, either 'landscape',
+'portrait', or 'all' which means the app is automatically rotated to match
+how the device is currently being held. I set this to 'all' for our
+simple app, but you can make your own choice. You can also dynamically
+change the orientation from within your app if you want.
+
+**fullscreen**: If set to 1 the app will fill as much of the screen as
+possible (everything except a software navigation bar if there is
+one), or if set to 0 it leaves the status bar visible. I set it to 0,
+but either option is fine. At the time of writing this doesn't support
+the new screen usage parameters introduced in Android 4.4, you only
+have a binary choice.
+
+After this there are lots of android options that we don't need to
+worry about, the defaults are all fine. There are also iOS build
+options that obviously aren't important for Android compilation,
+though buildozer *can* perform part of the iOS build process if you're
+interested. Actually, there's only one other important option:
+
+**log_level**: This controls how much information is printed to your
+screen as buildozer runs. It defaults to 1, basic information, but I
+almost always set it to 2 to see more build information including a
+lot more useful logs if something goes wrong.
+
+
+Building the APK
+----------------
+
+That's it for the configuration file. Assuming you made the minor
+changes I suggested, you're ready to build your APK!
+
+The advantage of buildozer is that this part is *really easy*. All we
+need to do is type and run in a shell:
+
+.. code-block:: bash
+
+   buildozer android debug
+
+This calls buildozer, and tells it to build an Android APK in debug
+mode. The debug part refers to the way the package is signed, it
+doesn't need properly signing with a developer key (that isn't hard
+but it's another topic) and you can immediately upload it to a device
+and run it.
+
+You'll find that the first time you run buildozer it has to download a
+lot (the Android SDK and NDK plus some other tools), which are
+hundreds or thousands of megabytes in size. This isn't really
+avoidable if you want to build locally, but it will only happen once,
+after which buildozer will always use the same ones. If you already
+have the SDK/NDK installed, you can check out some of the buildozer
+options I didn't mention that can point buildozer at the local copies
+so it doesn't have to download them again.
+
+If you have a device ready to run your app on, you may instead like
+enable developer mode and adb in its settings (the method varies by
+device, you can look it up), which lets your computer interact with
+the phone to access logs, run commands, install apps etc. The last is
+the most immediately important here, as it means we can plug the phone
+into the building computer and run
+
+.. code-block:: bash
+
+   buildozer android debug deploy
+
+The last argument, 'deploy', tells buildozer to automatically install
+the APK onto your device when the build process is done.
+
+That's literally everything. Assuming nothing goes wrong, your APK
+will be built and placed in the 'bin' directory in the local path, and
+you can do whatever you like with it. You can send it to your device
+via email, adb, dropbox, or lots of other methods.
+
+Debugging
+---------
+
+Even if the APK building works, your app may still have
+problems. Common ones are stuff like forgetting to include images in
+the APK so the app crashes when Kivy tries to access them. It's
+extremely useful to debug this using the *logcat* tool that comes with
+the Android SDK. You can run this with
+
+.. code-block:: bash
+
+   buildozer android logcat
+
+to use the version buildozer installed as part of the build
+process. More generally, if the SDK tools are in your `$PATH` you can
+just run:
+
+.. code-block:: bash
+
+   adb logcat
+
+Both of these will output the logcat log straight to your terminal.
