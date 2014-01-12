@@ -12,7 +12,7 @@ are/will be standalone write-ups of these.
 I maintain a `separate github repository
 <https://github.com/inclement/kivycrashcourse>`_ with the original kivy crash
 course files and any accompanying notes. Everything relevant is linked to from
-the relevant articles or videos.
+the individual articles or videos.
 
 I'm not short of ideas for future crash course entries, but if you
 have any suggestions please feel free to `contact me <{filename}/pages/about.rst>`_.
