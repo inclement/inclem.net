@@ -44,7 +44,3 @@ OUTPUT_RETENTION = (".git", )
 
 TYPOGRIFY = True
 
-ARTICLE_URL = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS = '{category}/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
-PAGE_URL = 'pages/{slug}/'
-PAGE_SAVE_AS = 'pages/{slug}/index.html'
