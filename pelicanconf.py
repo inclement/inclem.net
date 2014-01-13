@@ -43,3 +43,8 @@ RELATIVE_URLS = True
 OUTPUT_RETENTION = (".git", )
 
 TYPOGRIFY = True
+
+ARTICLE_URL = '{category}/{slug}/'
+ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
+PAGE_URL = 'pages/{slug}/'
+PAGE_SAVE_AS = 'pages/{slug}/index.html'
