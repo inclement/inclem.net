@@ -1,7 +1,7 @@
 Kivy Crash Course 1 - Making a simple App
 #########################################
 
-:date: 2013-01-09 21:34
+:date: 2014-01-09 21:34
 :tags: kivy, crash course, python
 :category: Kivy Crash Course
 :slug: 1_making-a-simple-app
