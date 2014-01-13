@@ -19,6 +19,8 @@ TRANSLATION_FEED_ATOM = None
 
 STATIC_PATHS = ['media', 'images', ]
 
+MENUITEMS = (('Home', 'http://inclem.net'), )
+
 #PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 
 # Blogroll
