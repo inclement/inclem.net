@@ -15,6 +15,7 @@ RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+FEED_DOMAIN = SITEURL
 
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{category}/{slug}/'
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{category}/{slug}/index.html'
