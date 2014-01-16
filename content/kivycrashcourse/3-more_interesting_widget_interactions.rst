@@ -72,3 +72,56 @@ Let's start by importing the widgets we need:
 
    from kivy.uix.textinput import TextInput
    from kivy.uix.boxlayout import BoxLayout
+
+The BoxLayout is a kind of layout that automatically places its
+children in a row, either horizontally (the default) or
+vertically. We're going to use this as our new top level root widget
+containing our entire application. That's because we don't want to
+change any of the existing app structure (the Label in a Scatter in a
+FloatLayout), but instead to place our new TextInput next to
+it. That's what the BoxLayout will do, plus it can also handle more
+advanced stuff like proportional sizes, which I'll cover later in this
+article.
+
+Now we have a plan, so lets create our new widgets. We can add the
+following at the top of our `build()` method:
+
+.. code-block:: python
+
+   b = BoxLayout()  # The default BoxLayout, no
+                    # extra properties set   
+   t = TextInput(font_size=150)
+
+The TextInput font_size could also be left as the default, setting it
+to 150 pixels is just an example customisation. Both the `BoxLayout
+<http://kivy.org/docs/api-kivy.uix.boxlayout.html>`_ and `TextInput
+<http://kivy.org/docs/api-kivy.uix.textinput.html>`_ have many other
+properties you could set, which you can find in the linked Kivy
+documentation if interested.
+
+Having created our new widgets, we need to add them to the widget tree
+of the existing build method. We now want to `return` the BoxLayout
+(it's going to be our top level widget), and we'll need to add both
+the FloatLayout and the TextInput to that one, so that the BoxLayout
+contains them both and can place them next to one another. That means
+the full build method can become:
+
+.. code-block:: python
+
+   def build(self):
+       b = BoxLayout()
+       t = TextInput(font_size=150)
+       f = FloatLayout()
+       s = Scatter()
+       l = Label(text="Hello!",
+                 font_size=150)
+
+       f.add_widget(s)
+       s.add_widget(l)
+
+       b.add_widget(f)
+       b.add_widget(t)
+       return b
+
+Before going any further, lets see exactly what this looks like!
+            
