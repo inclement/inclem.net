@@ -1,7 +1,7 @@
 Shall I keep going?
 ###################
 
-:date: 2014-01-15 22:10
+:date: 2014-01-17 22:10
 :tags: kivy, crash course, python
 :category: Kivy Crash Course
 :slug: shall_i_keep_going
