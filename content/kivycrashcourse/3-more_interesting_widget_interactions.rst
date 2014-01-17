@@ -235,13 +235,45 @@ After that...we're done! We've changed the arrangement of our widgets,
 and our new binding should update the Label as we type in the
 TextInput. The full program should look something like the following:
 
+.. code-block:: python
+
+    from kivy.app import App
+
+    from kivy.uix.scatter import Scatter
+    from kivy.uix.label import Label
+    from kivy.uix.floatlayout import FloatLayout
+    from kivy.uix.textinput import TextInput
+    from kivy.uix.boxlayout import BoxLayout
+
+    class TutorialApp(App):
+        def build(self):
+            b = BoxLayout(orientation='vertical')
+            t = TextInput(font_size=150,
+                          size_hint_y=None,
+                          height=200)
+            f = FloatLayout()
+            s = Scatter()
+            l = Label(text="Hello!",
+                      font_size=150)
+
+            f.add_widget(s)
+            s.add_widget(l)
+
+            b.add_widget(t)
+            b.add_widget(f)
+            t.bind(text=l.setter('text'))
+            return b
+
+    if __name__ == "__main__":
+        TutorialApp().run()
+
+When you run the code and type in the TextInput, you should get
+something like this, with the Label updating to match the TextInput as expected:
+
 .. image:: {filename}/images/kivycrashcourse/2_finished.png
    :alt: App with added TextInput
    :width: 65ex
    :align: center
-
-In the screenshot I've typed in the TextInput, and that's
-automatically updated the Label text just as expected.
 
 This post has been a very quick introduction to some basic Kivy layout
 techniques, and a simple way to bind our own behaviours when widget
