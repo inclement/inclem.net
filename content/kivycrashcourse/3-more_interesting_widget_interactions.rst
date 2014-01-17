@@ -1,8 +1,8 @@
 Kivy Crash Course 3 - More interesting widget interactions
 ##########################################################
 
-:date: 2014-01-15 21:24
-:tags: kivy, crash course, python, android
+:date: 2014-01-17 22:05
+:tags: kivy, crash course, python
 :category: Kivy Crash Course
 :slug: 3_more_interesting_widget_interactions
 :author: Alexander Taylor
