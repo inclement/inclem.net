@@ -125,3 +125,129 @@ the full build method can become:
 
 Before going any further, lets see exactly what this looks like!
             
+.. image:: {filename}/images/kivycrashcourse/2_middle.png
+   :alt: App with added TextInput
+   :width: 65ex
+   :align: center
+
+The above image is exactly the code from above, plus I moved the
+Scatter a little and typed into the TextInput. Everything seems to
+work as expected. Note that the BoxLayout aligns its child widgets
+horizontally, so the first one added (the FloatLayout) is on the left,
+whilst the second (the TextInput) is on the right.
+
+
+Now we can focus on making changes to achieve the original goal - I
+want the TextInput to be at the top of the screen, and it doesn't need
+to take up half of it (the default setting), but only to have a fixed
+height large enough to fit in a line of text. I also want the
+TextInput text to propagate straight to the Label, updating the
+movable text.
+
+The first step here is reorienting the BoxLayout - by default it has
+placed its two children horizontally adjacent, but we can make it
+vertical instead by changing a single line:
+
+.. code-block:: python
+
+   b = BoxLayout(orientation='vertical')
+
+Let's also set the height of the TextInput to a specific value. The
+first thing to do is a minor Kivy subtlety, we have to set its
+`size_hint_y` to `None`. All widgets have a default size_hint of 1 in
+both the x and y directions, and it's this number that the BoxLayout
+is using to resize its child widgets proportionally - since both have
+1, they both have the same height or width. Whenever we want
+to set a manual size, we must first set the appropriate size_hint to
+None, after which we can manually set the height or width and have the
+widget maintain that specific value.
+
+If that isn't clear to you, I suggest playing with changing the
+size_hint and seeing how it changes the relative widget sizes. After
+that, you can replace the TextInput declaration with the
+following. I've also given it some default text so that it doesn't
+start off empty.
+
+.. code-block:: python
+
+   t = TextInput(text='default',
+                 font_size=150,
+                 size_hint_y=None,
+                 height=200)
+
+The height is set in the default unit of pixels, so it's just a little
+larger than the font_size and will easily fit in a line of text.
+
+The final layout change is to add the TextInput *before* the
+FloatLayout. The BoxLayout places its children in order from left to
+right (if horizontal) or from top to bottom (if vertical), so we need
+to add the TextInput first for it to be at the top of the screen. You
+can simply switch the order of the `add_widget` calls as follows:
+
+.. code-block:: python
+
+       b.add_widget(t)
+       b.add_widget(f)
+
+
+With our layout all set up, we can move to creating the *binding* that
+will cause the Label to automatically update when text is changed in
+the TextInput. The syntax is as follows:
+
+.. code-block:: python
+
+   t.bind(text=some_function)
+
+This would mean that when the `text` of the widget `t` changes,
+`some_function` is automatically called. That `some_function` could be
+absolutely any function, it could change your gui, or print to the
+console, or communicate on a network, or anything else that you can
+program in Python. This is a very useful and general way to make
+things happen in response to changes (e.g. from user interaction) in
+your widgets.
+
+We'll need to use a very specific function, we need one that takes the
+modified text (which is automatically passed as an argument) and uses
+it to set the text of our label to the same thing. Of course we could
+write our own function to do this and use that function in the
+binding, but actually Kivy has a convenient alternative method:
+
+.. code-block:: python
+
+   t.bind(text=l.setter('text'))
+
+Remember, `l` is our Label. The `setter` method is available for any
+Kivy widget (and some other Kivy objects), and it always returns a
+function that *sets* the given property. That's exactly what we want,
+so overall the effect is that when the `text` of the Textinput
+changes, it calls the returned function, which updates the text of the
+Label. Therefore the Label text will always change immediately to
+match the TextInput, and we'll get the behaviour I originally wanted.
+
+This could be a little confusing, but again I encourage you to
+experiment to see what happens. A good exercise would be to replace
+the setter call with your own function that (for instance) prints its
+arguments to the terminal. That way you can see exactly when the
+function is called (as you type in the TextInput), and exactly what
+arguments it receives.
+
+After that...we're done! We've changed the arrangement of our widgets,
+and our new binding should update the Label as we type in the
+TextInput. The full program should look something like the following:
+
+.. image:: {filename}/images/kivycrashcourse/2_finished.png
+   :alt: App with added TextInput
+   :width: 65ex
+   :align: center
+
+In the screenshot I've typed in the TextInput, and that's
+automatically updated the Label text just as expected.
+
+This post has been a very quick introduction to some basic Kivy layout
+techniques, and a simple way to bind our own behaviours when widget
+properties change. In the next post, I'll talk about Kivy's own
+domain specific language for creating widget trees, which includes a
+different but extremely powerful and convenient method for doing many
+of these tasks.
+
+You can download the finished code from the end of the article `here <https://github.com/inclement/kivycrashcourse/blob/master/video3-more_interesting_widget_interactions/after.py>`_.
