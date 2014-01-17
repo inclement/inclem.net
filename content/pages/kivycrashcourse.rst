@@ -27,7 +27,7 @@ Entries
    <https://www.youtube.com/watch?v=t8N_8WkALdE>`__ or `article
    <{filename}/kivycrashcourse/2-building_an_android_apk.rst>`__.
 3) More interesting widget interactions; `youtube
-   <https://www.youtube.com/watch?v=-NvpKDReKyg>`__.
+   <https://www.youtube.com/watch?v=-NvpKDReKyg>`__ or `article <{filename}/kivycrashcourse/3-more_interesting_widget_interactions.rst>`__.
 4) Kivy language; `youtube
    <https://www.youtube.com/watch?v=ZVWAKzR63ig>`__.
 5) Mixing python and kivy language; `youtube
