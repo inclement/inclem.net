@@ -135,7 +135,7 @@ probably install virtualenv via pip.
 
 At this point we can finally get around to installing buildozer
 itself. You should be able to do this via pip (remember to prefix with
-`sudo` if not running as root):
+:code:`sudo` if not running as root):
 
 .. code-block:: bash
 
@@ -159,9 +159,9 @@ application, such as the simple moving text program I made in the
 `previous article
 <{filename}/kivycrashcourse/1-making_a_simple_app.rst>`_. The first
 vital point is that you *must* name your main python file
-`main.py`. That's because Android app will look for and run this file
+:code:`main.py`. That's because Android app will look for and run this file
 when you start the app. You can spread the rest of your app across
-other python files and folders if you want, but this `main.py` must
+other python files and folders if you want, but this :code:`main.py` must
 exist and will always be the entry point.
 
 The second step is to create a basic buildozer.spec file, a
@@ -192,10 +192,10 @@ change at least the version settings or your compilation will fail.
 your app drawer. I used 'Kivy Crash Course 2'.
 
 **package.name**: A simple string identifier (no spaces etc.), which
-along with `package.domain` should be a unique identifier. I used 'kivycrash2'.
+along with :code:`package.domain` should be a unique identifier. I used 'kivycrash2'.
 
 **package.domain**: Not a real domain name, but along with
-`package.name` should be a unique identifier. Using the default
+:code:`package.name` should be a unique identifier. Using the default
 org.test is fine for now, or more generally you might use a reversed
 form of your own domain name.
 
@@ -217,13 +217,13 @@ fine for us.
 **version.regex**, **version.filename**: These comprise the default
 way to find your APK's declared version. Buildozer looks in the given
 filename (your main.py by default) for a string of the form
-`__version__ = 'some_version'`. I did not add such a string in our
+:code:`__version__ = 'some_version'`. I did not add such a string in our
 simple app from the first article, so you should *delete or comment
 out* these two settings tokens as they will fail when they try to find
 the version string.
 
 **version**: This is another way to set your app version, and is
-commented out by default. Unless you added a `__version__` string (see
+commented out by default. Unless you added a :code:`__version__` string (see
 above), you should *uncomment* this line. The actual version number or
 string isn't important, I left it at 1.0 for now.
 
@@ -354,7 +354,7 @@ but they may be useful if you don't have a computer handy.
 That's everything for this article. It's a pretty quick guide, but I
 hope it covers everything you need to quickly and easily build your
 first Android APK with buildozer. Once it's all working, you can
-rebuild your app whenever you like with `buildozer android debug`, and
+rebuild your app whenever you like with :code:`buildozer android debug`, and
 it only takes a few seconds!
 
 In the next article I'll go back to covering the features of kivy

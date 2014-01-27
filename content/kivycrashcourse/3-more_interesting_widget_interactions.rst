@@ -60,7 +60,7 @@ but this is all handled by the Scatter widget and it isn't yet clear
 how we could create our own widget interactions in a useful way.
 
 I'm going to demonstrate a simple widget interaction by adding a
-`TextInput`, a textbox widget that the user can type into. I'll then
+:code:`TextInput`, a textbox widget that the user can type into. I'll then
 create a binding so that the Label automatically updates to match this
 text, so as soon as the user types anything the text is automatically
 propagated to the Label, which we'll still be able to drag around via
@@ -84,7 +84,7 @@ advanced stuff like proportional sizes, which I'll cover later in this
 article.
 
 Now we have a plan, so lets create our new widgets. We can add the
-following at the top of our `build()` method:
+following at the top of our :code:`build()` method:
 
 .. code-block:: python
 
@@ -100,7 +100,7 @@ properties you could set, which you can find in the linked Kivy
 documentation if interested.
 
 Having created our new widgets, we need to add them to the widget tree
-of the existing build method. We now want to `return` the BoxLayout
+of the existing build method. We now want to :code:`return` the BoxLayout
 (it's going to be our top level widget), and we'll need to add both
 the FloatLayout and the TextInput to that one, so that the BoxLayout
 contains them both and can place them next to one another. That means
@@ -154,7 +154,7 @@ vertical instead by changing a single line:
 
 Let's also set the height of the TextInput to a specific value. The
 first thing to do is a minor Kivy subtlety, we have to set its
-`size_hint_y` to `None`. All widgets have a default size_hint of 1 in
+:code:`size_hint_y` to :code:`None`. All widgets have a default size_hint of 1 in
 both the x and y directions, and it's this number that the BoxLayout
 is using to resize its child widgets proportionally - since both have
 1, they both have the same height or width. Whenever we want
@@ -182,7 +182,7 @@ The final layout change is to add the TextInput *before* the
 FloatLayout. The BoxLayout places its children in order from left to
 right (if horizontal) or from top to bottom (if vertical), so we need
 to add the TextInput first for it to be at the top of the screen. You
-can simply switch the order of the `add_widget` calls as follows:
+can simply switch the order of the :code:`add_widget` calls as follows:
 
 .. code-block:: python
 
@@ -198,8 +198,8 @@ the TextInput. The syntax is as follows:
 
    t.bind(text=some_function)
 
-This would mean that when the `text` of the widget `t` changes,
-`some_function` is automatically called. That `some_function` could be
+This would mean that when the :code:`text` of the widget :code:`t` changes,
+:code:`some_function` is automatically called. That :code:`some_function` could be
 absolutely any function, it could change your gui, or print to the
 console, or communicate on a network, or anything else that you can
 program in Python. This is a very useful and general way to make
@@ -216,10 +216,10 @@ binding, but actually Kivy has a convenient alternative method:
 
    t.bind(text=l.setter('text'))
 
-Remember, `l` is our Label. The `setter` method is available for any
+Remember, :code:`l` is our Label. The :code:`setter` method is available for any
 Kivy widget (and some other Kivy objects), and it always returns a
 function that *sets* the given property. That's exactly what we want,
-so overall the effect is that when the `text` of the Textinput
+so overall the effect is that when the :code:`text` of the Textinput
 changes, it calls the returned function, which updates the text of the
 Label. Therefore the Label text will always change immediately to
 match the TextInput, and we'll get the behaviour I originally wanted.

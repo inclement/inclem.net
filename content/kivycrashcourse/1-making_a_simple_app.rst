@@ -47,30 +47,30 @@ A first Kivy app
 ================
 
 So...lets actually do something! We'll start completely from scratch,
-and our kivy entry point will be an `App` class which we'll import
+and our kivy entry point will be an :code:`App` class which we'll import
 from kivy.
 
 .. code-block:: python
 
    from kivy.app import App
 
-The `App` is the base of any Kivy application, and we'll start making
-our own Kivy program by defining our own `App` subclass.
+The :code:`App` is the base of any Kivy application, and we'll start making
+our own Kivy program by defining our own :code:`App` subclass.
 
 .. code-block:: python
 
     class TutorialApp(App):
         pass
 
-At this point we don't even need to add any behaviour, the `App` can
+At this point we don't even need to add any behaviour, the :code:`App` can
 already run, and if we do so it will perform all the basic application
 setup like creating a window, sizing and positioning it, and
 potentially even stuff like retreiving application settings and
 constructing a settings panel. 
 
 To complete our first totally trivial kivy app, we just add a standard
-python declaration that instantiates our `TutorialApp`
-class and calls its `run` method - the function that tells the `App`
+python declaration that instantiates our :code:`TutorialApp`
+class and calls its :code:`run` method - the function that tells the :code:`App`
 to start and to do its thing. With this addition, the full file should
 look like the following:
 
@@ -88,22 +88,22 @@ You can already run this app if you like - it should start up fine,
 and you'll get a totally black window because we didn't tell it to
 display anything. Congratulations on your first kivy program!
 
-To make this more interesting, we need to tell our `App` how to
+To make this more interesting, we need to tell our :code:`App` how to
 display something. In practice with Kivy, this means telling it to
-display some `Widget`. Kivy comes with quite a lot of widget
+display some :code:`Widget`. Kivy comes with quite a lot of widget
 classes, generally small with some specific functionality of their own
 (checkbox, label, textinput, scrollable container etc.), but
 designed to be easy to combine to make much more complex interfaces
 with whatever behaviour you really want.
 
-For now we'll import a simple `Button` widget:
+For now we'll import a simple :code:`Button` widget:
 
 .. code-block:: python
 
    from kivy.uix.button import Button
 
 Next we need to tell Kivy how to display this button. We do this using
-the `build` method of `App`. When the `App` is run it calls this `build`
+the :code:`build` method of :code:`App`. When the :code:`App` is run it calls this :code:`build`
 method, and whatever is returned is used as Kivy's 'root widget'. This
 widget is automatically sized and positioned to fill the window, and
 the rest of your application is built by adding child widgets (more on
@@ -156,7 +156,7 @@ I'm going to finish this tutorial entry by just
 quickly introducing a couple more widgets in a way that adds some
 significantly more interesting behaviour and interaction to the app. 
 
-To do this I'll use a `Scatter` widget. This can be moved, resized and
+To do this I'll use a :code:`Scatter` widget. This can be moved, resized and
 rotated by interactions (either mouse or touch) or manually in the
 code, and in the process takes care of propagating these changes to
 any child widgets so that you can easily apply these transformations
@@ -168,7 +168,7 @@ We don't need the button any more, so you can replace that import with
 
    from kivy.uix.scatter import Scatter
 
-We'll also need a couple of other widgets. First, a `Label` which
+We'll also need a couple of other widgets. First, a :code:`Label` which
 displays some text and will be placed in the scatter (so it will be
 possible to move, rotate, scale it etc.), and second a `FloatLayout`
 that will be our new root widget. A layout is a special kind of widget
@@ -178,7 +178,7 @@ on your desktop probably do - they can have arbitrary positions and
 sizes. That's what we want, since we're using a scatter whose position
 and size may be changed by our interaction, and we don't want some
 other layout interfering with that (see future tutorial entries for
-more). The `FloatLayout` also has other features like letting us
+more). The :code:`FloatLayout` also has other features like letting us
 easily size widgets proportionally, but that's not important here.
 
 .. code-block:: python
@@ -237,7 +237,7 @@ the following:
 
 The text doesn't all fit in the screen because the initial position of
 the label is in the bottom left corner, and the text doesn't entirely
-fit within the `Label` widget (a full explanation will come in a later
+fit within the :code:`Label` widget (a full explanation will come in a later
 post). It doesn't matter though, because you should be able to drag
 the text to the centre of the screen! This is all automatically
 handled by the scatter widget containing the label.
