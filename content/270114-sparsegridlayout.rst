@@ -10,7 +10,7 @@ Creating a Kivy layout: the SparseGridLayout
 
 I thought for a change I'd try for a shorter post on a single quick
 subject, so I'm going to quickly explain a simple Kivy layout I
-created, the `SparseGridLayout`. The post is standalone, but would go
+created, the :code:`SparseGridLayout`. The post is standalone, but would go
 well with ideas from my `Kivy Crash Course
 <{filename}/pages/kivycrashcourse.rst>`_, especially the recent videos
 trying to draw ideas together to make widgets or specifically focusing
@@ -32,8 +32,8 @@ grid cell. That means we don't need any extra widgets, which is much
 more efficient if we want a grid with not many entries, hence *sparse*
 grid layout.
 
-We can start with a `FloatLayout` base, then all we need to do is set
-our grid children's `size_hint` and `pos_hint` properties
+We can start with a :code:`FloatLayout` base, then all we need to do is set
+our grid children's :code:`size_hint` and :code:`pos_hint` properties
 appropriately for the grid and call the `FloatLayout`'s normal layout
 method to actually place them in the grid positions/shapes for us.
 
@@ -50,17 +50,17 @@ We can start by making our layout class:
        shape = ReferenceListProperty(rows, columns)
 
 That creates a basic class that doesn't have any more actual behavior
-than the `FloatLayout` alone, but has a few new properties. It'll
+than the :code:`FloatLayout` alone, but has a few new properties. It'll
 hopefully all make sense if you've used Kivy a little or followed my
-crash course, though the `ReferenceListProperty` may be new - this
+crash course, though the :code:`ReferenceListProperty` may be new - this
 takes multiple other properties and lets us access them as a list, so
-for instance referencing or setting `shape[0]` really updates the
-`rows` property, including calling all its associated events etc.. At
-the same time, the `shape` is also a real property, with its own
+for instance referencing or setting :code:`shape[0]` really updates the
+:code:`rows` property, including calling all its associated events etc.. At
+the same time, the :code:`shape` is also a real property, with its own
 events. Do experiment with this if the explanation is not clear.
 
 Now, to make our layout actually rearrange its children to the grid,
-we need to override its `do_layout` method, which is what's called
+we need to override its :code:`do_layout` method, which is what's called
 whenever it or its children are updated.
 
 .. code-block:: python
@@ -80,18 +80,18 @@ whenever it or its children are updated.
 
 This iterates over all the `SparseGridLayout`'s children, setting their
 size_hint so that they'll fit exactly in a grid cell (as per the
-`rows` and `columns` properties we set above). It then checks if
-they have a `row` or `column` property, setting it to `0` if not - I've
+:code:`rows` and :code:`columns` properties we set above). It then checks if
+they have a :code:`row` or :code:`column` property, setting it to :code:`0` if not - I've
 chosen that my rows and columns should be zero-indexed, you could
-modify that if you like. After that, it sets their `pos_hint` such
+modify that if you like. After that, it sets their :code:`pos_hint` such
 that they're placed in the right place. I've deliberately let this
 work with floats, so for instance they could be in column 2.5 to be
 halfway between the integer columns, so the layout is extra flexible.
 
-The final step is calling the original `do_layout` method of the
-`FloatLayout`. The magic is that all we did is set the child widgets
-`size_hint` and `pos_hint` so that the widgets align to a grid - the
-`FloatLayout` itself already knows how to actually set their positions
+The final step is calling the original :code:`do_layout` method of the
+:code:`FloatLayout`. The magic is that all we did is set the child widgets
+:code:`size_hint` and :code:`pos_hint` so that the widgets align to a grid - the
+:code:`FloatLayout` itself already knows how to actually set their positions
 and sizes based on this information. By making use of Kivy's existing
 layout abilities, we've saved ourself a lot of work.
 
@@ -110,9 +110,9 @@ This is very simple, but it means you can do for example:
    class GridLabel(Label, GridEntry):
        pass
 
-The GridLabel is thereby a `Label` that already has row and column
-properties, so it will behave properly in our `SparseGridLayout`. We
-don't strictly need to do this, we could add the `row` and `column`
+The GridLabel is thereby a :code:`Label` that already has row and column
+properties, so it will behave properly in our :code:`SparseGridLayout`. We
+don't strictly need to do this, we could add the :code:`row` and :code:`column`
 any other way, but this is neat and makes it totally clear what we're
 using our widgets for.
 
