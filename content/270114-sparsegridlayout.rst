@@ -23,7 +23,7 @@ expected a slightly different behaviour. The problem is that the
 GridLayout fills widgets in from the top. That means for instance if there are 3
 columns, you can't place a widget in the third row without first
 adding *6* widgets to fill the first two rows. That's just inefficient
-and wasteful if all you wanted was widgets in a grid.
+and wasteful if all you wanted was a small number of widgets in a grid.
 
 So, my SparseGridLayout is a very simple layout that has a number of
 rows or columns, and checks its children for a `row` and `column`
@@ -78,7 +78,7 @@ whenever it or its children are updated.
                              'y': shape_hint[1] * child.column}
        super(SparseGridLayout, self).do_layout(*args)
 
-This iterates over all the `SparseGridLayout's children, setting their
+This iterates over all the `SparseGridLayout`'s children, setting their
 size_hint so that they'll fit exactly in a grid cell (as per the
 `rows` and `columns` properties we set above). It then checks if
 they have a `row` or `column` property, setting it to `0` if not - I've
