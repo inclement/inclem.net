@@ -40,5 +40,6 @@ Entries
    <https://www.youtube.com/watch?v=2Gc8iYJQ_qk>`__.
 9) Creating a scrollable label; `youtube
    <https://www.youtube.com/watch?v=WdcUg_rX2fM>`__.
-   
+10) Thinking about layouts; `youtube <https://www.youtube.com/watch?v=0n8Rar3CgdI>`__.
+11) Animation and the Clock; `youtube <https://www.youtube.com/watch?v=ChmfVOu9aIc&feature=youtu.be>`__.
 
