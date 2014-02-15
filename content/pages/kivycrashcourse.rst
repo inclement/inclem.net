@@ -42,4 +42,5 @@ Entries
    <https://www.youtube.com/watch?v=WdcUg_rX2fM>`__.
 10) Thinking about layouts; `youtube <https://www.youtube.com/watch?v=0n8Rar3CgdI>`__.
 11) Animation and the Clock; `youtube <https://www.youtube.com/watch?v=ChmfVOu9aIc&feature=youtu.be>`__.
+12) Using Android APIs; `youtube <https://www.youtube.com/watch?v=8Jwp1PTvECI&feature=youtu.be>`__.
 
