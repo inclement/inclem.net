@@ -3,7 +3,7 @@ Creating a Kivy layout: the SparseGridLayout
 
 :date: 2014-01-27 22:37
 :tags: kivy, python, layout, widget
-:category: Kivy Crash Course
+:category: kivy
 :slug: sparsegridlayout
 :author: Alexander Taylor
          
