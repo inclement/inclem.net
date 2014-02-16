@@ -8,7 +8,7 @@ New Kivy Crash Course video - 12: Using Android APIs
 :author: Alexander Taylor
 
 New Kivy Crash Course video released, `12: Using Android APIs
-<http://dotabuff.com/players/67880750>`_.
+<https://www.youtube.com/watch?v=8Jwp1PTvECI>`_.
 
 In this video I quickly cover 3 (related) ways to access Android's
 APIs straight from Python, making it easy to use hardware features
