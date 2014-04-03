@@ -44,4 +44,5 @@ Entries
 11) Animation and the Clock; `youtube <https://www.youtube.com/watch?v=ChmfVOu9aIc&feature=youtu.be>`__.
 12) Using Android APIs; `youtube <https://www.youtube.com/watch?v=8Jwp1PTvECI&feature=youtu.be>`__.
 13) Using Kivy's settings panel: `youtube <https://www.youtube.com/watch?v=oQdGWeN51EE>`__.
+14) Using a ScreenManager: `youtube <https://www.youtube.com/watch?v=xx-NLOg6x8o>`__.
 
