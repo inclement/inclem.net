@@ -17,14 +17,14 @@ grow to accommodate its text. I've covered this before in the 12th
 write up of the basics.
 
 
-The first thing to realise is how the Label works by default. It takes
-the text, and *draws* it to a texture, in practical terms that's an
+The first thing to realise is how the Label works by default, it takes
+the text and *draws* it to a texture - in practical terms that's an
 image of the characters. Everything you might want to do with the
 Label revolves around what this texture is really doing. By default,
 it does *not* wrap the text (unless you put in linebreak characters
-manually) - it just makes one long image on a single row.  This image
+manually), it just makes one long image on a single row.  This image
 is is placed right in the middle of the label, centered in both
-directions. The behaviour is fine for short text snippets, but will
+directions, which is fine for short text snippets but will
 overhang the Label on both sides if the text is too long.
 
 This also leads to some other annoying behaviour - as well as the
@@ -35,7 +35,9 @@ is the exact size it needs to contain the text so alignments change
 nothing.
 
 To solve all these problems, you can manually set the size of the
-texture with :code:`text_size`, a tuple of width and height, e.g.::
+texture with :code:`text_size`, a tuple of width and height, e.g.
+
+.. code-block:: python
 
     Label:
         text_size: self.size
@@ -50,7 +52,9 @@ which holds the *actual* size of the texture. You can use that do bind
 behaviour to the size of the text. For instance, a common requirement
 is to create a Label that grows as long as it needs to contain its
 text, but which wraps it to a certain width. We can combine both of
-the above ideas to accomplish this::
+the above ideas to accomplish this:
+
+.. code-block:: python
 
     Label:
         size_hint_y: None
