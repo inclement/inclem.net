@@ -11,7 +11,7 @@ Wrapping text in Kivy's Label
 Another Kivy question that I often see (particularly recently for some
 reason) is about using the Label widget - how to have text wrap
 automatically, or the opposite, how to have the label automatically
-grow to accommodate its text. I've covered this before in the 12th
+grow to accommodate its text. I've covered this before in the 9th
 `Kivy crash course video
 <https://www.youtube.com/watch?v=WdcUg_rX2fM>`_, but here's a quick
 write up of the basics.
