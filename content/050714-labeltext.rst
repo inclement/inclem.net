@@ -18,21 +18,21 @@ write up of the basics.
 
 
 The first thing to realise is how the Label works by default. It takes
-the text, and *draws* it to a texture - that's all the text you see is
-really, sequential images of each of the characters you
-entered. Everything you might want to do with the Label revolves
-around what this texture is really doing. By default, this is *not*
-wrapping the text (unless you put in linebreak characters manually) - it just
-makes one long image of all the text, not respecting the size of the
-label or anything like that, and this image is is placed right in the middle of the
-label, centered in both directions.
+the text, and *draws* it to a texture, in practical terms that's an
+image of the characters. Everything you might want to do with the
+Label revolves around what this texture is really doing. By default,
+it does *not* wrap the text (unless you put in linebreak characters
+manually) - it just makes one long image on a single row.  This image
+is is placed right in the middle of the label, centered in both
+directions. The behaviour is fine for short text snippets, but will
+overhang the Label on both sides if the text is too long.
 
-This leads to some potentially annoying behaviour - as well as the
+This also leads to some other annoying behaviour - as well as the
 text not wrapping, you might have observed that the halign and valign
 properties seem to do nothing by default. This is because they orient
 things not inside the widget, but inside the texture...which 
-is the exact size it needs to contain the text so all alignments are
-identical.
+is the exact size it needs to contain the text so alignments change
+nothing.
 
 To solve all these problems, you can manually set the size of the
 texture with :code:`text_size`, a tuple of width and height, e.g.::
