@@ -38,12 +38,13 @@ The surprise is that this is actually not what happens. Instead, the
 rectangle is always positioned at (50, 50) with size (50, 50),
 regardless of where the widget appears.
 
-The reason for this is that these values *are* the position of the
-widget at the point where the canvas code was run; all widgets have a
-default position of (0, 0) and size of (100, 100), and this may not be
-updated (for instance by a parent layout class) until after their
-``__init__`` is run. However, the Rectangle position was set just
-once, and it doesn't know about the new position of the widget.
+The reason for this is that these values really are based on the pos
+and size of the widget at the point where the canvas code was run; all
+widgets have a default position of (0, 0) and size of (100, 100), and
+this will not necessarily be updated (for instance by a parent layout
+class) until after their ``__init__`` is run. However, the Rectangle
+properties receive only these initial values, and don't know about the
+new position of the widget.
 
 The solution is to simply hook into kivy's event system to update the
 rectangle pos and size ourselves whenever the widget changes:
@@ -88,7 +89,7 @@ language:
               pos: self.center
               size: self.width / 2., self.height / 2.
               
-This is shorter, simpler and clearer. We don't to manually set up the
+This is shorter, simpler and clearer. We don't need to manually set up the
 binding because kv automatically detects that we referred to
 properties of the parent widget and creates it automatically -
 something that isn't really possible in python. This is
