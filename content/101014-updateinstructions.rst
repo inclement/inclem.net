@@ -25,8 +25,10 @@ documented `here <http://kivy.org/docs/api-kivy.graphics.html>`_.
            super(CornerRectangleWidget, self).__init__(**kwargs)
            
            with self.canvas:
-               Color(1, 0, 0, 0)  # set the colour to red
-               Rectangle(pos=self.center, size=(self.width/2., self.height/2.))
+               Color(1, 0, 0, 1)  # set the colour to red
+               self.rect = Rectangle(pos=self.center, 
+                                     size=(self.width/2., 
+                                           self.height/2.))
                
 This looks like it will create a red rectangle, whose length is half the
 parent size in both directions, and whose position is the parent
@@ -57,7 +59,9 @@ rectangle pos and size ourselves whenever the widget changes:
            
            with self.canvas:
                Color(1, 0, 0, 1)  # set the colour to red
-               self.rect = Rectangle(pos=self.center, size=(self.width/2., self.height/2.))
+               self.rect = Rectangle(pos=self.center, 
+                                     size=(self.width/2., 
+                                           self.height/2.))
                
            self.bind(pos=self.update_rect,
                      size=self.update_rect)
@@ -76,8 +80,8 @@ language:
 
 .. code-block:: python
                 
-   <CornerRectangleWidget@Widget>  # This syntax makes a 'dynamic class'
-       canvas:                     # that doesn't need a python definition
+   <CornerRectangleWidget@Widget>  
+       canvas:
            Color:
               rgba: 1, 0, 0, 1                        
            Rectangle:
