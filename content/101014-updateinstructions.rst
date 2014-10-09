@@ -43,7 +43,7 @@ and size of the widget at the point where the canvas code was run; all
 widgets have a default position of (0, 0) and size of (100, 100), and
 this will not necessarily be updated (for instance by a parent layout
 class) until after their ``__init__`` is run. However, the Rectangle
-properties receive only these initial values, and don't know about the
+properties receive only these initial values, and doesn't know about the
 new position of the widget.
 
 The solution is to simply hook into kivy's event system to update the
