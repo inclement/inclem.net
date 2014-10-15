@@ -45,16 +45,16 @@ actually does, check out my `Kivy crash course
 
     ;; HyApp().run()
 
-This works great (though only with python3 due to a small bug in
+This works great, though only with python3 due to a small bug in
 Kivy - the kwargs of Label are eventually read in cython with a
-variable defined as ``str``, which in python2 excludes the unicode Hy
-passes). But that's not surprising even if it's cool - part of the
+variable typed as ``str``, which in python2 excludes the unicode Hy
+passes. Still, that's not surprising even if it's cool - part of the
 point of Hy is to interoperate perfectly with Python.
 
 A tougher problem is how to use Kivy's kv language with Hy. kv is a
 simple domain-specific language for declaring widget trees, making it
 easy to define event-driven interactions between the different
-properties of widgets. It's super useful and we tend to recommend
+properties of widgets. It's really useful and we tend to recommend
 using it as much as possible, so it'd be great to have it work with Hy.
 I won't explain the language here (you can see the `Kivy doc
 <http://kivy.org/docs/guide/lang.html>`__ or my own tutorials), but
@@ -73,8 +73,9 @@ code for the kv parser:
                             
 ``value`` is the string of Python code whose output will set a
 property of a widget or be run when an event is registered. For
-instance, a line of kv code might be ``color: (1, 0, 0, self.alpha)``,
-in which case ``value`` would be ``(1, 0, 0, self.alpha)``.
+instance, a line of kv code might be ``color: (1, 0, 0,
+some_function_of(self.alpha))``, in which case ``value`` would be
+``"(1, 0, 0, some_function_of(self.alpha))"``.
 
 To make a line of Hy code work instead of Python, we can do an awful
 hack, replacing the above line with:
@@ -103,10 +104,10 @@ so runs the code through Hy's own equivalent of ``compile``
 the normal Python code). I also have the extra muckiness of taking
 apart this ast if the compilation is in ``eval`` mode, because I
 couldn't get Hy to return an ``ast.Expression`` in the first place.
-This is probably very easily fixable, but I've left it like this
-because a silly hack is good enough for a proof of concept. All credit
-for this part goes to the friendly Hy people on their irc channel, #hy
-on Freenode.
+This is probably very easily and neatly fixed, but I've left it like
+this because a silly hack is good enough for a proof of concept. All
+credit for this part goes to the friendly Hy people on their irc
+channel, #hy on Freenode.
 
 With this in place, we can write a new Python program, but this time
 use our Hy+kv language to define the widget tree. Here's the new
@@ -167,7 +168,7 @@ my name and clicking the button:
 .. image:: {filename}/media/hy_example.png
    :alt: Image of Kivy program after running Hy code
 
-For those not familiar with kv, a second feature is that it
+For those not familiar with kv, one of its features is that it
 automatically detects property changes and updates dependent
 properties - in this case, the text of the button should change every
 time ``ti.text`` changes (i.e. every time a letter is typed in the
