@@ -55,11 +55,11 @@ A tougher problem is how to use Kivy's kv language with Hy. kv is a
 simple domain-specific language for declaring widget trees, making it
 easy to define event-driven interactions between the different
 properties of widgets. It's super useful and we tend to recommend
-using it as much as possible, so it'd be cool to have it work with Hy!
+using it as much as possible, so it'd be great to have it work with Hy.
 I won't explain the language here (you can see the `Kivy doc
 <http://kivy.org/docs/guide/lang.html>`__ or my own tutorials), but
 the key point is that much of it consists of interpreting normal
-python code, which I'd like to replace with hy code.
+python code, which I'd like to replace with Hy code.
 
 It turns out making this work is actually really easy. Here's the
 relevant part of ``lang.py`` in Kivy's source, the file containing the
@@ -73,7 +73,7 @@ code for the kv parser:
                             
 ``value`` is the string of Python code whose output will set a
 property of a widget or be run when an event is registered. For
-instance, a line of kv code might be `color: (1, 0, 0, self.alpha)`,
+instance, a line of kv code might be ``color: (1, 0, 0, self.alpha)``,
 in which case ``value`` would be ``(1, 0, 0, self.alpha)``.
 
 To make a line of Hy code work instead of Python, we can do an awful
