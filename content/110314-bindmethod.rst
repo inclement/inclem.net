@@ -7,7 +7,7 @@ Kivy's bind method
 :slug: kivy_bind_method
 :author: Alexander Taylor
          
-One of the big mistakes I see from new Kivy users is misunderstanding
+One of the most common problems for new Kivy users is misunderstanding
 how the bind method works, especially amongst newer Python users who
 haven't fully formed their intuition about function calls. For
 instance, a user will write code like:
@@ -20,8 +20,8 @@ Here, the idea is that when the :code:`current` property changes, it
 will call :code:`a_function` with the arguments :code:`arg1` and
 :code:`arg2`.
 
-The problem is that Python itself fundamentally doesn't work like
-this. The bind method doesn't know about the existence of
+The problem is that Python itself doesn't work like
+this; the bind method doesn't know about the existence of
 :code:`a_function` or its arguments, it only receives the *result* of
 this function call. This often leads to confusion when a user doesn't
 understand why the binding is only called once, during the declaration
