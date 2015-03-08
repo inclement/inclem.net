@@ -1,12 +1,12 @@
 About
 #####
 
-This site contains my simple blog, containing mainly (or at the time
-of writing, only...) tutorials for the `Kivy <http://kivy.org>`_
-graphical framework. I created it after making a series of `video
-tutorials <http://www.youtube.com/kivycrashcourse>`_ that turned out
-to be surprisingly popular! My first set of topics includes
-independent write-ups of each video.
+This site contains my simple blog, containing mainly tutorials for the
+`Kivy <http://kivy.org>`_ graphical framework. I created it after
+making a series of `video tutorials
+<http://www.youtube.com/kivycrashcourse>`_ that turned out to be quite
+popular. Some of the posts here are standalone write-ups of each
+video.
 
 These pages are constructed using `Pelican
 <http://blog.getpelican.com/>`_, a static website generator for
@@ -23,5 +23,5 @@ Contact
 =======
 
 My email address is `alexanderjohntaylor@gmail.com
-<mailto:alexanderjohntaylor@gmail.com>`_. Feel free to email with
-questions/comments/criticisms.
+<mailto:alexanderjohntaylor@gmail.com>`_. Emails with
+questions/comments/criticisms are welcomed.
