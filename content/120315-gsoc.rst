@@ -1,0 +1,33 @@
+Kivy in GSOC 2015
+#################
+
+:date: 2015-03-12 20:25
+:tags: kivy, gsoc, python
+:category: kivy
+:slug: kivy_gsoc_2015
+:author: Alexander Taylor
+         
+Kivy will be participating in the `Google Summer of Code 2015
+<https://www.google-melange.com/gsoc/homepage/google/gsoc2015>`__
+(GSOC), under the `Python Software Foundation umbrella
+<https://wiki.python.org/moin/SummerOfCode/2015>`__.  Applications are
+welcomed not just for the Kivy framework itself but on all the
+projects managed by the Kivy organisation including
+Python-for-Android, Kivy-iOS, PyJNIus, PyOBJus, Plyer and Buildozer.
+As such, GSOC projects can range in focus and difficulty from those
+that should be accessible to intermediate Python users to low level
+work making use of Cython, or interacting with Java and Objective C on
+mobile platforms.
+
+Our page GSOC information and suggested projects is available `here
+<http://kivy.org/docs/gsoc.html>`__ and includes ideas touching all of
+these areas. However, these are just guidelines and suggestions; if
+you have a different idea, we're happy to discuss it.  Prospective
+GSOC students should introduce themselves on the `kivy-dev mailing
+list <https://groups.google.com/forum/#!forum/kivy-dev>`__, and also
+say hello on our `IRC channel
+<http://kivy.org/docs/contact.html#irc>`__; discussions there will be
+an important part of any application.
+
+Beyond that, check out the project page linked above, and good luck
+with your applications.
