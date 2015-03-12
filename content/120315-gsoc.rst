@@ -26,7 +26,7 @@ you have a different idea, we're happy to discuss it.  Prospective
 GSOC students should introduce themselves on the `kivy-dev mailing
 list <https://groups.google.com/forum/#!forum/kivy-dev>`__, and also
 say hello on our `IRC channel
-<http://kivy.org/docs/contact.html#irc>`__; discussions there will be
+<http://kivy.org/docs/contact.html#irc>`__, discussions there will be
 an important part of any application.
 
 Beyond that, check out the project page linked above, and good luck
