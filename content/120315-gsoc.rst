@@ -19,7 +19,7 @@ that should be accessible to intermediate Python users to low level
 work making use of Cython, or interacting with Java and Objective C on
 mobile platforms.
 
-Our page GSOC information and suggested projects is available `here
+Our page of GSOC information and suggested projects is available `here
 <http://kivy.org/docs/gsoc.html>`__ and includes ideas touching all of
 these areas. However, these are just guidelines and suggestions; if
 you have a different idea, we're happy to discuss it.  Prospective
