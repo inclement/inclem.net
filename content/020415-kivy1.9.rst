@@ -22,7 +22,7 @@ changelog above, along with more information about the many other
 changes.
 
 One of the most major internal changes is a shift to using SDL2 as our
-window (and other backend) provider on almost all platforms - only
+window and other backend provider on almost all platforms - only
 Android still uses the old pygame/SDL backend.  This shouldn't change
 the external user API at all, but directly makes available features
 that Pygame lacked such as proper support for high-DPI displays and
@@ -31,9 +31,9 @@ in Windows and OS X), as well as resolving some old Pygame related
 bugs and hopefully making further low level customisation easier in
 the future. Although this doesn't change at all how you interact with
 Kivy, it's a big improvement behind the scenes. This also means that
-Pygame is now deprecated on platforms where SDL2 already works, we'll
-continue to support it for a while (and it's unlikely to stop working
-even after that) but it's no longer a focus.
+Pygame is now deprecated on platforms where SDL2 already works; we'll
+continue to support it for a while and it's unlikely to stop working
+even after that, but it's no longer a focus.
 
 .. figure:: {filename}/media/kivy_retina.png
    :alt: Image of Kivy on a retina display with high DPI mode
@@ -50,12 +50,13 @@ even after that) but it's no longer a focus.
 These images show the difference in Kivy rendering on the same (OS X
 retina) screen, first with the new SDL2 high DPI mode enabled so that
 Kivy has full awareness of the true resolution, and second letting the
-operating system scale up a smaller rendered result (the default if an
-application does not declare DPI awareness). The difference is
-dramatic, and we're glad to be able to properly support these
-resolutions. This improvement is currently enabled only on OS X, but
-the equivalent Windows fix will be merged shortly and the behaviour
-should already be correct on Linux.
+operating system scale up a smaller rendered result - the latter is
+default for applications that do not declare DPI awareness, but Kivy
+will now always render properly as in the first image. The
+difference is dramatic, and we're glad to be able to properly support
+these resolutions. This improvement is currently enabled only on OS X,
+but the equivalent Windows fix will be merged shortly and the
+behaviour should already be correct on Linux.
 
 A different change that may be more directly useful in your
 applications is the new EffectWidget, which behaves as a normal
@@ -70,7 +71,7 @@ easily be combined with existing applications.
            
 |
 
-The above screenshot demonstrates the EffectWidget via one of the new
+This above screenshot demonstrates the EffectWidget via one of the new
 Kivy examples; the kv code of the left and right is identical,
 except the right hand side includes colour mixing and pixelation
 effects. Since these are applied at a very low level they are very
