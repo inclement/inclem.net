@@ -1,0 +1,124 @@
+Kivy 1.9 released
+#################
+
+:date: 2015-04-02 20:20
+:tags: kivy, python, release
+:category: kivy
+:slug: kivy_1.9_released
+:author: Alexander Taylor
+
+
+Kivy 1.9 has just been released! This has been a long time in the
+making, for no very good reason, but now you can take advantage of all
+our many new features in the stable branch. You can find the full
+changelog at the official `mailing list announcement
+<https://groups.google.com/forum/#!topic/kivy-users/PZpI1g-W3do>`__.
+
+This big release includes almost 2500 new commits (about 30% of the
+total in Kivy!) from nearly 100 different contributors, including both
+significant changes and many smaller fixes. I'll showcase a few of
+the most interesting ones below; these are also listed in the
+changelog above, along with more information about the many other
+changes.
+
+One of the most major internal changes, though it shouldn't change the
+external user API at all, is a shift to using SDL2 as our window (and
+other backend) provider on almost all platforms - only Android still
+uses the old pygame/SDL backend. This directly makes available
+features that Pygame lacked such as proper support for high-DPI
+displays and the ability to retain an openGL context on resize (in
+Windows), as well as resolving some old Pygame related bugs and
+hopefully making further low level customisation easier in the
+future. Although this doesn't change at all how you interact with
+Kivy, it's a big improvement behind the scenes. This also means that
+Pygame is now deprecated on platforms where SDL2 already works, we'll
+continue to support it for a while (and it's unlikely to stop working
+even after that) but it's no longer a focus.
+
+.. figure:: {filename}/media/kivy_retina.png
+   :alt: Image of Kivy on a retina display with high DPI mode
+   :align: center
+           
+|
+
+.. figure:: {filename}/media/kivy_nonretina.png
+   :alt: Image of Kivy on a retina display without high DPI mode
+   :align: center
+           
+|
+
+These images show the difference in Kivy rendering on the same (OS X
+retina) screen, first with the new SDL2 high DPI mode enabled so that
+Kivy has full awareness of the true resolution, and second letting the
+operating system scale up a smaller rendered result (the default if an
+application does not declare DPI awareness). The difference is
+dramatic, and we're glad to be able to properly support these
+resolutions. This improvement is currently enabled only on OS X, but
+the equivalent Windows fix will be merged shortly and the behaviour
+should already be correct on Linux.
+
+A different change that may be more directly useful in your
+applications is the new EffectWidget, which behaves as a normal
+RelativeLayout but also lets you add one or more shader effects to its
+rendered output. The API is designed to make it very easy to create
+simple effects even without knowing about GLSL, in a way that can
+easily be combined with existing applications.
+
+.. figure:: {filename}/media/effectwidget_example.png
+   :alt: Image of Kivy effectwidget
+   :align: center
+           
+|
+
+The above screenshot demonstrates the EffectWidget via one of the new
+Kivy examples; the kv code of the left and right is identical,
+except the right hand side includes colour mixing and pixelation
+effects. Since these are applied at a very low level they are very
+efficient (although not optimised for too many effects at once) and
+can be applied even to video or moving scenes such as in games.
+
+.. figure:: {filename}/media/kivy_svg_example.png
+   :alt: Image of the Kivy SVG example, including the famous svg tiger
+   :align: center
+           
+|
+
+One feature that has been heavily requested by users is SVG support
+for Kivy, and preliminary support is included in 1.9! This is still
+experimental and currently supports only Python 2, but much of the
+work has been done and even complex SVG images are reproduced
+well. The above image shows one of the new SVG examples, including the
+famous tiger.
+
+There are also some nice new features that can't be captured so easily
+in a screenshot. One is the addition of a ``rebind`` option to Kivy
+properties. This resolves a problem that arose with code like
+
+.. code-block:: python
+                
+    # In python
+    from kivy.uix.button import Button
+    from kivy.properties import ObjectProperty
+    class MyButton(Button):
+        some_ref = ObjectProperty(None, rebind=True)
+    
+    # And in kv language
+    <MyButton>:
+        text: self.some_ref.text if self.some_ref else None
+
+The problem here was that kv could only bind automatically to the
+first value of self.some_ref, so the text of the ``MyButton`` instance
+would never update, and it is difficult to improve this internally
+without dramatic slowdowns from checking if many objects have
+changed. The new rebind option makes it possible to enable this second
+level of binding in select places where appropriate; it won't be
+necessary or useful to everyone, but it's a convenient feature when
+really necessary.
+
+Other new features include a new, faster video provider via Cython
+and ffmpeg, Window modes to detect and react to the presence of a
+software keyboard on Android, an internal rewiring of focus handling
+for widgets, and many many other bugfixes and smaller new
+features.
+
+Thanks to all our contributors, and enjoy the new release!
