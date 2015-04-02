@@ -105,7 +105,7 @@ properties. This resolves a problem that arose with code like
     
     # And in kv language
     <MyButton>:
-        text: self.some_ref.text if self.some_ref else None
+        text: self.some_ref.text if self.some_ref else ''
 
 The problem here was that kv could only bind automatically to the
 first value of self.some_ref, so the text of the ``MyButton`` instance
