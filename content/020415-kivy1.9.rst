@@ -21,15 +21,15 @@ the most interesting ones below; these are also listed in the
 changelog above, along with more information about the many other
 changes.
 
-One of the most major internal changes, though it shouldn't change the
-external user API at all, is a shift to using SDL2 as our window (and
-other backend) provider on almost all platforms - only Android still
-uses the old pygame/SDL backend. This directly makes available
-features that Pygame lacked such as proper support for high-DPI
-displays and the ability to retain an openGL context on resize (in
-Windows), as well as resolving some old Pygame related bugs and
-hopefully making further low level customisation easier in the
-future. Although this doesn't change at all how you interact with
+One of the most major internal changes is a shift to using SDL2 as our
+window (and other backend) provider on almost all platforms - only
+Android still uses the old pygame/SDL backend.  This shouldn't change
+the external user API at all, but directly makes available features
+that Pygame lacked such as proper support for high-DPI displays and
+the ability to retain an OpenGL context on resize (previously lacking
+in Windows and OS X), as well as resolving some old Pygame related
+bugs and hopefully making further low level customisation easier in
+the future. Although this doesn't change at all how you interact with
 Kivy, it's a big improvement behind the scenes. This also means that
 Pygame is now deprecated on platforms where SDL2 already works, we'll
 continue to support it for a while (and it's unlikely to stop working
