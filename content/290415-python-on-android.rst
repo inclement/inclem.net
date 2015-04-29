@@ -28,30 +28,30 @@ uses to get Python on Android; the unimaginatively-named
 `python-for-android project
 <https://github.com/kivy/python-for-android>`__. The basic
 functionality of this tool is to first build a *distribution*, an
-Android project directory that includes all the components components
-Kivy needs to run, compiled for Android by the Android NDK. This
-includes in particular the Python interpreter itself, plus Kivy and
-the libraries it depends on - currently Pygame and SDL, although we
-are working to modernise this bit. The Android distribution also
-includes a Java bootstrap, a normal Android application whose job is
-to display Kivy's OpenGL surface and to mediate between Kivy and
-Android. All these components can then be bundled into an APK with
-different settings (icon, name, orientation etc.) to taste.
+Android project directory that includes all the components
+Kivy needs to run, compiled for Android by its NDK. This includes in
+particular the Python interpreter itself, plus Kivy and the libraries
+it depends on - currently Pygame and SDL, although we are working to
+modernise this bit. The distribution also includes a Java bootstrap, a
+normal app structure whose job is to display Kivy's OpenGL surface and
+to mediate between Kivy and Android. All these components can then be
+bundled into an APK with the user's Python script and different
+settings (icon, name, orientation etc.) to taste.
 
-This is only the basic procedure, the Python distribution can include
-much more than just these essentials. Most of the Python standard
-library is built in by default, and pure Python modules can be
-included easily, so in general you can perform tasks using just the
-same libraries you would on the desktop. Libraries with compiled
-components are more complex, but can be built as long as
-python-for-android has a compilation recipe for them (or you provide
-your own) - these are often quite simple, just setting some
+This is only the basic procedure, the APK can (and does) include much
+more than just these essentials. Amongst other things, most of the
+Python standard library is built in by default, and pure Python
+modules can be included easily so in general you can perform tasks
+using just the same libraries you would on the desktop. Libraries with
+compiled components are more complex, but can be built and included as
+long as python-for-android has a compilation recipe for them (or you
+provide your own) - these are often quite simple, just setting some
 compilation flags and running the normal build procedure, although
 some modules need additional patching. Python-for-android includes
 quite a few recipes by default, including very popular modules like
 numpy, sqlite3, twisted and even django!
 
-The above is the basics of how python-for-android works, but far from
+The above is the basics of how python-for-android works but is far from
 the whole story, and you can check the documentation for more
 information about building your own APKs - in particular, we recommend
 using `Buildozer <https://github.com/kivy/buildozer>`__, which gives
@@ -72,9 +72,9 @@ Android API is an important part of how your app behaves - getting
 sensor data, creating notifications, vibrating, pausing and
 restarting, or just about anything else. Kivy takes care of the
 essentials for you, but many of these are things you'll still want to
-manage yourself from Python. For this reason, we have the `PyJNIus
+manage yourself from Python. For this reason we have the `PyJNIus
 <https://github.com/kivy/pyjnius>`__ project, also developed under the
-Kivy organisation, which automatically wraps Java code in a python
+Kivy organisation, which automatically wraps Java code in a Python
 interface.
 
 As a simple example, here's the Python code to have an Android device
@@ -145,13 +145,13 @@ All of these tools have been shaped in their current form by the needs
 of Kivy, but are really more generic Python tools; Plyer specifically
 avoids any Kivy dependency, and PyJNIus only makes an assumption about
 how to access the JNI environment on Android. We hope that these tools
-can be more generally useful to anyone running Python on Android.  For
+can be more generally useful to anyone running Python on Android; for
 instance, you can already experiment with PyJNIus using the `QPython
 Android app
 <https://play.google.com/store/apps/details?id=com.hipipal.qpyplus>`__. Python-for-android
 is more tied to Kivy's current toolchain but this is a detail under
 review, and we're happy to discuss the details of Android compilation
-with anyone interested. 
+with anyone interested.
 
 Overall, a lot is possible with Python on Android, despite how
 different the Python environment is to the Java development that is
