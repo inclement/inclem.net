@@ -108,7 +108,7 @@ equivalent Java code. For this reason, the Kivy project set includes
 *Plyer*.
 
 
-Plyer: A platform independent API for platform-specific features
+Plyer: A platform-independent API for platform-specific features
 ================================================================
 
 The `Plyer <https://github.com/kivy/plyer>`__ project takes a step
