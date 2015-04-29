@@ -28,10 +28,10 @@ uses to get Python on Android; the unimaginatively-named
 `python-for-android project
 <https://github.com/kivy/python-for-android>`__. The basic
 functionality of this tool is to first build a *distribution*, an
-Android project directory that includes all the components
-Kivy needs to run, compiled for Android by its NDK. This includes in
-particular the Python interpreter itself, plus Kivy and the libraries
-it depends on - currently Pygame and SDL, although we are working to
+Android project directory that includes all the components Kivy needs
+to run, compiled for Android by its NDK. This includes in particular
+the Python interpreter itself, plus Kivy and the libraries it depends
+on - currently including Pygame and SDL, although we are working to
 modernise this bit. The distribution also includes a Java bootstrap, a
 normal app structure whose job is to display Kivy's OpenGL surface and
 to mediate between Kivy and Android. All these components can then be
