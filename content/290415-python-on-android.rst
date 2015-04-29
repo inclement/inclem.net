@@ -1,7 +1,7 @@
 Python on Android
 #################
 
-:date: 2015-04-29 20:20
+:date: 2015-04-29 23:32
 :tags: kivy, python, android, pyjnius, plyer
 :category: kivy
 :slug: python-on-android
