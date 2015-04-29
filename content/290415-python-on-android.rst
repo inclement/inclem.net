@@ -78,7 +78,7 @@ Kivy organisation, which automatically wraps Java code in a Python
 interface.
 
 As a simple example, here's the Python code to have an Android device
-vibrate for 10s
+vibrate for 10s:
 
 .. code-block:: python
 
