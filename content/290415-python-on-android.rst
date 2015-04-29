@@ -135,7 +135,7 @@ others such as the compass or gyroscope sensors or sending SMS
 messages would work on both Android and iOS.
 
 Plyer is very much under development, with new API wrapper
-contributions very welcome, and is the subject of a (second) GSOC
+contributions very welcome, and is the subject of a (second) GSoC
 project this year. We hope that it will become increasingly
 feature-complete.
 
