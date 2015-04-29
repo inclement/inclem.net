@@ -117,6 +117,8 @@ in order to try to create a simple, pythonic interface for a subset of
 (mostly) shared functionality. For instance, the vibration example
 above would become
 
+.. code-block:: python
+
     from plyer.vibrator import vibrate
     vibrate(10)  # in Plyer, the argument is in seconds
     
