@@ -29,7 +29,7 @@ without being very heavy (one thing they have in common is stripping
 out a lot of stuff), avoiding duplication of effort and making it
 easier for any new projects to get started - though I should note that
 this is my vague dream and depends of course on interest from anyone
-else involved, and on python-for-android actually ending up fit for
+else involved, and on python-for-android actually being made fit for
 this purpose.
 
 To this end, the revamp project has several major goals:
@@ -77,36 +77,36 @@ Python module backends. As of now, the new python-for-android supports
 the old Pygame bootstrap mostly as before, but also implements an SDL2
 based PythonActivity that works very well with Kivy - highly anecdotal
 testing found, amongst other things, app start time reduced to 60% of
-what it was with Pygame. It also simplifies maintenance; SDL2's java
+what it was with Pygame. It also simplifies maintenance as SDL2's java
 components fulfil the same role as those maintained in the Pygame
 backend, but no longer require much special treatment as functionality
 such as touch interaction and pausing are now accessed with the SDL2
 api just as on desktop platforms.
 
-Further, as a proof that python-for-android can now build non-Kivy
-apps you can build for Android projects created with the `Vispy
-scientific visualisation library <http://vispy.org/>`_! This uses the
-same new SDL2 backend but Kivy is not involved, and the build process
-does not use Cython (unlike with Kivy); instead, SDL2 and OpenGL are
-called entirely with ctypes, using `pysdl2
+Further, python-for-android can now build non-Kivy apps! The first
+project with this support built in is the `Vispy scientific
+visualisation library <http://vispy.org/>`_. This uses the same new
+SDL2 backend but Kivy is not involved, and the build process does not
+use Cython (unlike with Kivy); instead, SDL2 and OpenGL are called
+entirely with ctypes, using `pysdl2
 <https://pysdl2.readthedocs.org/en/latest/>`_ and Vispy's own gloo
 wrapper respectively. I didn't even have to patch things much for
 this, Vispy is mostly self contained and already quite platform
 independent, barring a couple of possible small bugs and a hack to
 avoid the lack of a supported font provider on Android. Vispy also
 uses numpy heavily, but this was already supported by
-python-for-android and seems to work fine. This Vispy support is
-itself quite experimental and there are some performance issues with
-Vispy that will need resolving, but it was very simple to set up with
-the new toolchain. Here's a screenshot of one of Vispy's 3D examples
-running on Android - there are a few small visual artifacts, but I
-think these are small bugs in Vispy's OpenGL ES 2 support that the
-Vispy team are actively addressing:
+python-for-android and seems to work fine. The Vispy support is itself
+quite experimental and there are some performance issues that will
+need resolving, but it was very simple to set up with the new
+toolchain. Here's a screenshot of one of Vispy's 3D examples running
+on Android - there are a few small visual artifacts, but I think these
+are small bugs in Vispy's OpenGL ES 2 support that the Vispy team are
+actively addressing:
 
 .. figure:: {filename}/media/vispy_android_example.png
    :alt: Image of Vispy running on Android
    :align: center
-
+           
 Support for binary distribution and multiple architectures are both
 partially implemented but (at the time of writing) not yet
 working. However, the toolchain is built around them, so there should
@@ -134,7 +134,7 @@ be distributed separately and populated with app details by a user,
 and the above just involves making such prebuilt distributions
 available to download and use automatically. I found more recently the
 method of the pybee project/Toga toolkit's `Python-Android-template
-<https://github.com/pybee/Python-Android-template>`_ which is a
+<https://github.com/pybee/Python-Android-template>`_. This is a
 similar idea (built by a modified python-for-android) but implemented
 much better as a standalone project with app details populated by
 cookiecutter and the packaging of the user's Python modules taken care
@@ -143,7 +143,7 @@ didn't know this was even possible! This means that the user can just
 write their Python code, drop it in place, and run the APK build, a
 very neat process. It should be quite easy to modify
 python-for-android's dist output to easily create such templates,
-currently a dist is functionally the same thing with a different and
+its dist system is functionally the same thing with a different and
 less standard-Android interface, and I hope that doing so could create
 another easy way for users to build and distribute their Python apps
 with almost no local build tools at all.
@@ -182,3 +182,10 @@ keep informed, watch this space, I'll make further announcements as
 things develop. If there is developer interest and people start
 switching from the old toolchain, I hope development will speed up a
 lot and quickly approach proper feature parity.
+
+tl;dr: Kivy's python-for-android build tools have been revamped to
+have a better interface, build apps based on SDL2, build non-Kivy apps
+(currently specifically applications with Vispy), and be more
+extensible. Further semi-complete features include binary
+distribution, Windows support, and multiple architecture
+targets. Python 3 is brought closer but needs direct compilation work.
