@@ -9,8 +9,10 @@ python-for-android revamped
 :author: Alexander Taylor
 
 I've recently been working on a significantly revamped version of
-python-for-android, the Kivy-project tools that take a Python program
-and package it - along with any dependencies and the Python
+`python-for-android
+<http://python-for-android.readthedocs.org/en/latest/>`_, the
+`Kivy-project <http://kivy.org/#home>`_ tools that take a Python
+program and package it - along with any dependencies and the Python
 interpreter itself - into an Android APK that can be run and
 distributed just like a normal Android app. This rewrite is driven by
 the problem that although the current python-for-android is fairly
