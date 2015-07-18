@@ -18,24 +18,9 @@ distributed just like a normal Android app. This rewrite is driven by
 the problem that although the current python-for-android is fairly
 robust as far as the build process goes, it's quite set in its ways
 and hard to modify to make large changes such as to support backends
-other than Kivy. For instance, there are various Python projects (some
-quite experimental) with Android build tools that seem to be based on
-Kivy's python-for-android with varying levels of changes, including
-`QPython2
-<https://github.com/qpython-android/QPython2-core-with-kivy>`_,
-`Pydroid <https://bitbucket.org/tonyfinn/pydroid>`_, and `toga-android
-<https://github.com/pybee/Python-Android-support>`_.  One hope would
-be that such projects could perhaps become less fragmented if
-python-for-android were flexible enough to work for all of them
-without being very heavy (one thing they have in common is stripping
-out a lot of stuff). This would hopefully avoid duplication of effort
-and make it easier for any new projects to get started - though this
-is my vague dream and depends of course on interest from anyone else
-involved, and on python-for-android actually being made fit for this
-purpose. Regardless, the following changes are all major improvements
-for Kivy itself.
+other than Kivy. 
 
-The revamp project has several major goals:
+To this end, the revamp project has several major goals:
 
 - Rewrite python-for-android to a fully Python toolchain that can be
   more easily modified and extended.
