@@ -131,11 +131,11 @@ of using ant itself, the normal APK build and deployment interface - I
 didn't know this was even possible! This means that the user can just
 write their Python code, drop it in place, and run the APK build, a
 very neat process. It should be quite easy to modify
-python-for-android's dist output to easily create such templates,
-its dist system is functionally the same thing with a different and
-less standard-Android interface, and I hope that doing so could create
-another easy way for users to build and distribute their Python apps
-with almost no local build tools at all.
+python-for-android's dist output to easily create such templates, its
+dist system is functionally the same thing with a different and less
+standard-Android interface, and I hope that doing so could make it
+even more convenient for users to build and distribute different kinds
+of Python apps. 
 
 This leaves the elephant in the room, support for Python 3 on Android,
 which is perhaps the most requested feature for Kivy itself. The new
