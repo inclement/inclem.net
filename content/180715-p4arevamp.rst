@@ -23,16 +23,17 @@ Kivy's python-for-android with varying levels of changes, including
 <https://github.com/qpython-android/QPython2-core-with-kivy>`_,
 `Pydroid <https://bitbucket.org/tonyfinn/pydroid>`_, and `toga-android
 <https://github.com/pybee/Python-Android-support>`_.  One hope would
-be that these might potentially be somewhat unified if
+be that such projects could perhaps become less fragmented if
 python-for-android were flexible enough to work for all of them
 without being very heavy (one thing they have in common is stripping
 out a lot of stuff). This would hopefully avoid duplication of effort
-and make it easier for any new projects to get started - though I
-should note that this is my vague dream and depends of course on
-interest from anyone else involved, and on python-for-android actually
-being made fit for this purpose.
+and make it easier for any new projects to get started - though this
+is my vague dream and depends of course on interest from anyone else
+involved, and on python-for-android actually being made fit for this
+purpose. Regardless, the following changes are all major improvements
+for Kivy itself.
 
-To this end, the revamp project has several major goals:
+The revamp project has several major goals:
 
 - Rewrite python-for-android to a fully Python toolchain that can be
   more easily modified and extended.
@@ -184,9 +185,9 @@ things develop. If there is developer interest and people start
 switching from the old toolchain, I hope development will speed up a
 lot and quickly approach proper feature parity.
 
-tl;dr: Kivy's python-for-android build tools have been revamped to
-have a better interface, build apps based on SDL2, build non-Kivy apps
-(currently specifically applications with Vispy), and be more
+tl;dr (I was told I should have one): Kivy's python-for-android build
+tools have been revamped to have a better interface, build apps based
+on SDL2, build non-Kivy apps (currently Vispy apps), and be more
 extensible. Further semi-complete features include binary
 distribution, Windows support, and multiple architecture
 targets. Python 3 is brought closer but needs direct compilation work.
