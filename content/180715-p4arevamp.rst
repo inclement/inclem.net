@@ -26,11 +26,11 @@ Kivy's python-for-android with varying levels of changes, including
 be that these might potentially be somewhat unified if
 python-for-android were flexible enough to work for all of them
 without being very heavy (one thing they have in common is stripping
-out a lot of stuff), avoiding duplication of effort and making it
-easier for any new projects to get started - though I should note that
-this is my vague dream and depends of course on interest from anyone
-else involved, and on python-for-android actually being made fit for
-this purpose.
+out a lot of stuff). This would hopefully avoid duplication of effort
+and make it easier for any new projects to get started - though I
+should note that this is my vague dream and depends of course on
+interest from anyone else involved, and on python-for-android actually
+being made fit for this purpose.
 
 To this end, the revamp project has several major goals:
 
@@ -55,17 +55,18 @@ I'm making this post to announce that the python-for-android revamp
 project has reached a usable state, with several of these goals either
 implemented or significantly advanced, and all of them at least made
 much more accessible. The core change is that all of the original
-toolchain has been rewritten in Python, based on (but different to)
-the recent Kivy-iOS rewrite. It's also much lighter, all heavy pygame
-stuff is downloaded on demand instead of built in, and is designed to be
-accessed by a single set of commands and the new python-for-android
-executable rather than by the separate invocation of different
-scripts in different places. I won't go into the technical details
-here, but you can find the (WIP) documentation temporarily hosted
-`here <http://inclem.net/files/p4a_revamp_doc/>`_. If anyone would like
-to test it you can try the instructions there, but the project is in
-an experimental state right now and it's likely you may encounter bugs
-or missing features; the current focus is ironing these out. I'm very
+toolchain has been rewritten in Python, with the initial structure
+based on the recent Kivy-iOS rewrite. It's also much lighter, all
+heavy pygame stuff is downloaded on demand instead of built in, and is
+designed to be accessed by a single set of commands and the new
+python-for-android executable rather than by the separate invocation
+of different scripts in different places. I won't go into the
+technical details here, but you can find the (WIP) documentation
+temporarily hosted `here
+<http://inclem.net/files/p4a_revamp_doc/>`_. If anyone would like to
+test it you can try the instructions there, but the project is in an
+experimental state right now and it's likely you may encounter bugs or
+missing features, the current focus is ironing these out. I'm very
 happy to discuss these on the `kivy-users mailing list
 <https://groups.google.com/forum/#!forum/kivy-users>`_ or #kivy irc
 channel on irc.freenode.net.
@@ -111,20 +112,20 @@ Support for binary distribution and multiple architectures are both
 partially implemented but (at the time of writing) not yet
 working. However, the toolchain is built around them, so there should
 be no major issues. The initial idea with binary distribution will be
-to simply make available a number of prebuilt distributions
-(i.e. Android projects with the Python interpreter) with common sets
-of Android modules, so that when the user adds modules as requirements
-when calling python-for-android they can automatically be checked and
-an appropriate choice downloaded, with this process being transparent
-to the user and not requiring any special options. This should not
-only make many builds faster but also work on Windows, one of our most
-requested features but not something that was possible when the
-toolchain required that everything be locally compiled. Likewise, the
-toolchain has semi-implemented support for multiple architectures
-internally, but none other than armeabi are yet supported and there
-will be bugs to work out when more are enabled. Still, these will
-(fingers crossed) be things to look forward to in the relatively near
-future.
+to simply make available a number of prebuilt distributions 
+(i.e. Android projects with the Python interpreter) that include
+common dependencies, so that when the user adds modules as
+requirements when calling python-for-android they can automatically be
+checked and an appropriate choice downloaded, with this process being
+transparent to the user and not requiring any special options. This
+should not only make many builds faster but also work on Windows, one
+of our most requested features but something that was not possible
+when the toolchain required that everything be locally
+compiled. Likewise, the toolchain has semi-implemented support for
+multiple architectures internally, but none other than armeabi are yet
+supported and there will be bugs to work out when more are
+enabled. Still, these will (fingers crossed) be things to look forward
+to in the relatively near future.
 
 I should note here that this model of binary distribution is what I
 initially targeted as a natural extension of python-for-android's
