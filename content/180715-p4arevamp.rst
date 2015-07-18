@@ -162,7 +162,7 @@ new SDL2 backend which should have no issues supporting Python3 more
 or less the same as on the desktop. However, the missing link here is
 still actually being able to compile Python 3 for Android, and I don't
 yet know how to do this. Some of Kivy's main Python 2 patches come
-from `this site <http://randomsplat.com/>`, but this has Python 3
+from `this site <http://randomsplat.com/>`_, but this has Python 3
 patches only up to 3.2.2 and it would be ideal to target 3.4 or 3.5
 (and to be able to support new versions as they appear). I've looked
 around and seen a few different discussions of this, but I'm not sure
