@@ -41,8 +41,8 @@ this happens the problem and solution should be clearly displayed.
 
 The new toolchain is currently documented (temporarily) `here
 <http://inclem.net/files/p4a_revamp_doc/>`__. We'll push the new
-documentation to the normal readthedocs site
-(`http://python-for-android.rtfd.org`_) as soon as possible, which
+documentation to the `normal readthedocs site
+<http://python-for-android.rtfd.org>`_ as soon as possible, which
 will also include the legacy doc for the old toolchain so nothing is
 lost.
 
