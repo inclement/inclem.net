@@ -5,7 +5,7 @@ python-for-android status update
 :date: 2015-12-06 14:00
 :tags: kivy, python, android
 :category: kivy
-:slug: python_for_android_revamp_replaces_master
+:slug: python_for_android_update
 :author: Alexander Taylor
          
 It's been a while since Kivy's `python-for-android project
