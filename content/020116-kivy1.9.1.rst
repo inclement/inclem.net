@@ -22,8 +22,8 @@ One major improvement for Windows users is that we now have a fully
 working installation method using pip and wheels for both Kivy and its
 non-python binary dependencies, rather than our older standalone kivy
 distribution. This should make it easy to install Kivy in any existing
-Python installation. OS X distribution has also seen improvement, with
-better support for working with homebrew.
+Python installation. OS X distribution has also seen improvement,
+including better support for working with homebrew.
 
 We've also improved app packaging particularly on OS X, with a new
 packaging method that should be easier than pyinstaller (though
@@ -46,7 +46,8 @@ In the future, we're heading towards Kivy 2.0, which we've had in mind
 for a while to be a major release with some big new features and
 potentially removal of some long-deprecated components. We aren't sure
 on the timescale for this yet, but if it takes too long there will be
-other minor releases first. For other updates, watch this blog.
+other minor releases first. For other updates, watch this blog or the
+standard Kivy support channels.
 
 Thanks to all our contributors, and enjoy the new release!
 
