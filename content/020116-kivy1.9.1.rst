@@ -1,0 +1,52 @@
+Kivy 1.9.1 released
+###################
+
+:date: 2016-01-02 13:45
+:tags: kivy, python, release
+:category: kivy
+:slug: kivy_1_9_1_released
+:author: Alexander Taylor
+
+We've just released a new stable version of Kivy, version 1.9.1. You
+can see the changelog on the `mailing list announcement
+<https://groups.google.com/forum/#!topic/kivy-users/7LTIHnRCuG4>`__,
+and download the new version from the `Kivy website
+<http://kivy.org/#download>`__ or via your package manager.
+
+This is mainly a bugfix and tidying release following the major
+version 1.9 last year, but includes many bugfixes, smaller new
+features, and improvements to our surrounding infrastructure across
+almost 1000 new commits from over 70 different contributors.
+
+One major improvement for Windows users is that we now have a fully
+working installation method using pip and wheels for both Kivy and its
+non-python binary dependencies, rather than our older standalone kivy
+distribution. This should make it easy to install Kivy in any existing
+Python installation. OS X distribution has also seen improvement, with
+better support for working with homebrew.
+
+We've also improved app packaging particularly on OS X, with a new
+packaging method that should be easier than pyinstaller (though
+pyinstaller is still supported), a buildozer backend for OS X
+packaging (now buildozer works with Android, iOS *and* OS X!), and
+generally improved and updated `documentation
+<http://kivy.org/docs/guide/packaging-osx.html>`__ for the packaging
+process. The documentation for Windows and Linux packaging has
+similarly been updated, and the new packaging methods and buildozer
+support will hopefully be added for these in the future.
+
+Packaging for Android with `python-for-android
+<http://python-for-android.readthedocs.org/>`__ is not tied to the
+Kivy update schedule in the same way, but has been seeing significant
+improvements and updates in the last few months, including a full
+revamp of the toolchain and support for many new features, which you
+can see in several of the recent previous posts on this blog.
+
+In the future, we're heading towards Kivy 2.0, which we've had in mind
+for a while to be a major release with some big new features and
+potentially removal of some long-deprecated components. We aren't sure
+on the timescale for this yet, but if it takes too long there will be
+other minor releases first. For other updates, watch this blog.
+
+Thanks to all our contributors, and enjoy the new release!
+
