@@ -6,6 +6,9 @@ Kivy 1.9.1 released
 :category: kivy
 :slug: kivy_1_9_1_released
 :author: Alexander Taylor
+         
+.. |nbsp| unicode:: 0xA0 
+   :trim:
 
 We've just released a new stable version of Kivy, version 1.9.1. You
 can see the changelog on the `mailing list announcement
@@ -22,13 +25,13 @@ One major improvement for Windows users is that we now have a fully
 working installation method using pip and wheels for both Kivy and its
 non-python binary dependencies, rather than our older standalone kivy
 distribution. This should make it easy to install Kivy in any existing
-Python installation. OS X distribution has also seen improvement,
+Python installation. OS |nbsp| X distribution has also seen improvement,
 including better support for working with homebrew.
 
-We've also improved app packaging particularly on OS X, with a new
+We've also improved app packaging particularly on OS |nbsp| X, with a new
 packaging method that should be easier than pyinstaller (though
-pyinstaller is still supported), a buildozer backend for OS X
-packaging (now buildozer works with Android, iOS *and* OS X!), and
+pyinstaller is still supported), a buildozer backend for OS |nbsp| X
+packaging (now buildozer works with Android, iOS *and* OS |nbsp| X!), and
 generally improved and updated `documentation
 <http://kivy.org/docs/guide/packaging-osx.html>`__ for the packaging
 process. The documentation for Windows and Linux packaging has
