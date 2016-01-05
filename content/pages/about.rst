@@ -1,9 +1,11 @@
 About
 #####
 
-This site contains my simple blog, containing mainly tutorials for the
-`Kivy <http://kivy.org>`_ graphical framework. I created it after
-making a series of `video tutorials
+This is my blog, focusing on my exploits as a core developer of the
+cross-platform `Kivy graphical framework <http://kivy.org>`_ for
+Python, especially the development of its `python-for-android
+<https://github.com/kivy/python-for-android>`__ build tools. I
+originally created it to host my series of `video tutorials
 <http://www.youtube.com/kivycrashcourse>`_ that turned out to be quite
 popular. Some of the posts here are standalone write-ups of each
 video.
