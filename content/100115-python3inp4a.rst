@@ -64,15 +64,15 @@ Java bootstrap application, which mostly starts a Python script via
 JNI. The script then runs essentially as normal, almost all of the
 Python standard library is present and works fine, and
 python-for-android supports including other modules or non-Python
-dependencies; pure Python modules will mostly work without special
-treatment, though things requiring compilation require a special
+dependencies. Pure Python modules will mostly work without special
+treatment, though things requiring compilation need a special
 recipe. Many common modules such as numpy and sqlalchemy are supported
 this way.  Following its revamp python-for-android is now designed to
-support multiple kinds of java bootstrap, but the main support is for
-GUI apps via Pygame (for Kivy's old Android support) or SDL2 (both for
-Kivy and for anything else that can use it); SDL2 also now does much
-of the heavy lifting of handling events etc itself, via its own
-Android support.
+support multiple kinds of java bootstrap, but the current main support
+is for GUI apps via Pygame (for Kivy's old Android support) or SDL2
+(both for Kivy and for anything else that can use it); SDL2 also now
+does much of the heavy lifting of handling events etc. itself, via its
+own Android support.
 
 The main problems with compiling and including Python are first that
 it must be patched to compile (as Android's libc doesn't
@@ -150,12 +150,12 @@ in the future as the python3 support becomes better integrated, but
 not significantly.
 
 There's also one big change whose importance I'm not sure about; the
-Python 3 mechanism doesn't currently build a local python3 to use as a
+Python 3 mechanism doesn't currently build a local Python 3 to use as a
 hostpython, instead using the system python. This means that you must
-have python3.5 installed locally (and in your $PATH) in order for
+have python3.5 (3.4 may also work) installed locally in order for
 python-for-android to build Python 3 APKs. This will be fixed soon,
-adding a hostpython3 build (to avoid weird bugs with system-specific
-differences), but you need to bear it in mind for now.
+adding a hostpython3 recipe to avoid weird bugs with system-specific
+differences, but you need to bear it in mind for now.
 
 
 Future work
