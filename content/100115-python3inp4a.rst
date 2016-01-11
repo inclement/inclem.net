@@ -144,11 +144,11 @@ everything else should work automatically.
 
 To build for Python 3, add the ``python3crystax`` recipe to the
 requirements option,
-e.g. :code:`--requirements=python3crystax,kivy`. It should work
-automatically with all existing recipes (though at this stage there
-may be bugs or problems with a few). The exact syntax may change
-in the future as the python3 support becomes better integrated, but
-not significantly.
+e.g. :code:`--requirements=python3crystax,kivy`. It should mostly work
+automatically with existing recipes, though at this stage there
+may be bugs or problems with a few, and some will need
+modification. The exact syntax above may also change in the future as
+the Python 3 support becomes better integrated, but not significantly.
 
 There's also one big change whose importance I'm not sure about; the
 Python 3 mechanism doesn't currently build a local Python 3 to use as a
