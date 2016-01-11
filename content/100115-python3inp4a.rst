@@ -1,6 +1,6 @@
-
+ 
 python-for-android now supports Python 3 APKs
-############################################
+#############################################
 
 :date: 2016-01-10 15:00
 :tags: kivy, python, android
