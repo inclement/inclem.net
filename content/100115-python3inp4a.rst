@@ -180,8 +180,8 @@ old toolchain will be used to, like the splash screen image and at
 least one Kivy-specific function. These too are being actively worked
 on, especially as more people start to move their apps to SDL2.
 
-I've also phrased this as Python 2 (built locally) vs Python 3 (from
-CrystaX), but actually CrystaX also supports Python 2.7 and I hope to
+I've also phrased this as Python 2 built locally vs Python 3 from
+CrystaX, but actually CrystaX also supports Python 2.7 and I hope to
 add this option in the near future. As discussed in the technical
 details, it also should absolutely be possible to have a local Python 3
 build, which I'd like to eventually come back to.
