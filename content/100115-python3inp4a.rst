@@ -13,10 +13,11 @@ It's been a long time coming, but we can finally make the
 announcement... python-for-android now supports Python 3 Android apps!
 This naturally includes Kivy, but also should work for anything else
 you can package with python-for-android, such as apps made with
-PySDL2. Using Python 3 remains experimental for now, but there should
-be no extra application requirements (beyond actually being written
-for Python 3), and remaining issues and optimisations will continue to
-be worked on.
+PySDL2. Using Python 3 remains experimental for now, it works but
+doesn't yet perform all possible optimisations and hasn't been as
+widely tested as Python 2. However, there should be no extra
+application requirements (beyond actually being written for Python 3),
+and the remaining issues and optimisations are being worked on. 
 
 
 Overview
