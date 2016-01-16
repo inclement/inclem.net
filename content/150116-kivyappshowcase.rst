@@ -17,7 +17,7 @@ resources for these kinds of question are existing apps, and in this
 post I'll give a quick impression of three of my favourites. This is
 obviously highly subjective, but I'm focusing in particular on
 features of technical interest, apps that push Kivy beyond what's
-normal to show what it capable of.
+normal to show what it is capable of.
 
 If you're interested in other examples, there's a fairly extensive
 (but far from exhaustive) list on the `Kivy wiki
