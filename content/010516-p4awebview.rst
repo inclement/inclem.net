@@ -2,7 +2,7 @@
 Android apps with Python, Flask and a WebView
 #############################################
 
-:date: 2016-05-01 22:00
+:date: 2016-05-07 18:00
 :tags: kivy, python, android
 :category: kivy
 :slug: python_for_android_webview_support
