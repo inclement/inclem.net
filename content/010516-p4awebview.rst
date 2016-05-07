@@ -9,13 +9,14 @@ Android apps with Python, Flask and a WebView
 :author: Alexander Taylor
          
 
-python-for-android has just gained support for a new webview app
-interface, an alternative to the existing SDL2 or Pygame
-backends. Under this mode of operation the app gui consists entirely
-of a browser window directed to open a webpage on localhost, and the
-Python backend can then run any web framework (I tested with Flask,
-but others like Bottle or even Django should work), serving this
-website and managing the app backend.
+`python-for-android <https://github.com/kivy/python-for-android>`__
+has just gained support for a new webview app interface, an
+alternative to the existing SDL2 or Pygame backends. Under this mode
+of operation the app gui consists entirely of a browser window
+directed to open a webpage on localhost, and the Python backend can
+then run any web framework (I tested with Flask, but others like
+Bottle or even Django should work), serving this website and managing
+the app backend.
 
 .. figure:: {filename}/media/flask_on_android.png
    :alt: Example Flask app running on Android
