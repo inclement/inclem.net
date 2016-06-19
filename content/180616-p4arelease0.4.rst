@@ -39,7 +39,7 @@ As of this release, you can now install python-for-android with simply:
 
 .. code-block:: bash
 
-    pip install pythonforandroid
+    pip install python-for-android
     
 For full instructions and further information, see the
 `python-for-android documentation
