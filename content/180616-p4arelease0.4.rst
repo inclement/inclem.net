@@ -35,7 +35,9 @@ next release include bringing the python3 build up to full
 functionality and stability, and some argument restructuring to make
 command line usage simpler and clearer.
 
-As of this release, you can now install python-for-android with simply::
+As of this release, you can now install python-for-android with simply:
+
+.. code-block:: bash
 
     pip install pythonforandroid
     
