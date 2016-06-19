@@ -31,8 +31,9 @@ contributors who have made this possible!
 
 From now on we intend to move to regular versioned releases rather
 than the previous rolling master branch. Short term targets for the
-next release include improvements to the python3 build and some
-argument restructuring to make command line usage simpler and clearer.
+next release include bringing the python3 build up to full
+functionality and stability, and some argument restructuring to make
+command line usage simpler and clearer.
 
 As of this release, you can now install python-for-android with simply::
 
