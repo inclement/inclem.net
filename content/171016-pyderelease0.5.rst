@@ -1,18 +1,18 @@
-PyDE interpreter: A Python interpreter GUI for Android, written in Python
+Pyonic interpreter: A Python interpreter GUI for Android, written in Python
 #########################################################################
 
 :date: 2016-10-17 23:06
 :tags: python, android, kivy
 :category: kivy
-:slug: pyde_interpreter_0_5_released
+:slug: pyonic_interpreter_0_5_released
 :author: Alexander Taylor
 
-I've just released a new app, `PyDE Python 2 interpreter <>`__.  PyDE
+I've just released a new app, `Pyonic Python 2 interpreter <>`__.  Pyonic
 interpreter is a Python interpreter app for Android, providing a
 convenient gui adapted to mobile devices. The app itself is written
 entirely in Python using `Kivy <https://kivy.org/#home>`__.
 
-.. figure:: {filename}/media/pyde_android_small.png
+.. figure:: {filename}/media/pyonic_android_small.png
    :alt: Screenshot of the interpreter app.
    :align: center
 
@@ -23,7 +23,12 @@ better than I expected, Kivy handled almost everything perfectly - I
 actually underestimated its maturity here! As part of the project,
 I've tried to round a number of corners that Kivy apps sometimes tend
 to have, creating an app that (hopefully) behaves smoothly in all
-situations.
+situations. Within the interpreter, all of the standard library is
+available, and it's possible to interrupt execution (equivalent to the
+normal ctrl+c behaviour) or to restart the interpreter process. No
+external modules are included yet except those necessary for the app
+to run, but I'll probably include some major ones like numpy in a
+future release. 
 
 This has also been a great stimulus for working on `python-for-android
 <http://python-for-android.readthedocs.io/en/latest/>`__; I've fixed
@@ -31,7 +36,7 @@ a number of bugs, added several new features, and improved
 documentation in several places, just thanks to needing these things
 in a real app.
 
-On a technical level, PyDE interpreter runs under Python 2, consisting
+On a technical level, Pyonic interpreter runs under Python 2, consisting
 of the app itself and a background Service running a second instance
 of the interpreter. I'll be working on Python 3 support next, in fact
 I originally wrote the app using Python 3 but switched to Python 2 due
@@ -46,19 +51,20 @@ normal Python interpreter. Doing things this way is quite awkward and
 feels like reinventing the wheel, although I'm not sure how to better
 achieve the same thing. An alternative might be to just call the
 python binary in a subprocess and manipulate its stdin/stdout - I'll
-be looking into this option, but it may need some small changes in
-python-for-android, and I'll need to check if/how android imposes any
-limits on subprocessing.
+be looking into this option, but it doesn't eliminate the need for
+message passing and may need some small changes in python-for-android,
+assuming also that android doesn't impose any important limits on
+subprocessing.
 
 In the short term future, I expect to work to release a Python 3
 version, and then to investigate some of these technical
 questions. I'd like to look into iOS support, as everything should
 work almost the same way there, but I don't have the hardware or
 developer mempership for iOS development; if anyone would like to try
-it, let me know. Longer term, PyDE interpreter is hopefully the first
-step in creating a larger suite of mobile Python tools, in tandem with
+it, let me know. Longer term, Pyonic interpreter is an experimental step
+towards creating a larger suite of mobile Python tools, in tandem with
 using this experience to improve python-for-android. There are many
 features to be added directly to the interpreter, but I'd also like to
 add surrounding tools including a full code editor, the ability to use
-pip to install other modules locally, and user-defined GUI
-functionality via additional Kivy activities.
+pip to install other modules locally, and GUI support via additional
+Kivy activities.
