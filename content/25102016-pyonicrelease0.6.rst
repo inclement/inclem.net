@@ -78,3 +78,5 @@ other modules locally, and GUI support via additional Kivy activities.
    :alt: Screenshot of the settings screen in the development version
          of Pyonic interpreter.
    :align: center
+
+   Settings screen in development to appear in the next release.
