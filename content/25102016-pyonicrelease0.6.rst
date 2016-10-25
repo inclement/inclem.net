@@ -16,6 +16,7 @@ written entirely in Python using `Kivy <https://kivy.org/#home>`__.
 .. figure:: {filename}/media/pyonic_android_small.png
    :alt: Screenshot of the interpreter app.
    :align: center
+   :width: 200px
 
 I put this together because I've always thought it would be nice to
 have a Python interpreter app that is itself written in Python, and in
@@ -78,5 +79,6 @@ other modules locally, and GUI support via additional Kivy activities.
    :alt: Screenshot of the settings screen in the development version
          of Pyonic interpreter.
    :align: center
+   :width: 200px
 
    Settings screen in development to appear in the next release.
