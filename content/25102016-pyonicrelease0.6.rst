@@ -13,10 +13,10 @@ Pyonic interpreter is a Python interpreter app for Android, providing
 a convenient interface adapted to mobile devices. The app itself is
 written entirely in Python using `Kivy <https://kivy.org/#home>`__.
 
-.. figure:: {filename}/media/pyonic_android_small.png
+.. figure:: {filename}/media/pyonic_0_5_images.png
    :alt: Screenshot of the interpreter app.
    :align: center
-   :width: 200px
+   :width: 700px
 
 I put this together because I've always thought it would be nice to
 have a Python interpreter app that is itself written in Python, and in
