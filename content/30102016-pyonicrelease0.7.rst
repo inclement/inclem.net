@@ -9,7 +9,7 @@ Pyonic interpreter 0.7 released: Python for Android, now supports Python 3
 
 Pyonic interpreter 0.7 has just been released. There are now two
 versions on Google Play, one `for Python 2.7
-<https://play.google.com/store/apps/details?id=net.inclem.pyonicinterpreter`__
+<https://play.google.com/store/apps/details?id=net.inclem.pyonicinterpreter>`__
 and one `for Python 3.5
 <https://play.google.com/store/apps/details?id=net.inclem.pyonicinterpreter3>`__. The
 APKs are also available directly `from Github
