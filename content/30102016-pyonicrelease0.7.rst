@@ -22,8 +22,9 @@ gui arrangement.
    :align: center
    :width: 700px
 
-The app uses exactly the same code under both Python versions. This
-code is open source and available online `on Github
+The app is written in Python using Kivy, and uses exactly the same
+code under both Python versions. This code is open source and
+available online `on Github
 <https://github.com/inclement/Pyonic-interpreter>`__.
 
 This release includes most of the short term improvements I had
