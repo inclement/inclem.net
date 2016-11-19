@@ -2,7 +2,7 @@ Pyonic interpreter 0.7 released: Python for Android, now supports Python 3
 ##########################################################################
 
 :date: 2016-11-05 10:30
-:tags: python, android, kivy
+:tags: python, android, kivy, pyonic
 :category: kivy
 :slug: pyonic_interpreter_0_7_released
 :author: Alexander Taylor

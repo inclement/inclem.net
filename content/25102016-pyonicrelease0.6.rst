@@ -2,7 +2,7 @@ Pyonic interpreter: a Python interpreter GUI for Android, written in Python
 ###########################################################################
 
 :date: 2016-10-25 20:14
-:tags: python, android, kivy
+:tags: python, android, kivy, pyonic
 :category: kivy
 :slug: pyonic_interpreter_0_6_released
 :author: Alexander Taylor
