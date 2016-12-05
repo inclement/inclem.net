@@ -13,7 +13,8 @@ Play for `Python 2.7
 or `Python 3.5
 <https://play.google.com/store/apps/details?id=net.inclem.pyonicinterpreter3>`__,
 or download the APKs directly `from Github
-<https://github.com/inclement/Pyonic-interpreter/releases/tag/v1.0>`__.
+<https://github.com/inclement/Pyonic-interpreter/releases/tag/v1.0.1>`__
+(update: changed to v1.0.1 following a small bugfix).
 
 The primary change in this release is that both APKs are about 25%
 smaller than before, thanks to optimisations in the Python
