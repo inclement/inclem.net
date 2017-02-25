@@ -32,8 +32,8 @@ The main change to the app this release is support for the ``input``
 and (in Python 2) ``raw_input`` functions. These would previously
 crash as the interpreter isn't really being run in a shell, so the way
 they try to take input doesn't work. They are now overridden with new
-replacements, which should hopefully behave the same way as the
-originals are supposed to but via a more convenient popup gui for the
+replacements, which should hopefully behave roughly the same way as the
+originals are supposed to, but via a more convenient popup gui for the
 text to be entered.
 
 I'm still working on file editing and other Python management
