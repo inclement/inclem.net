@@ -13,7 +13,7 @@ from Google Play, now for `Python 2.7
 or `Python 3.6
 <https://play.google.com/store/apps/details?id=net.inclem.pyonicinterpreter3>`__.
 The APKs can also de bownloaded directly `from Github
-<https://github.com/inclement/Pyonic-interpreter/releases/tag/v.1.2.0>`__
+<https://github.com/inclement/Pyonic-interpreter/releases/tag/v1.2.0>`__
 (where the `source code
 <https://github.com/inclement/Pyonic-interpreter>`__ is also
 available).
