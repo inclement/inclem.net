@@ -7,8 +7,8 @@ Pyonic interpreter 1.3 released: Adds support for loading and executing files
 :slug: pyonic_interpreter_1_3_0released
 :author: Alexander Taylor
 
-I've just released Pyonic interpreter 1.3. As usual, you can get it
-from Google Play, now for `Python 2.7
+I've just released Pyonic interpreter 1.3. As usual you can download it
+from Google Play, for `Python 2.7
 <https://play.google.com/store/apps/details?id=net.inclem.pyonicinterpreter>`__
 or `Python 3.6
 <https://play.google.com/store/apps/details?id=net.inclem.pyonicinterpreter3>`__.
