@@ -1,0 +1,34 @@
+Kivy 1.10 released
+###################
+
+:date: 2016-05-07 18:00
+:tags: kivy, python, release
+:category: kivy
+:slug: kivy_1_10_0_released
+:author: Alexander Taylor
+         
+.. |nbsp| unicode:: 0xA0 
+   :trim:
+
+We're pleased to announce a new stable version of Kivy, version 1.10. You
+can see the full detailed changelog on the `mailing list announcement
+<https://groups.google.com/forum/#!topic/kivy-users/2zusmq8NXPE>`__,
+and download the new version from the `Kivy website
+<http://kivy.org/#download>`__ or via your package manager.
+
+This release includes many new features. Highlights include:
+
+- Python 3.5/3.6+ support on Windows. Support for these versions was
+  previously available in nightly builds due to changes in the
+  compiler toolchain, but official wheels are now available.
+- A new RecycleView widget replaces the old ListView. It is 
+  faster and more efficient, but with a simpler API.
+- Graphics backend improvements including ANGLE support on Windows and
+  a mock backend for headless Kivy.
+- Several new Window options when using the SDL2 backend, for much
+  improved cross-platform behaviour.
+- Improvements in Clock performance.
+
+There are also many other new features and bugfixes, spread across
+over 1500 commits from almost 100 different developers. Thanks to everyone who
+contributed!
