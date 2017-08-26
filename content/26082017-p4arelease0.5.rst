@@ -10,7 +10,7 @@ python-for-android 0.5 released
          
 We've just officially released `python-for-android 0.5
 <https://github.com/kivy/python-for-android>`__. The new version can
-be downloaded by pypi, or will be used by buildozer automatically in
+be downloaded via pip, or will be used by buildozer automatically in
 new installations.  This release contains about 300 commits from
 almost 40 different contributors. Thanks to everyone involved!
 
