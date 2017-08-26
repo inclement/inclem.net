@@ -1,0 +1,33 @@
+
+python-for-android 0.5 released
+###############################
+
+:date: 2017-08-26 20:54
+:tags: python, android, kivy
+:category: kivy
+:slug: python_for_android_0_5_released
+:author: Alexander Taylor
+         
+We've just officially released `python-for-android 0.5
+<https://github.com/kivy/python-for-android>`__. The new version can
+be downloaded by pypi, or will be used by buildozer automatically in
+new installations.  This release contains about 300 commits from
+almost 40 different contributors. Thanks to everyone involved!
+
+`python-for-android
+<http://python-for-android.readthedocs.io/en/latest/>`__ is a
+packaging tool for turning Python scripts and apps into Android
+APKs. It was originally created for use with the `Kivy graphical
+framework <https://kivy.org/#home>`__, but now supports multiple kinds
+of Python app including Kivy, PySDL2, a webview interface with Flask
+or other webserver backend, plain Python scripts without a GUI, or other
+possibilities such as Python builds for use in other applications.
+
+This release contains many fixes and improvements to all parts of the
+toolchain. Now that these have been released as stable, we intend to
+move quickly to make some larger improvements including supporting
+gradle builds, and better support for Python 3 in some recipes.
+
+For full instructions and further information, see the
+`python-for-android documentation
+<https://python-for-android.readthedocs.io/en/latest/>`__.
