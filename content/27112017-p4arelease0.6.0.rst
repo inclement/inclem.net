@@ -30,6 +30,12 @@ versions of the Android SDK and NDK. On the SDK side this means
 python-for-android now uses gradle if available, although this doesn't
 require any changes to the configuration on the user side.
 
+For the next release I intend to focus work on checking and updating
+python-for-android's build recipes to make sure they are all properly
+compatible with one another and with different build
+configurations. I'd also like to improve our automated testing, in
+order to more easily detect and fix issues as they appear.
+
 For full instructions and further information, see the
 `python-for-android documentation
 <https://python-for-android.readthedocs.io/en/latest/>`__.
