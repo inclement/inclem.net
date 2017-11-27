@@ -11,7 +11,7 @@ python-for-android 0.6 released
 We've just officially released `python-for-android 0.6
 <https://github.com/kivy/python-for-android>`__. The new version can
 be downloaded via pip, or will be used by buildozer automatically in
-new installations.  This release contains about 130 commits from
+new installations.  This release contains about 130 new commits from
 14 different contributors. Thanks to everyone involved!
 
 `python-for-android
@@ -23,10 +23,11 @@ of Python app including Kivy, PySDL2, a webview interface with Flask
 or other webserver backend, plain Python scripts without a GUI, or other
 possibilities such as Python builds for use in other applications.
 
-This release includes some relatively major changes and
-improvements. In particular, python-for-android should now work with
-all recent versions of the Android SDK and NDK. On the SDK side this
-means python-for-android now uses gradle, although this doesn't
+As planned following the release of python-for-android 0.5, the new
+version includes some relatively major changes and improvements. In
+particular, python-for-android should now work with all recent
+versions of the Android SDK and NDK. On the SDK side this means
+python-for-android now uses gradle if available, although this doesn't
 require any changes to the configuration on the user side.
 
 For full instructions and further information, see the
