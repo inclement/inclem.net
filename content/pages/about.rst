@@ -1,14 +1,19 @@
 About
 #####
 
-This is my blog, focusing on my exploits as a core developer of the
-cross-platform `Kivy graphical framework <http://kivy.org>`_ for
-Python, especially the development of its `python-for-android
-<https://github.com/kivy/python-for-android>`__ build tools. I
-originally created it to host my series of `video tutorials
+I am a scientific researcher currently based in South West England,
+with a particular interest in scientific computation and software
+development.
+
+This is my blog about my personal projects and interests, especially
+as a core developer of the cross-platform `Kivy graphical framework
+<http://kivy.org>`_ for Python. I'm particularly involved in
+maintaining the `python-for-android
+<https://github.com/kivy/python-for-android>`__ APK packaging tool,
+which supports multiple types of Python apps (not just Kivy!). I
+originally made this site to host my series of `video tutorials
 <http://www.youtube.com/kivycrashcourse>`_ that turned out to be quite
-popular. Some of the posts here are standalone write-ups of each
-video.
+popular.
 
 These pages are constructed using `Pelican
 <http://blog.getpelican.com/>`_, a static website generator for
@@ -24,6 +29,6 @@ can find my modifications `here
 Contact
 =======
 
-My email address is `alexanderjohntaylor@gmail.com
-<mailto:alexanderjohntaylor@gmail.com>`_. Emails with
+My email address is `alexander@inclem.net
+<mailto:alexander@inclem.net>`_. Emails with
 questions/comments/criticisms are welcomed.
