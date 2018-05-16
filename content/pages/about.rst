@@ -1,5 +1,7 @@
-About Me
-########
+About
+#####
+
+:slug: about
 
 I am a scientific researcher currently based in South West England,
 with a particular interest in scientific problem solving, numerical
