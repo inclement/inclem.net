@@ -6,7 +6,7 @@ with a particular interest in scientific problem solving, numerical
 computation and software engineering.
 
 My CV can be found `here
-<{filename}/media/alexander_taylor_cv.pdf>`__. I can be contacted at
+<{filename}/media/alexander_taylor_cv.pdf>`__. Contact me at
 `alexander@inclem.net <mailto:alexander@inclem.net>`_.
 
 I am currently employed as a Postdoctoral Research Associate at the
