@@ -1,8 +1,6 @@
 About
 #####
 
-:slug: about
-
 I am a scientific researcher currently based in South West England,
 with a particular interest in scientific problem solving, numerical
 computation and software engineering.
@@ -14,7 +12,7 @@ I am currently employed as a Postdoctoral Research Associate at the
 University of Bristol. My publications and other activities include:
 
 Scientific Publications
-=======================
+~~~~~~~~~~~~~~~~~~~~~~~
 
 **2018**: Universal statistics of vortex tangles in three-dimensional random waves
 ----------------------------------------------------------------------------------
@@ -59,7 +57,7 @@ Cover image for *J Phys A* **47** (46).
 
 
 Conferences and Presentations
-=============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **2017** APS March Meeting, New Orleans, USA
 --------------------------------------------
@@ -162,8 +160,9 @@ Poster and short presentation: *Knots in random fields*
 Invited short presentation: *Knots in random fields*
 
 
+
 This site
-#########
+~~~~~~~~~
 
 This is my blog about my personal projects and interests, especially
 as a core developer of the cross-platform `Kivy graphical framework
@@ -187,7 +186,7 @@ can find my modifications `here
 
 
 Contact
-=======
+~~~~~~~
 
 My email address is `alexander@inclem.net
 <mailto:alexander@inclem.net>`_. Communications are welcomed.
