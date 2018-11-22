@@ -1,5 +1,5 @@
-Pyonic interpreter 1.1 released: Python 2/3 interpreter for Android, now with autocompletion
-############################################################################################
+Cached and templated files in python-for-android builds
+#######################################################
 
 :date: 2018-11-22 22:00
 :tags: python, android, kivy
