@@ -42,7 +42,7 @@ Build directories
 =================
 
 Most of the individual python-for-android recipes are built in
-individual build directories. The location of these depents on the OS:
+separate build directories. The location of these depends on the OS:
 on Linux the default is ``~/.local/share/python-for-android``,
 especially ``~/.local/share/python-for-android/other_builds``. When
 you build a recipe, it is copied here for the build to be run.  These
@@ -65,7 +65,7 @@ Linux, their default location is
 ``~/.local/share/python-for-android/dists``.
 
 Every time you build an APK using ``p4a apk ...``, this essentially
-runs gradle from appropriate dist directory (i.e. the one with the
+runs gradle from an appropriate dist directory (i.e. the one with the
 recipes you wanted). At this point, nothing new is built or copied
 from the build directories, so changes you make to p4a's recipes or
 build directories have no effect on the output. However, templated
