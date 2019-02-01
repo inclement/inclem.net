@@ -15,7 +15,7 @@ issues, but for most of us the first time we've ever met - even after
 years of collaboration!
 
 .. figure:: {filename}/media/hackathon-2019-02-01.jpg
-   :alt: From left to right: Peter Badida (KeyWeeUsr), Gabriel Gettier
+   :alt: From left to right: Peter Badida (KeyWeeUsr), Gabriel Pettier
          (tshirtman), Mathieu Virbel (tito), Alexander Taylor
          (inclement) and Andre Miras (AndreMiras)
    :align: center
