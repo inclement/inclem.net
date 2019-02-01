@@ -21,7 +21,7 @@ years of collaboration!
    :align: center
 
 From left to right the attendees are Peter Badida (KeyWeeUsr), Gabriel
-Gettier (tshirtman), Mathieu Virbel (tito), Alexander Taylor
+Pettier (tshirtman), Mathieu Virbel (tito), Alexander Taylor
 (inclement) and Andre Miras (AndreMiras).
 
 We used this opportunity to make amazing progress on a range of Kivy
