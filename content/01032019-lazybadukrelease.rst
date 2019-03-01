@@ -10,8 +10,7 @@ Lazy Baduk: Leela Zero analysis tool for Android
 
 A few days ago I released `Lazy Baduk
 <https://github.com/inclement/LazyBaduk>`__, a Leela Zero analysis
-tool for Android (although it also runs on the desktop). You can
-download it `from Google Play
+tool for Android. You can download it `from Google Play
 <https://play.google.com/store/apps/details?id=net.inclem.lazybaduk>`__,
 or directly from the Github release (see below).
 
@@ -47,12 +46,14 @@ simultaneously if you want:
 Lazy Baduk's source is available `on Github
 <https://github.com/inclement/LazyBaduk>`__ if anyone is interested,
 although it's a messy combination of the old code for my SGF editor
-noGo and new code to interface with Leela Zero.. It works by including
-a version of Leela Zero compiled for arm. It runs only on the CPU,
-although GPU support might be possible in the future for some
-devices. Leela Zero does use as much CPU power as it can, which can
-drain the battery very fast - consider charging your phone while using
-the app!
+noGo and new code to interface with Leela Zero. The app is written in
+Python using the `Kivy graphical framework
+<https://kivy.org/#home>`__, so it can also be run on the desktop. It
+works by including a version of Leela Zero compiled for ARM, running
+only on the CPU although GPU support might be possible in the future
+for some devices. Leela Zero does use as much CPU power as it can,
+which can drain the battery very fast - consider charging your phone
+while using the app!
 
 If this is interesting to you, you might also be interested in `lizzie
 <https://github.com/featurecat/lizzie>`__ on the desktop. Or on
