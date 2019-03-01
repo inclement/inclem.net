@@ -10,7 +10,10 @@ Lazy Baduk: Leela Zero analysis tool for Android
 
 A few days ago I released `Lazy Baduk
 <https://github.com/inclement/LazyBaduk>`__, a Leela Zero analysis
-tool for Android (although it also runs on the desktop).
+tool for Android (although it also runs on the desktop). You can
+download it `from Google Play
+<https://play.google.com/store/apps/details?id=net.inclem.lazybaduk>`__,
+or directly from the Github release (see below).
 
 .. figure:: {filename}/media/lazy_baduk_screenshot_small.png
    :alt: Example Lazy Baduk usage showing Leela Zero analysis.
