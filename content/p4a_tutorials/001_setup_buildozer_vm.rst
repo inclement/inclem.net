@@ -141,15 +141,17 @@ needs to run. Run the following command to do so, and enter your
 user's password if prompted:
 
 .. code-block:: bash
-    sudo apt-get install python3-pip openjdk-8-jdk autoconf libtool python3-venv
+
+   sudo apt-get install python3-pip openjdk-8-jdk autoconf libtool python3-venv
 
 That should give us everything we need for a basic app, so we can go
 ahead and install buildozer::
 
 .. code-block:: bash
-    python3 -m venv buildozer-env
-    source buildozer-env/bin/activate
-    pip install buildozer cython
+
+   python3 -m venv buildozer-env
+   source buildozer-env/bin/activate
+   pip install buildozer cython
 
 Note that we installed cython as well, this is also required for
 building the APK.
@@ -173,7 +175,8 @@ your application code. Navigate to this folder in the terminal (``cd
 app_dir``) and run::
 
 .. code-block:: bash
-  buildozer init
+
+    buildozer init
 
 This will create a buildozer.spec file alongside your main.py:
 
@@ -199,7 +202,8 @@ We're now ready to actually build the app into an APK file. Start the
 process with::
 
 .. code-block:: bash
-  buildozer -v android debug
+
+    buildozer -v android debug
 
 The ``-v`` option asks for verbose output. This is recommended so that
 you can keep an eye on what's happening - the details aren't too
