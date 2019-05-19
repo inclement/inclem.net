@@ -34,7 +34,7 @@ Once you have downloaded the Lubuntu iso file, start VirtualBox and
 press ``New`` to create a new virtual machine. You'll see a dialog
 like the following:
 
-.. figure:: {filename}/setup_buildozer_vm/001_new_vm_dialog.png
+.. figure:: {filename}/media/setup_buildozer_vm/001_new_vm_dialog.png
     :alt: New VM dialog
     :align: center
 
@@ -42,7 +42,7 @@ Fill in the other options as shown in the image. It's fine to set a
 larger memory size if you have enough available, or less may also work
 fine. Then press ``Create`` to continue.
 
-.. figure:: {filename}/setup_buildozer_vm/002_VM_memory.png
+.. figure:: {filename}/media/setup_buildozer_vm/002_VM_memory.png
     :alt: Disk image creation dialog
     :align: center
 
@@ -54,7 +54,7 @@ Now, select your new VM and click ``Start`` in the main VirtualBox
 GUI. You should be prompted to select a virtual optical disk to boot
 from:
 
-.. figure:: {filename}/setup_buildozer_vm/003_load_lubuntu.png
+.. figure:: {filename}/media/setup_buildozer_vm/003_load_lubuntu.png
     :alt: Choose iso to boot
     :align: center
 
@@ -62,13 +62,13 @@ Navigate to your Lubuntu 18.04 iso downloaded earlier, as shown, and
 press ``Start`` to continue. The first screen you see should look
 something like the following:
 
-.. figure:: {filename}/setup_buildozer_vm/004_select_language.png
+.. figure:: {filename}/media/setup_buildozer_vm/004_select_language.png
     :alt: Select language
     :align: center
 
 Select your language to see the boot menu:
 
-.. figure:: {filename}/setup_buildozer_vm/005_install_lubuntu.png
+.. figure:: {filename}/media/setup_buildozer_vm/005_install_lubuntu.png
     :alt: Choose boot option
     :align: center
 
@@ -83,14 +83,14 @@ options if you prefer.
 
 The fourth screen will ask what kind of install to use, as shown:
 
-.. figure:: {filename}/setup_buildozer_vm/006_normal_installation_and_download_updates.png
+.. figure:: {filename}/media/setup_buildozer_vm/006_normal_installation_and_download_updates.png
     :alt: Choose install type
     :align: center
 
 The options shown above should be the defaults, and are what you want
 to use, so go ahead and continue.
 
-.. figure:: {filename}/setup_buildozer_vm/007_erase_disk_and_install.png
+.. figure:: {filename}/media/setup_buildozer_vm/007_erase_disk_and_install.png
     :alt: Choose partitioning options
     :align: center
 
@@ -101,7 +101,7 @@ affect your host operating system.
 Click through again, and you'll eventually reach the user creation
 screen. It doesn't matter what your username is, I used ``kivyuser``:
 
-.. figure:: {filename}/setup_buildozer_vm/008_create_user.png
+.. figure:: {filename}/media/setup_buildozer_vm/008_create_user.png
     :alt: User creation dialog
     :align: center
 
@@ -110,7 +110,7 @@ more questions, but eventually will just have to wait for the
 installation to complete. This shouldn't take too long. You'll be
 prompted to "Restart Now", which you should go ahead and do.
 
-.. figure:: {filename}/setup_buildozer_vm/009_restart_now.png
+.. figure:: {filename}/media/setup_buildozer_vm/009_restart_now.png
     :alt: Restart Now screen
     :align: center
 
@@ -122,7 +122,7 @@ congratulations, your virtual machine is ready to use! Enter your
 username and password, and proceed to the next section of
 instructions.
 
-.. figure:: {filename}/setup_buildozer_vm/009_1_login_screen.png
+.. figure:: {filename}/media/setup_buildozer_vm/009_1_login_screen.png
     :alt: Login screen
     :align: center
 
@@ -132,7 +132,7 @@ Setting up buildozer
 We can now go ahead and set up buildozer ready to build your app. Open
 an LXTerminal as below:
 
-.. figure:: {filename}/setup_buildozer_vm/010_open_LXTerminal.png
+.. figure:: {filename}/media/setup_buildozer_vm/010_open_LXTerminal.png
     :alt: LXTerminal location in menu
     :align: center
 
@@ -180,14 +180,14 @@ app_dir``) and run::
 
 This will create a buildozer.spec file alongside your main.py:
 
-.. figure:: {filename}/setup_buildozer_vm/011_terminal_in_app_dir.png
+.. figure:: {filename}/media/setup_buildozer_vm/011_terminal_in_app_dir.png
     :alt: Creating buildozer.spec
     :align: center
 
 Edit the buildozer.spec to set any options you like. In this example
 I've changed only the title and pacakge.name options:
 
-.. figure:: {filename}/setup_buildozer_vm/012_edit_buildozer_spec.png
+.. figure:: {filename}/media/setup_buildozer_vm/012_edit_buildozer_spec.png
     :alt: Editing buildozer.spec
     :align: center
 
@@ -216,7 +216,7 @@ a while.
 At some point you'll be asked to accept the Android SDK license
 agreement, which is printed for you as in the following image:
 
-.. figure:: {filename}/setup_buildozer_vm/014_license_agreement.png
+.. figure:: {filename}/media/setup_buildozer_vm/014_license_agreement.png
     :alt: SDK license agreement
     :align: center
 
@@ -235,7 +235,7 @@ need re-packaging.
 Eventually the build will complete, you'll see a screen like the
 following:
 
-.. figure:: {filename}/setup_buildozer_vm/015_build_complete.png
+.. figure:: {filename}/media/setup_buildozer_vm/015_build_complete.png
     :alt: Build complete
     :align: center
 
