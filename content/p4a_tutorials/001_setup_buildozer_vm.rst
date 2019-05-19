@@ -140,14 +140,14 @@ We now have to run a few commands to install everything buildozer
 needs to run. Run the following command to do so, and enter your
 user's password if prompted:
 
-.. code-block::
+.. code-block:: bash
 
    sudo apt-get install python3-pip openjdk-8-jdk autoconf libtool python3-venv
 
 That should give us everything we need for a basic app, so we can go
-ahead and install buildozer::
+ahead and install buildozer:
 
-.. code-block::
+.. code-block:: bash
 
    python3 -m venv buildozer-env
    source buildozer-env/bin/activate
@@ -172,9 +172,9 @@ a shared folder.
 In the following instructions I'll assume you've created a folder
 named ``app_dir`` and placed a ``main.py`` file inside it containing
 your application code. Navigate to this folder in the terminal (``cd
-app_dir``) and run::
+app_dir``) and run:
 
-.. code-block::
+.. code-block:: bash
 
    buildozer init
 
@@ -199,11 +199,11 @@ Running buildozer
 =================
 
 We're now ready to actually build the app into an APK file. Start the
-process with::
+process with:
 
-.. code-block::
+.. code-block:: bash
 
-    buildozer -v android debug
+   buildozer -v android debug
 
 The ``-v`` option asks for verbose output. This is recommended so that
 you can keep an eye on what's happening - the details aren't too
