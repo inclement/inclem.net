@@ -17,6 +17,7 @@ contains 198 commits from 31 different contributors. Many thanks to
 everyone involved.
 
 Major changes in this release include:
+
 - Added support for running your setup.py when packaging your app,
   enabling your code to be installed as a module in the on-device
   Python environment. This also makes it easy to build Cython or other
