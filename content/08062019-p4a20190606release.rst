@@ -46,10 +46,10 @@ Release model
 In this release we've transitioned to a calendar-based version
 system. Future releases will continue to be of the form
 YYYY.MM.DD. We're initially targeting one release every four
-weeks. This scheme is represent to support how python-for-android is
-best used: many changes are driven by updates in the Android ecosystem
-and build toolchain, and in practice it's usually best to be working
-from the most recent possible python-for-android release.
+weeks. This scheme represents how python-for-android is normally best
+used: many changes are driven by updates in the Android ecosystem and
+build toolchain, and in practice it's usually best to be working from
+the most recent possible python-for-android release.
 
 This has been made possible by the hard work of various contributors,
 setting up and continuing to improve python-for-android's suite of
