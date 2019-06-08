@@ -1,0 +1,94 @@
+An update on python-for-android: v2019.06.06 released and future plans
+######################################################################
+
+:date: 2019-06-08 16:00
+:tags: python, android, kivy
+:category: kivy
+:slug: an_update_on_python_for_android
+:author: Alexander Taylor
+
+`python-for-android <https://github.com/kivy/python-for-android>`__ is
+a packaging tool for Python apps on Android. You can create your own
+Python distribution including the modules and dependencies you want,
+and bundle it in an APK along with your own code.
+
+python-for-android 2019.06.06 has just been released! This release
+contains 198 commits from 31 different contributors. Many thanks to
+everyone involved.
+
+Major changes in this release include:
+- Added support for running your setup.py when packaging your app,
+  enabling your code to be installed as a module in the on-device
+  Python environment. This also makes it easy to build Cython or other
+  compiled components of your code.
+- Added some tooling for requesting and checking for app permissions
+  at runtime.
+- Added initial support for matplotlib.
+- Updated many recipes, and especially the SDL2 backend components,
+  for improved performance and stability on Android.
+- Ongoing improvements to our test coverage and infrastructure.
+- Removed a significant amount of dead code relating to
+  long-deprecated build configurations, and unified other parts of the
+  build to reduce duplication of effort between bootstraps.
+- Updated the release model to target regular, smaller releases.
+
+Of course there have also been a wide range of bugfixes and
+improvements.  See the `release notes
+<https://github.com/kivy/python-for-android/releases/tag/v2019.06.06>`__
+for a full changelog.
+
+Release model
+=============
+
+In this release we've transitioned to a calendar-based version
+system. Future releases will continue to be of the form
+YYYY.MM.DD. We're initially targeting one release every four
+weeks. This scheme is represent to support how python-for-android is
+best used: many changes are driven by updates in the Android ecosystem
+and build toolchain, and in practice it's usually best to be working
+from the most recent possible python-for-android release.
+
+This has been made possible by the hard work of various contributors,
+setting up and continuing to improve python-for-android's suite of
+tests and continuous integration services. In the past we haven't done
+a great job of keeping up releases alongside major improvements, but
+this should now be much more straightforward.
+
+If you're using buildozer then this doesn't directly affect you, as
+buildozer was already configured to use a more recent
+python-for-android version. Buildozer will now automatically
+transition to use the latest release, represented by the master
+branch in the python-for-android git repository.
+
+Future work
+===========
+
+We've had some questions about Google's plan to `require 64-bit
+support for apps on Google Play
+<https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html>`__,
+starting in August 2019. In fact python-for-android already supports
+this, just pass the required architecture as an argument to the build:
+
+.. code-block:: bash
+
+   p4a apk --arch=arm64-v8a
+
+That said, we're working to improve our testing and documentation
+around 64-bit builds, to make sure everything works as expected.
+
+We also don't currently support multi-architecture builds in a single
+output APK. This should be technically possible, but hasn't ever
+been a focus because it would significantly increase the APK size. We
+may revisit this, but in the meantime you can upload one APK of each
+type to Google Play and python-for-android will automatically handle
+versioning different architectures correctly (i.e. arm64-v8a is an
+'upgrade' for devices that support it, so that APK will be preferred).
+
+The other current focus is on improving our test infrastructure,
+especially increasing test coverage and automation. This should
+further increase the ease of making regular releases, and our
+confidence that everything continues to work correctly!
+
+These points are just general goals for python-for-android. There is
+always other maintenance work to do, and contributions of all types are
+always welcome.
