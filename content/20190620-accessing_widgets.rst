@@ -1,10 +1,10 @@
-Interacting with widgets between Python and Kv
-##############################################
+Widget interactions between Python and Kv
+#########################################
 
 :date: 2019-06-20 22:00
 :tags: kivy, python
 :category: kivy
-:slug: interacting_with_widgets_between_python_and_kv
+:slug: widget_interactions_between_python_and_kv
 :author: Alexander Taylor
 
 One of the biggest Kivy confusions I see is how different widgets can
