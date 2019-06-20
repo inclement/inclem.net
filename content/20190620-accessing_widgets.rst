@@ -335,9 +335,10 @@ perhaps using the methods from the previous Sections.
            App.get_running_app().counter += 1
 
    class CounterLabel(Label):
-       counter = NumericProperty(0)
 
    class ExampleApp(App):
+       counter = NumericProperty(0)
+
        def build(self):
            boxlayout = BoxLayout(orientation='vertical')
            label = CounterLabel()
