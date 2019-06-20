@@ -23,6 +23,7 @@ How can a widget access its parent?
 Use the ``parent`` property of the widget:
 
 .. code-block:: python
+
    child = Widget()
    parent = Widget()
 
@@ -39,6 +40,7 @@ How can a widget access its children?
 Use the ``children`` property. This is a list containing all the children you added.
 
 .. code-block:: python
+
    child = Widget()
    parent = Widget()
 
@@ -63,6 +65,7 @@ Option 1: ids
 You can give the widgets in your kv rule ids to access them from Python.
 
 .. code-block:: python
+
    # main.py
 
    from kivy.uix.boxlayout import BoxLayout
@@ -87,6 +90,7 @@ You can give the widgets in your kv rule ids to access them from Python.
            return KvRuleWidget()
 
 .. code-block:: python
+
    # example.kv
 
    <KvRuleWidget>:
@@ -119,6 +123,7 @@ Option 2: properties
 You can use Kivy properties to pass around references to widgets.
 
 .. code-block:: python
+
    # main.py
 
    from kivy.uix.boxlayout import BoxLayout
@@ -137,6 +142,7 @@ You can use Kivy properties to pass around references to widgets.
            return KvRuleWidget()
 
 .. code-block:: python
+
    # example.kv
 
    <KvRuleWidget>:
@@ -163,6 +169,7 @@ This is usually a bad idea and is prone to breakage if the structure
 of the widget tree changes. However, it's still possible.
 
 .. code-block:: python
+
    # main.py
 
    from kivy.uix.boxlayout import BoxLayout
@@ -183,6 +190,7 @@ of the widget tree changes. However, it's still possible.
            return KvRuleWidget()
 
 .. code-block:: python
+
    # example.kv
 
    # note: this time there are no ids at all
@@ -207,6 +215,7 @@ others created dynamically in Python. You can access the Python
 widgets in kv by saving references to them in Kivy properties:
 
 .. code-block:: python
+
    # main.py
 
    from kivy.uix.boxlayout import BoxLayout
@@ -230,6 +239,7 @@ widgets in kv by saving references to them in Kivy properties:
            return KvRuleWidget()
 
 .. code-block:: python
+
    # example.kv
 
    <KvRuleWidget>:
@@ -256,6 +266,7 @@ principles can be used to link together widgets across your whole
 program using references passed around where the kv rules meet.
 
 .. code-block:: python
+
    # main.py
 
    from kivy.uix.boxlayout import BoxLayout
@@ -280,6 +291,7 @@ program using references passed around where the kv rules meet.
            return RootWidget()
 
 .. code-block:: python
+
    # example.kv
 
    <IncrementCounterButton>:
@@ -310,6 +322,7 @@ case you could probably think of a better way to do the same thing,
 perhaps using the methods from the previous Sections.
 
 .. code-block:: python
+
    # main.py
 
    from kivy.uix.boxlayout import BoxLayout
@@ -338,6 +351,7 @@ perhaps using the methods from the previous Sections.
            return boxlayout
 
 .. code-block:: python
+
    # example.kv
 
    <IncrementCounterButton>:
