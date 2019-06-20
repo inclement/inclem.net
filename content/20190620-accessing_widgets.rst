@@ -335,6 +335,7 @@ perhaps using the methods from the previous Sections.
            App.get_running_app().counter += 1
 
    class CounterLabel(Label):
+       pass
 
    class ExampleApp(App):
        counter = NumericProperty(0)

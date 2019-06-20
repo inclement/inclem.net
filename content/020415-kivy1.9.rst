@@ -38,13 +38,13 @@ even after that, but it's no longer a focus.
 .. figure:: {filename}/media/kivy_retina.png
    :alt: Image of Kivy on a retina display with high DPI mode
    :align: center
-           
+
 |
 
 .. figure:: {filename}/media/kivy_nonretina.png
    :alt: Image of Kivy on a retina display without high DPI mode
    :align: center
-           
+
 |
 
 These images show the difference in Kivy rendering on the same (OS X
@@ -68,7 +68,7 @@ easily be combined with existing applications.
 .. figure:: {filename}/media/effectwidget_example.png
    :alt: Image of Kivy effectwidget
    :align: center
-           
+
 |
 
 This above screenshot demonstrates the EffectWidget via one of the new
@@ -81,7 +81,7 @@ can be applied even to video or moving scenes such as in games.
 .. figure:: {filename}/media/kivy_svg_example.png
    :alt: Image of the Kivy SVG example, including the famous svg tiger
    :align: center
-           
+
 |
 
 One feature that has been heavily requested by users is SVG support
@@ -96,13 +96,13 @@ in a screenshot. One is the addition of a ``rebind`` option to Kivy
 properties. This resolves a problem that arose with code like
 
 .. code-block:: python
-                
+
     # In python
     from kivy.uix.button import Button
     from kivy.properties import ObjectProperty
     class MyButton(Button):
         some_ref = ObjectProperty(None, rebind=True)
-    
+
     # And in kv language
     <MyButton>:
         text: self.some_ref.text if self.some_ref else ''
