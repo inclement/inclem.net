@@ -51,10 +51,10 @@ Use the ``children`` property. This is a list containing all the children you ad
    print(parent.children)  # [<kivy.uix.widget.Widget object at 0x???>]
    assert child in parent.children
 
-.. note:: The ``children`` list is actually backwards, i.e. the last
-          widget you add will by default be the first in the
-          list. This is a bit surprising, and only really happens for
-          backwards compatibility.
+**Note:** The ``children`` list is actually backwards, i.e. the last
+widget you add will by default be the first in the
+list. This is a bit surprising, and only really happens for
+backwards compatibility.
 
 How can a widget in Python access children from its kv rule?
 ============================================================
@@ -110,12 +110,10 @@ You can give the widgets in your kv rule ids to access them from Python.
            id: bottom
            text: 'bottom'
 
-.. note:: You *cannot* set up widget ids from Python code, if
-          you write e.g. ``w = Widget(id='some_name')`` this will not
-          crash but the id will not be available in any ids
-          dictionary.
-
-.. note:: Remember that you can also use ids to
+**Note:** You *cannot* set up widget ids from Python code, if
+you write e.g. ``w = Widget(id='some_name')`` this will not
+crash but the id will not be available in any ids
+dictionary.
 
 Option 2: properties
 --------------------
@@ -314,8 +312,8 @@ Sometimes you really do want widgets to interact with one another
 without any good relationship between them. You can do this in a
 convenient way by using a Kivy property in the App class.
 
-.. note:: This is notionally similar to using a global variable, and
-          is often bad practice for all the same reasons.
+**Note:** This is notionally similar to using a global variable, and
+is often bad practice for all the same reasons.
 
 The following example is quite contrived to keep it simple. In this
 case you could probably think of a better way to do the same thing,
