@@ -1,0 +1,32 @@
+python-for-android 2019.08.09 released: drops support for running under Python 2
+################################################################################
+
+:date: 2019-08-20 20:30
+:tags: python, android, kivy
+:category: kivy
+:slug: p4a_2019_08_09_released
+:author: Alexander Taylor
+
+`python-for-android <https://github.com/kivy/python-for-android>`__ is
+a packaging tool for Python apps on Android. You can create your own
+Python distribution including the modules and dependencies you want,
+and bundle it in an APK along with your own code.
+
+----------------------------
+
+python-for-android 2019.08.09 has just been released! I haven't been
+making a blog post for every release now that we've switched to
+monthly releases, but this one includes an especially major change:
+python-for-android no longer runs under Python 2.
+
+Note that you *can still target Python 2* on Android, simply add
+python2 to your requirements the same way as ever. However, this won't
+last forever, support for Python 2 on Android will probably be
+totally removed early in 2020.
+
+Other changes in this release include further testing improvements,
+significantly improved documentation on developing with
+python-for-android, and some preparations for further big changes in
+the future. See the `release note
+<https://github.com/kivy/python-for-android/releases/tag/v2019.08.09>`__
+for full details.
