@@ -15,7 +15,7 @@ and bundle it in an APK along with your own code.
 ----------------------------
 
 python-for-android 2019.08.09 has just been released! I haven't been
-making a blog post for every release now that we've switched to
+making a blog post for every new version now that we've switched to a
 monthly releases, but this one includes an especially major change:
 python-for-android no longer runs under Python 2. If this affects you,
 simply run python-for-android (or buildozer) under Python 3.6 or
