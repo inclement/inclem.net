@@ -35,11 +35,9 @@ developed in tutorial 5, starting with the code from last time:
             self.bind(pos=self.update_rectangle,
                       size=self.update_rectangle)
 
-
         def update_rectangle(self, instance, value):
             self.rect.pos = self.pos
             self.rect.size = self.size
-
 
 
     class DrawingApp(App):
