@@ -2,10 +2,10 @@
 Kivy tutorial 002: Improving appearance: customising widgets using Kivy Properties
 ##################################################################################
 
-:date: 2019-12-18 22:30
+:date: 2019-12-18 22:31
 :tags: kivy, python, tutorial
 :category: kivy
-:slug: kivy_tutorial_001_say_hello
+:slug: kivy_tutorial_002_improving_appearance
 :author: Alexander Taylor
 
 **Central themes:** Modifying Widget appearance, Kivy properties
