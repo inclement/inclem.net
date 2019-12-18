@@ -1,5 +1,5 @@
-1) Say Hello
-############
+Kivy tutorial 001: Say Hello
+############################
 
 :date: 2019-12-18 22:30
 :tags: kivy, python, tutorial
@@ -17,7 +17,7 @@ program::
 
   from kivy.app import App
 
-This imports the :code:`App` class, something you'll be using in any
+This imports the ``App`` class, something you'll be using in any
 Kivy application. Your instance of this class will create the Kivy
 window and serve as the top level of your application
 
@@ -46,7 +46,7 @@ subclass as follows:
         root_widget = Label(text='Hello world!')
         return root_widget
 
-The :code:`build` method is the only important addition you have to
+The ``build`` method is the only important addition you have to
 make, and is the usually the first entry point for your use of a Kivy
 application. This method must instantiate and return what will be your
 **root widget**, the top level widget of your Kivy application, which
@@ -57,7 +57,7 @@ the Label text will appear right in the middle.
 
 In our case, the application will only ever need a single Widget; the
 Label displaying our text. We set the text by simply passing it as an
-argument. This works automatically because :code:`text` is a *Kivy
+argument. This works automatically because ``text`` is a *Kivy
 property* of the Label widget...but that doesn't matter right now.
 
 Finally, add a line to start and run the Application:
@@ -89,7 +89,9 @@ application.
 Full code
 ~~~~~~~~~
 
-your_filename.py::
+your_filename.py:
+
+.. code-block:: python
 
   from kivy.app import App
   from kivy.uix.label import Label
