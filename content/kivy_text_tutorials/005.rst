@@ -106,8 +106,8 @@ you can achieve any kind of gui result. In fact, anything you see
 drawn with Kivy is ultimately using canvas instructions, including all
 the built in widget classes!
 
-The basic procedure always follows this one. First, open a :code:`with
-self.canvas` block - this sets an internal variable that means all
+The basic procedure always follows this one. First, open a ``with
+self.canvas`` block - this sets an internal variable that means all
 graphics instructions are drawn to the canvas of the current
 widget. All widgets have a canvas, you can draw on e.g. a Label or
 BoxLayout if you want. Second, instantiate any graphics instructions;
