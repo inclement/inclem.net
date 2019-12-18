@@ -37,7 +37,9 @@ You can find the documentation for Label `here
 later!.
 
 In every Kivy application, your first task is to create an App
-subclass as follows::
+subclass as follows:
+
+.. code-block:: python
 
     class YourApp(App):
         def build(self):
@@ -58,7 +60,9 @@ Label displaying our text. We set the text by simply passing it as an
 argument. This works automatically because :code:`text` is a *Kivy
 property* of the Label widget...but that doesn't matter right now.
 
-Finally, add a line to start and run the Application::
+Finally, add a line to start and run the Application:
+
+.. code-block:: python
 
     YourApp().run()
 
