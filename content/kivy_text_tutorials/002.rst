@@ -1,5 +1,5 @@
 
-Kivy tutorial 002: Improving appearance: customising widgets using Kivy Properties
+Kivy tutorial 002: Improving appearance, customising widgets using Kivy Properties
 ##################################################################################
 
 :date: 2019-12-18 22:31
@@ -114,7 +114,7 @@ modify the text within the Label. Try the following:
 Now run the application again, :code:`python your_filename.py`. The
 result should now look something like the following image.
 
-.. image:: images/02_output.png
+.. image:: {filename}/media/kivy_text_tutorials/02_output.png
    :alt: Output for example app.
    :align: center
    :width: 400px
