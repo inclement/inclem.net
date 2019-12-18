@@ -13,7 +13,9 @@ It's compulsory that the introduction to any programming project
 should contain a "Hello World!" application. Since Kivy is a GUI
 framework, that means starting an application and displaying the words
 on the screen. Start by adding each of the following lines to your
-program::
+program:
+
+.. code-block:: python
 
   from kivy.app import App
 
