@@ -49,7 +49,7 @@ Let's set ourselves three goals:
 To customise the Label appearance, we must check the documentation to
 find an appropriate Kivy property. For the text size, check the `Label
 doc <https://kivy.org/docs/api-kivy.uix.label.html>`__ and find the
-:code:`font_size` listing. It looks something like the following:
+``font_size`` listing. It looks something like the following:
 
 .. image:: images/02_font_size.png
    :alt: Font size doc from Kivy website
@@ -72,7 +72,7 @@ You can run the code now to see the result.
 
 To make the text italic, the procedure is the same. Check the `Label doc
 <https://kivy.org/docs/api-kivy.uix.label.html>`__ and find the
-:code:`italic` property entry. you'll see that this is a
+``italic`` property entry. you'll see that this is a
 BooleanProperty that defaults to False; just set it to True to enable
 the underline:
 
@@ -111,7 +111,7 @@ modify the text within the Label. Try the following:
        markup=True)
    root_widget.text = '[color=#ff0000]Hello[/color] [color=#00ff00]world![/color]'
 
-Now run the application again, :code:`python your_filename.py`. The
+Now run the application again, ``python your_filename.py``. The
 result should now look something like the following image.
 
 .. image:: {filename}/media/kivy_text_tutorials/02_output.png

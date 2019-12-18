@@ -70,8 +70,8 @@ following:
 
 We're now instantiating three Widget classes; the BoxLayout and two
 Buttons. Just like with the Label, each one can be customised by
-passing properties. The only new one here is the :code:`orientation`
-of the BoxLayout; passing :code:`'vertical'` means it will place its
+passing properties. The only new one here is the ``orientation``
+of the BoxLayout; passing ``'vertical'`` means it will place its
 children below one another. The Buttons are internally a Label with a
 background image and touch behaviour (you can see this in the `Button
 documentation
@@ -95,7 +95,7 @@ is automatic, they don't do anything else yet.
      :align: center
      :width: 400px
 
-Try setting the BoxLayout orientation to :code:`'horizontal'` to see
+Try setting the BoxLayout orientation to ``'horizontal'`` to see
 how it affects the result.
 
 Resize the window, and note that the sizes and positions of the
@@ -103,7 +103,7 @@ buttons update automatically. This happens because the BoxLayout
 repositions and resizes its children when its own size changes, and
 because it is the root widget its own size tracks that of the
 window. This is **very important**! If you replace the BoxLayout with
-a plain Widget (:code:`from kivy.uix.widget import Widget`) this will
+a plain Widget (``from kivy.uix.widget import Widget``) this will
 *not* happen, the Buttons will both have their default position and
 size in the bottom left of the window. For this reason, you'll want to
 use Layouts like BoxLayout all the time to automatically position
@@ -151,21 +151,21 @@ representing our entire calculator interface:
 
 This introduces a couple of new ideas; the GridLayout is a new layout
 class that arranges its child widgets in (you guessed it) a
-grid. We've set its :code:`cols` property to ``4``, which means
+grid. We've set its ``cols` property to ``4```, which means
 that every 4 widgets we add it will start a new row. Since we add 16
 buttons altogether, that's 4 rows of 4.
 
-The other new idea here is the :code:`size_hint_y` setting for the
-output_label and button_grid. All widgets have a :code:`size_hint_x`
-(horizontal) and :code:`size_hint_y` (vertical) that you can set. They
+The other new idea here is the ``size_hint_y`` setting for the
+output_label and button_grid. All widgets have a ``size_hint_x``
+(horizontal) and ``size_hint_y`` (vertical) that you can set. They
 are used by Layout classes to set relative sizes; in this case, the
-the one with :code:`size_hint_y=2` takes up twice as much vertical
-space as the one with :code:`size_hint_y=1`.
+the one with ``size_hint_y=2`` takes up twice as much vertical
+space as the one with ``size_hint_y=1``.
 
 You can also override the size hint to set a manual width and/or
 height for your Widget, but you must do this explicitly, as shown here
-with the 'clear' button. By setting :code:`size_hint_y=None`, we
-ensure that its :code:`height=100` is never overridden, this Button
+with the 'clear' button. By setting ``size_hint_y=None``, we
+ensure that its ``height=100`` is never overridden, this Button
 will have a height of 100 pixels no matter what.
 
 Your final code should look something like the image below. You can
