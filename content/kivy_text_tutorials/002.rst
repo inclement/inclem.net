@@ -51,7 +51,7 @@ find an appropriate Kivy property. For the text size, check the `Label
 doc <https://kivy.org/docs/api-kivy.uix.label.html>`__ and find the
 ``font_size`` listing. It looks something like the following:
 
-.. image:: images/02_font_size.png
+.. figure:: images/02_font_size.png
    :alt: Font size doc from Kivy website
    :align: center
 
@@ -114,7 +114,7 @@ modify the text within the Label. Try the following:
 Now run the application again, ``python your_filename.py``. The
 result should now look something like the following image.
 
-.. image:: {filename}/media/kivy_text_tutorials/02_output.png
+.. figure:: {filename}/media/kivy_text_tutorials/02_output.png
    :alt: Output for example app.
    :align: center
    :width: 400px
