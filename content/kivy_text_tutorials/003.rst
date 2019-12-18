@@ -90,7 +90,7 @@ This code should give you something like the following image. You can
 also now click the buttons to see their colour change; this behaviour
 is automatic, they don't do anything else yet.
 
-  .. image:: {filepath}/media/kivy_text_tutorials/03_two_buttons.png
+  .. image:: {filename}/media/kivy_text_tutorials/03_two_buttons.png
      :alt: App output showing 2 buttons
      :align: center
      :width: 400px
@@ -172,7 +172,7 @@ Your final code should look something like the image below. You can
 resize the window to see all the components move around and resize
 automatically, thanks to the use of Layouts for positioning.
 
-.. image:: images/03_output.png
+.. image:: {filename}/media/kivy_text_tutorials/03_output.png
    :alt: Calculator gui image
    :align: center
    :width: 400
