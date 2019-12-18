@@ -1,4 +1,4 @@
-Kivy tutorial 003: Making the GUI do stuff, binding to events
+Kivy tutorial 004: Making the GUI do stuff, binding to events
 #############################################################
 
 :date: 2019-12-18 22:33
