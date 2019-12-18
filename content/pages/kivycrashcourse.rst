@@ -1,5 +1,5 @@
-Kivy tutorials
-##############
+Kivy crash course
+#################
 
 Kivy crash course videos
 ========================
@@ -46,11 +46,11 @@ Text tutorials
 
 I've also written a series of introductory text tutorials for Kivy:
 
-1) `Hello world! <{filename}/kivy_text_tutorials/001.rst>`
-2) `Improving appearances, customising widgets using Kivy Properties <{filename}/kivy_text_tutorials/002.rst>`
-3) `Building a full GUI <{filename}/kivy_text_tutorials/003.rst>`
-4) `Making the GUI do stuff, binding to events <{filename}/kivy_text_tutorials/004.rst>`
-5) `A drawing app <{filename}/kivy_text_tutorials/005.rst>`
-6) `Let's draw something <{filename}/kivy_text_tutorials/006.rst>`
-7) `Instroducing kv language <{filename}/kivy_text_tutorials/007.rst>`
-8) `More kv language <{filename}/kivy_text_tutorials/008.rst>`
+1) `Hello world! <{filename}/kivy_text_tutorials/001.rst>`__
+2) `Improving appearances, customising widgets using Kivy Properties <{filename}/kivy_text_tutorials/002.rst>`__
+3) `Building a full GUI <{filename}/kivy_text_tutorials/003.rst>`__
+4) `Making the GUI do stuff, binding to events <{filename}/kivy_text_tutorials/004.rst>`__
+5) `A drawing app <{filename}/kivy_text_tutorials/005.rst>`__
+6) `Let's draw something <{filename}/kivy_text_tutorials/006.rst>`__
+7) `Instroducing kv language <{filename}/kivy_text_tutorials/007.rst>`__
+8) `More kv language <{filename}/kivy_text_tutorials/008.rst>`__
