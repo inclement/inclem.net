@@ -1,24 +1,19 @@
-Kivy Crash Course
-#################
+Kivy tutorials
+##############
 
-This site was originally kicked off by the apparently warm reception
-to my Kivy Crash Course series of youtube videos, which you can find
-on my `youtube channel
+Kivy crash course videos
+========================
+
+This site was originally created to collate my Kivy Crash Course
+series of youtube videos, which you can find on my `youtube channel
 <https://www.youtube.com/playlist?list=SPdNh1e1kmiPP4YApJm8ENK2yMlwF1_edq>`_. This
 series starts from scratch and moves quickly through different Kivy
-features in about 10 minutes per video. My first set of posts here
-are/will be standalone write-ups of these.
+features in about 10 minutes per video.
 
 I maintain a `separate github repository
 <https://github.com/inclement/kivycrashcourse>`_ with the original kivy crash
 course files and any accompanying notes. Everything relevant is linked to from
 the individual articles or videos.
-
-I'm not short of ideas for future crash course entries, but if you
-have any suggestions please feel free to `contact me <{filename}/pages/about.rst>`_.
-
-Entries
-=======
 
 1) Making a simple App; `youtube
    <https://www.youtube.com/watch?v=F7UKmK9eQLY>`_ or `article
@@ -46,3 +41,16 @@ Entries
 13) Using Kivy's settings panel: `youtube <https://www.youtube.com/watch?v=oQdGWeN51EE>`__.
 14) Using a ScreenManager: `youtube <https://www.youtube.com/watch?v=xx-NLOg6x8o>`__.
 
+Text tutorials
+==============
+
+I've also written a series of introductory text tutorials for Kivy:
+
+1) `Hello world! <{filename}/kivy_text_tutorials/001.rst>`
+2) `Improving appearances, customising widgets using Kivy Properties <{filename}/kivy_text_tutorials/002.rst>`
+3) `Building a full GUI <{filename}/kivy_text_tutorials/003.rst>`
+4) `Making the GUI do stuff, binding to events <{filename}/kivy_text_tutorials/004.rst>`
+5) `A drawing app <{filename}/kivy_text_tutorials/005.rst>`
+6) `Let's draw something <{filename}/kivy_text_tutorials/006.rst>`
+7) `Instroducing kv language <{filename}/kivy_text_tutorials/007.rst>`
+8) `More kv language <{filename}/kivy_text_tutorials/008.rst>`
