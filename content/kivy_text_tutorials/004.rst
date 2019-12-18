@@ -1,0 +1,258 @@
+Kivy tutorial 003: Making the GUI do stuff, binding to events
+#############################################################
+
+:date: 2019-12-18 22:33
+:tags: kivy, python, tutorial
+:category: kivy
+:slug: kivy_tutorial_004_event_bindings
+:author: Alexander Taylor
+
+**Central themes:** Events and Kivy properties
+
+We left the last tutorial with a calculator app GUI with some nice
+automatic behaviour, but which doesn't actually do anything. Let's
+change that; it's time to learn about *binding events*.
+
+To refresh, the basic calculator GUI code was as follows. If you
+modified it to experiment, feel free to continue with your modified
+code, and try to change the instructions to fit your modifications:
+
+.. code-block:: python
+
+    from kivy.app import App
+    from kivy.uix.button import Button
+    from kivy.uix.boxlayout import BoxLayout
+    from kivy.uix.gridlayout import GridLayout
+    from kivy.uix.label import Label
+
+
+    class YourApp(App):
+        def build(self):
+            root_widget = BoxLayout(orientation='vertical')
+
+            output_label = Label(size_hint_y=1)
+
+            button_symbols = ('1', '2', '3', '+',
+                              '4', '5', '6', '-',
+                              '7', '8', '9', '.',
+                              '0', '*', '/', '=')
+
+            button_grid = GridLayout(cols=4, size_hint_y=2)
+            for symbol in button_symbols:
+                button_grid.add_widget(Button(text=symbol))
+
+            clear_button = Button(text='clear', size_hint_y=None,
+                                  height=100)
+
+            root_widget.add_widget(output_label)
+            root_widget.add_widget(button_grid)
+            root_widget.add_widget(clear_button)
+
+            return root_widget
+
+
+    YourApp().run()
+
+.. note:: This tutorial introduces some major new Kivy concepts. I
+          recommend working through it even if you don't entirely
+          follow what's going on, then going back to modify components
+          and see how things change.
+
+The plan now is that every one of these buttons should add their
+symbol to the Label at the top, except '=' which should evaluate the
+code and display the result. This is obviously an extremely basic
+calculator, but the point here is to showcase some Kivy basics - if
+you'd like to improve the interface, go ahead with trying to do so
+along the way.
+
+To make the buttons do something, we must *bind* to their events. This
+is a generic Kivy concept; whenever you want one thing to trigger
+another, you look for an event to bind to. Some widgets such as Button
+have events indicating they have been clicked on, and every Kivy
+property (such as all those used to customise Widgets so far) has an
+associated event when it changes.
+
+Let's start with a simple binding example:
+
+.. code-block:: python
+
+    def print_button_text(self, instance):
+        print(instance.text)
+    for button in button_grid.children[1:]:  # note use of the
+                                                # `children` property
+        button.bind(on_press=print_button_text)
+
+    # we could also have used `button.bind(on_press=lambda instance: print(instance.text))`
+
+If you run the code now, and click on any of the buttons, you should
+see its text printed in the console (but not in the Kivy GUI).
+
+The key concept here is the ``bind`` method, which you can use
+with any Widget, as well as several other Kivy objects (discussed in
+later tutorials). This takes any number of keyword arguments, each
+specifying an *event name* and a *function to call*; in this case the
+event name is ``on_press``, and the function to be called is our
+new ``print_button_text`. The ``bind``` method makes sure that
+whenever ``on_press`` occurs, the function is called. It
+automatically receives a single argument, the binded widget instance.
+
+Also note that we've iterated over
+``button_grid.children[1:]`. The ``children``` property is
+available on any Widget, and holds a list of all the widgets added to
+it, in reverse order. In this case, we use ``[1:]`` to skip the
+first element, '=', as we want to use this to evaluate the result.
+
+.. note:: Button also has an ``on_release`` event that is called
+          when the user releases a click or touch. You can find more
+          information in the `Button documentation
+          <https://kivy.org/docs/api-kivy.uix.button.html>`__.
+
+This binding idea is very normal in Kivy, and you'll quickly get used
+to seeing it used in different ways, including some introduced later
+in these tutorials. The kv markup language, also introduced later,
+has special syntax designed to make it even simpler and clearer.
+
+Anyway, all this does so far is print some text when the event occurs,
+but we want to update the GUI. Let's change the bound function to
+achieve that:
+
+.. code-block:: python
+
+        def print_button_text(instance):
+            output_label.text += instance.text
+
+Run the code again. Now when you press the buttons, you should see the
+text appear at the top of the screen, as in the screenshot below:
+
+.. figure:: images/04_example_text.png
+   :alt: Calculator text after number input
+   :align: center
+   :width: 400px
+
+
+At this point, a new problem presents itself; the font size of the
+label is kind of small. We can use another event to have it update
+automatically in response to the label's height:
+
+.. code-block:: python
+
+        def resize_label_text(label, new_height):
+            label.font_size = 0.5*label.height
+        output_label.bind(height=resize_label_text)
+
+Note that the event here is named ``height``. This works because
+the Label has a Kivy property named height (as do all Widgets, see the
+`documentation
+<https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.height>`__,
+and all Kivy properties can be bound to as an event of the same name,
+called when the property changes. In this case, you can now resize the
+window, which causes the layouts in the Widget tree to automatically
+resize their children, which in turn causes ``resize_label_text``
+to automatically be called.
+
+We'll use one final binding to make the calculator interface actually
+work; when the '=' button is pressed, we can evaluate the entire label
+text as python code, and display the result.
+
+.. note:: Using eval as a calculator like this is in general a
+          terrible idea, used here only to avoid dwelling on the
+          details rather than the Kivy principles.
+
+.. code-block:: python
+
+        def evaluate_result(instance):
+            try:
+                output_label.text = str(eval(output_label.text))
+            except SyntaxError:
+                output_label.text = 'Python syntax error!'
+        button_grid.children[0].bind(on_press=evaluate_result)
+        # Remember, button_grid.children[0] is the '=' button
+
+Further, we can make the 'clear' button clear the label, so that you
+can start a new calculation:
+
+.. code-block:: python
+
+        def clear_label(instance):
+            output_label.text = ''
+        clear_button.bind(on_press=clear_label)
+
+With this all in place, run the app again and...the calculator works!
+Every button now does something, either adding its symbol to the
+output label, evaluating the label's text as python code, or clearing
+the result. You should be seeing something like the image below:
+
+.. figure:: images/04_output.png
+   :alt: Output for calculator app with number input
+   :align: center
+   :width: 400px
+
+These core event binding concepts are central to working with Kivy
+widgets, and come up in many different ways. Don't worry if you don't
+remember all the details straight away, such as the way all properties
+have events you can bind to, or the specific syntax; you can look all
+this up in the documentation as linked throughout and indexed on the
+`Kivy website <https://kivy.org/docs/api-kivy.html>`__. Later
+tutorials also follow on to help cement this knowledge.
+
+Full code
+~~~~~~~~~
+
+your_filename.py:
+
+.. code-block:: python
+
+    from kivy.app import App
+    from kivy.uix.button import Button
+    from kivy.uix.boxlayout import BoxLayout
+    from kivy.uix.gridlayout import GridLayout
+    from kivy.uix.label import Label
+
+
+    class YourApp(App):
+        def build(self):
+            root_widget = BoxLayout(orientation='vertical')
+
+            output_label = Label(size_hint_y=1)
+
+            button_symbols = ('1', '2', '3', '+',
+                              '4', '5', '6', '-',
+                              '7', '8', '9', '.',
+                              '0', '*', '/', '=')
+
+            button_grid = GridLayout(cols=4, size_hint_y=2)
+            for symbol in button_symbols:
+                button_grid.add_widget(Button(text=symbol))
+
+            clear_button = Button(text='clear', size_hint_y=None,
+                                  height=100)
+
+            def print_button_text(instance):
+                output_label.text += instance.text
+            for button in button_grid.children[1:]:  # note use of the
+                                                 # `children` property
+                button.bind(on_press=print_button_text)
+
+            def resize_label_text(label, new_height):
+                label.font_size = 0.5*label.height
+            output_label.bind(height=resize_label_text)
+
+            def evaluate_result(instance):
+                try:
+                    output_label.text = str(eval(output_label.text))
+                except SyntaxError:
+                    output_label.text = 'Python syntax error!'
+            button_grid.children[0].bind(on_press=evaluate_result)
+
+            def clear_label(instance):
+                output_label.text = ''
+            clear_button.bind(on_press=clear_label)
+
+            root_widget.add_widget(output_label)
+            root_widget.add_widget(button_grid)
+            root_widget.add_widget(clear_button)
+
+            return root_widget
+
+
+    YourApp().run()

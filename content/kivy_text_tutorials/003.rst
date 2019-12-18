@@ -90,10 +90,10 @@ This code should give you something like the following image. You can
 also now click the buttons to see their colour change; this behaviour
 is automatic, they don't do anything else yet.
 
-  .. figure:: {filename}/media/kivy_text_tutorials/03_two_buttons.png
-     :alt: App output showing 2 buttons
-     :align: center
-     :width: 400px
+.. figure:: {filename}/media/kivy_text_tutorials/03_two_buttons.png
+    :alt: App output showing 2 buttons
+    :align: center
+    :width: 400px
 
 Try setting the BoxLayout orientation to ``'horizontal'`` to see
 how it affects the result.
