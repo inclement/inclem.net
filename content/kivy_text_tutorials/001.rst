@@ -68,7 +68,7 @@ basic steps.
 
 Now...run the code!
 
-.. code-block::
+.. code-block:: python
 
    python your_filename.py
 
