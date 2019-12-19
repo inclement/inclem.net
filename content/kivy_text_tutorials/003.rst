@@ -18,7 +18,8 @@ and doing some customisation.
 
 Let's now *combine* some widgets to make a larger GUI. This tutorial
 will solely cover joining the widgets together, not making them do
-anything; this is covered in later tutorials.
+anything; this is covered in later tutorials (see `007: Introducing
+Kivy language <{filename}/kivy_text_tutorials/007.rst>`__).
 
 **Note:** This tutorial will construct the GUI using entirely Python
 code. You can always do this with Python as described here, but

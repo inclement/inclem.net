@@ -123,8 +123,8 @@ result should now look something like the following image.
    :width: 400px
 
 **Note:** This is just a basic introduction to customising Kivy
-widgets, you can use similar methods to accomplish many different
-changes in many different scenarios. Kivy properties also have other
+widgets, you can use similar methods to manipulate different widgets
+in a huge range of different ways. Kivy properties also have other
 important functionality, covered later in these tutorials.
 
 **Next tutorial:** `Building a full GUI <{filename}/kivy_text_tutorials/003.rst>`__
