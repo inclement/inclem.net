@@ -331,8 +331,8 @@ the kv rule, in order to display a Label indicating what the slider
 is for. Notice how, consistent with everything so far, the Label
 automatically updates to always show the current value of the Slider.
 
- Run the app and try the drawing. You should now be able to control
- both the colour and width of every line:
+Run the app and try the drawing. You should now be able to control
+both the colour and width of every line:
 
 .. figure:: {filename}/media/kivy_text_tutorials/09_fully_working_with_width.png
    :alt: Lines drawn using selected colour and width
