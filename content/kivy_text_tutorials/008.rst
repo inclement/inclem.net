@@ -265,6 +265,8 @@ code, and seen all the basics of kv language. In the next tutorial
 we'll finish off the original purpose of all these sliders; letting
 the user set the colour of line that is drawn by the DrawingWidget.
 
+**Next tutorial:** `Finishing the drawing app <{filename}/kivy_text_tutorials/009.rst>`__
+
 Full code
 ~~~~~~~~~
 
