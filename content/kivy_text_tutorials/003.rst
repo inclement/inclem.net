@@ -8,7 +8,7 @@ Kivy tutorial 003: Building a full GUI
 :author: Alexander Taylor
 
 This is number 3 in a `series of introductory Kivy tutorials
-<{filename}/pages/kivycrashcourse.rst`__.
+<{filename}/pages/kivycrashcourse.rst>`__.
 
 **Central themes:** Adding Widgets to one another
 
