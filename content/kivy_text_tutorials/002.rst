@@ -27,8 +27,8 @@ We'll continue modifying the code from last time, which was:
 
   class YourApp(App):
       def build(self):
-      root_widget = Label(text='Hello world!')
-      return root_widget
+        root_widget = Label(text='Hello world!')
+        return root_widget
 
   YourApp().run()
 
@@ -54,7 +54,7 @@ find an appropriate Kivy property. For the text size, check the `Label
 doc <https://kivy.org/docs/api-kivy.uix.label.html>`__ and find the
 ``font_size`` listing. It looks something like the following:
 
-.. figure:: images/02_font_size.png
+.. figure:: {filename}/media/kivy_text_tutorials/02_font_size.png
    :alt: Font size doc from Kivy website
    :align: center
 
