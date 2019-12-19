@@ -7,6 +7,9 @@ Kivy tutorial 007: Introducing kv language
 :slug: kivy_tutorial_007_introducing_kv_language
 :author: Alexander Taylor
 
+This is number 7 in a `series of introductory Kivy tutorials
+<{filename}/pages/kivycrashcourse.rst`__.
+
 **Central themes:** kv language, building a gui, integration with Python
 
 The goal of this tutorial will be to build up a simple gui around the
@@ -293,6 +296,7 @@ the sliders control output colour), but in the interest of keeping
 these tutorials relatively short, I'll stop here for now. In the next
 tutorial will see how kv language also makes event binding very easy.
 
+**Next tutorial:** `More kv language <{filename}/kivy_text_tutorials/008.rst>`__
 
 Full code
 ~~~~~~~~~

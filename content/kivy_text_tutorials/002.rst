@@ -8,6 +8,9 @@ Kivy tutorial 002: Improving appearance, customising widgets using Kivy Properti
 :slug: kivy_tutorial_002_improving_appearance
 :author: Alexander Taylor
 
+This is number 2 in a `series of introductory Kivy tutorials
+<{filename}/pages/kivycrashcourse.rst`__.
+
 **Central themes:** Modifying Widget appearance, Kivy properties
 
 
@@ -124,6 +127,7 @@ widgets, you can use similar methods to accomplish many different
 changes in many different scenarios. Kivy properties also have other
 important functionality, covered later in these tutorials.
 
+**Next tutorial:** `Building a full GUI <{filename}/kivy_text_tutorials/003.rst>`__
 
 Full code
 ~~~~~~~~~

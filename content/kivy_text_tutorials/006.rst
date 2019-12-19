@@ -7,6 +7,9 @@ Kivy tutorial 006: Let's draw something
 :slug: kivy_tutorial_006_lets_draw_something
 :author: Alexander Taylor
 
+This is number 6 in a `series of introductory Kivy tutorials
+<{filename}/pages/kivycrashcourse.rst`__.
+
 **Central themes:** Handling touch or mouse input, more canvas instructions
 
 In this tutorial we'll directly add touch handling to the basic code
@@ -170,6 +173,7 @@ introduce the *kv markup language*, showing how a gui can easily be
 constructed without some of the Python boilerplate that comes from
 using a general purpose language for creating a gui.
 
+**Next tutorial:** `Introducing kv language <{filename}/kivy_text_tutorials/007.rst>`__
 
 Full code
 ~~~~~~~~~

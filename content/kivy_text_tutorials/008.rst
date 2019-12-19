@@ -7,6 +7,9 @@ Kivy tutorial 008: More kv language
 :slug: kivy_tutorial_008_more_kv_language
 :author: Alexander Taylor
 
+This is number 8 in a `series of introductory Kivy tutorials
+<{filename}/pages/kivycrashcourse.rst`__.
+
 **Central themes:** Event binding and canvas instructions in kv
 language
 

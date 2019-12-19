@@ -7,6 +7,9 @@ Kivy tutorial 004: Making the GUI do stuff, binding to events
 :slug: kivy_tutorial_004_event_bindings
 :author: Alexander Taylor
 
+This is number 4 in a `series of introductory Kivy tutorials
+<{filename}/pages/kivycrashcourse.rst`__.
+
 **Central themes:** Events and Kivy properties
 
 We left the last tutorial with a calculator app GUI with some nice
@@ -194,6 +197,8 @@ have events you can bind to, or the specific syntax; you can look all
 this up in the documentation as linked throughout and indexed on the
 `Kivy website <https://kivy.org/docs/api-kivy.html>`__. Later
 tutorials also follow on to help cement this knowledge.
+
+**Next tutorial:** `A drawing app <{filename}/kivy_text_tutorials/005.rst>`__
 
 Full code
 ~~~~~~~~~

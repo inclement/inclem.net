@@ -7,6 +7,9 @@ Kivy tutorial 001: Say Hello
 :slug: kivy_tutorial_001_say_hello
 :author: Alexander Taylor
 
+This is number 1 in a `series of introductory Kivy tutorials
+<{filename}/pages/kivycrashcourse.rst`__.
+
 **Central themes:** Starting an App, getting Kivy running
 
 It's compulsory that the introduction to any programming project
@@ -87,6 +90,7 @@ application.
    :align: center
    :width: 250px
 
+**Next tutorial:** `Improving appearances, customising widgets using Kivy Properties <{filename}/kivy_text_tutorials/002.rst>`__
 
 Full code
 ~~~~~~~~~

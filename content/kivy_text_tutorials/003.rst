@@ -7,6 +7,9 @@ Kivy tutorial 003: Building a full GUI
 :slug: kivy_tutorial_003_building_a_full_gui
 :author: Alexander Taylor
 
+This is number 3 in a `series of introductory Kivy tutorials
+<{filename}/pages/kivycrashcourse.rst`__.
+
 **Central themes:** Adding Widgets to one another
 
 The tutorals so far have covered the very basics of a Kivy
@@ -184,6 +187,7 @@ The calculator GUI clearly doesn't do anything yet (although you can
 click on the buttons due to their default behaviour). Adding some
 functionality is covered in the next tutorial.
 
+**Next tutorial:** `Making the GUI do stuff, binding to events <{filename}/kivy_text_tutorials/004.rst>`__
 
 Full code
 ~~~~~~~~~

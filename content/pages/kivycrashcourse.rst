@@ -52,5 +52,5 @@ I've also written a series of introductory text tutorials for Kivy:
 4) `Making the GUI do stuff, binding to events <{filename}/kivy_text_tutorials/004.rst>`__
 5) `A drawing app <{filename}/kivy_text_tutorials/005.rst>`__
 6) `Let's draw something <{filename}/kivy_text_tutorials/006.rst>`__
-7) `Instroducing kv language <{filename}/kivy_text_tutorials/007.rst>`__
+7) `Introducing kv language <{filename}/kivy_text_tutorials/007.rst>`__
 8) `More kv language <{filename}/kivy_text_tutorials/008.rst>`__

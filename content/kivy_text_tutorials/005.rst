@@ -7,6 +7,9 @@ Kivy tutorial 005: A drawing app
 :slug: kivy_tutorial_005_a_drawing_app
 :author: Alexander Taylor
 
+This is number 5 in a `series of introductory Kivy tutorials
+<{filename}/pages/kivycrashcourse.rst`__.
+
 **Central themes:** Canvas instructions
 
 The next couple of tutorials will move to a new application in order
@@ -217,6 +220,7 @@ In the next tutorial we'll introduce mouse/touch input handling, so
 that we can finally draw something dynamicall in response to user
 input.
 
+**Next tutorial:** `Let's draw something <{filename}/kivy_text_tutorials/006.rst>`__
 
 Full code
 ~~~~~~~~~
