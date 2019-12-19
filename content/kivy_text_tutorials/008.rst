@@ -88,23 +88,23 @@ drawing.kv:
             max: 1
             value: 0.5
             size_hint_y: None
-            height: 80
+            height: 50
         Slider:
             min: 0
             max: 1
             value: 0.5
             size_hint_y: None
-            height: 80
+            height: 50
         Slider:
             min: 0
             max: 1
             value: 0.5
             size_hint_y: None
-            height: 80
+            height: 50
         BoxLayout:
             orientation: 'horizontal'
             size_hint_y: None
-            height: 80
+            height: 50
             Label:
                 text: 'output colour:'
             Widget:
@@ -154,25 +154,25 @@ rule to the following:
             max: 1
             value: 0.5
             size_hint_y: None
-            height: 80
+            height: 50
         Slider:
             id: green_slider
             min: 0
             max: 1
             value: 0.5
             size_hint_y: None
-            height: 80
+            height: 50
         Slider:
             id: blue_slider
             min: 0
             max: 1
             value: 0.5
             size_hint_y: None
-            height: 80
+            height: 50
         BoxLayout:
             orientation: 'horizontal'
             size_hint_y: None
-            height: 80
+            height: 50
             Label:
                 text: 'output colour:'
             Widget:
@@ -227,7 +227,7 @@ note that you can even do this entirely in kv:
         max: 1
         value: 0.5
         size_hint_y: None
-        height: 80
+        height: 50
 
 
     <Interface>:
@@ -242,7 +242,7 @@ note that you can even do this entirely in kv:
         BoxLayout:
             orientation: 'horizontal'
             size_hint_y: None
-            height: 80
+            height: 50
             Label:
                 text: 'output colour:'
             Widget:
@@ -253,10 +253,12 @@ note that you can even do this entirely in kv:
                         size: self.size
                         pos: self.pos
 
-The new ``<ColourSlider@Slider>:`` rule defines a *dynamic class*,
-a Python class kv rule without a corresponding Python code
+The new ``<ColourSlider@Slider>:`` rule defines a *dynamic class*, a
+Python class kv rule without a corresponding Python code
 definition. This is convenient if you want to do something repeatedly
-only in kv, and never access it from Python.
+only in kv, and never access it from Python. These Sliders are a good
+example: they don't need any extra code, just some default property
+values, so using a throwaway dynamic class gets that out of the way.
 
 At this point, we've reached feature parity with the original Python
 code, and seen all the basics of kv language. In the next tutorial
@@ -329,7 +331,7 @@ drawing.kv:
         max: 1
         value: 0.5
         size_hint_y: None
-        height: 80
+        height: 50
 
 
     <Interface>:
@@ -344,7 +346,7 @@ drawing.kv:
         BoxLayout:
             orientation: 'horizontal'
             size_hint_y: None
-            height: 80
+            height: 50
             Label:
                 text: 'output colour:'
             Widget:

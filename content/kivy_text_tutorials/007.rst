@@ -102,14 +102,14 @@ widget and adding the new gui components:
             drawing_widget = DrawingWidget()
 
             red_slider = Slider(min=0, max=1, value=0.5,
-                                size_hint_y=None, height=80)
+                                size_hint_y=None, height=50)
             green_slider = Slider(min=0, max=1, value=0.5,
-                                size_hint_y=None, height=80)
+                                size_hint_y=None, height=50)
             blue_slider = Slider(min=0, max=1, value=0.5,
-                                size_hint_y=None, height=80)
+                                size_hint_y=None, height=50)
 
             colour_row = BoxLayout(orientation='horizontal',
-                                   size_hint_y=None, height=80)
+                                   size_hint_y=None, height=50)
             colour_label = Label(text='output colour:')
             colour_widget = Widget()
 
@@ -170,8 +170,8 @@ following whatever coding conventions you like, but some of it is
 unavoidable given how Python works.
 
 It's for this reason that Kivy comes with *kv language*, a simple but
-powerful set of rules specifically designed for creating Kivy widget
-trees. If learning a new language sounds worrying...don't be
+powerful declaration language specifically designed for creating Kivy
+widget trees. If learning a new language sounds worrying...don't be
 concerned! Kv isn't a general purpose language, it doesn't have much
 special syntax and is targeted specifically at Kivy widgets. It also
 uses normal Python code wherever possible (we'll see that soon).
@@ -194,7 +194,7 @@ root widget return with the following:
             root_widget = Interface()
             return root_widget
 
-kv language works by writing *rules* for Widget classes, which will be
+Kv language works by writing *rules* for Widget classes, which will be
 automatically applied every time you instantiate one. We can use kv
 for almost everything added to the app so far, but this time we'll
 construct the gui step by step to see how each part is added with the
@@ -240,8 +240,8 @@ Kivy properties of the widget, and add child widgets. Lines like
 ``orientation: 'vertical'`` set Kivy properties just like we did
 previously in the Python code. Note that everything to the right of
 the colon is *normal Python code* - that doesn't matter here, but for
-instance we could equally well write :code:`orientation: ''.join(['v',
-'e', 'r', 't', 'i', 'c', 'a', 'l'])` and it would be exactly the
+instance we could equally well write ``orientation: ''.join(['v',
+'e', 'r', 't', 'i', 'c', 'a', 'l'])`` and it would be exactly the
 same. You can set any Kivy property of a widget in this way, finding
 the available options in the documentation as previously discussed.
 
@@ -263,23 +263,23 @@ interface entirely in kv:
             max: 1
             value: 0.5
             size_hint_y: None
-            height: 80
+            height: 50
         Slider:
             min: 0
             max: 1
             value: 0.5
             size_hint_y: None
-            height: 80
+            height: 50
         Slider:
             min: 0
             max: 1
             value: 0.5
             size_hint_y: None
-            height: 80
+            height: 50
         BoxLayout:
             orientation: 'horizontal'
             size_hint_y: None
-            height: 80
+            height: 50
             Label:
                 text: 'output colour:'
             Widget:
@@ -373,23 +373,23 @@ drawing.kv:
             max: 1
             value: 0.5
             size_hint_y: None
-            height: 80
+            height: 50
         Slider:
             min: 0
             max: 1
             value: 0.5
             size_hint_y: None
-            height: 80
+            height: 50
         Slider:
             min: 0
             max: 1
             value: 0.5
             size_hint_y: None
-            height: 80
+            height: 50
         BoxLayout:
             orientation: 'horizontal'
             size_hint_y: None
-            height: 80
+            height: 50
             Label:
                 text: 'output colour:'
             Widget:
