@@ -221,7 +221,7 @@ Now, run the application and move the values of the sliders. You
 should see code printed in your terminal every time a slider moves,
 because every movement updates the value of ``target_colour_rgb``:
 
-.. code-block::
+.. code-block:: none
 
     target_colour_rgb changed to [0.20853658536585365, 0.6012195121951219, 0.4573170731707317]
     target_colour_rgb changed to [0.20853658536585365, 0.6012195121951219, 0.4585365853658537]
