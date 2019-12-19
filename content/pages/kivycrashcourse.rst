@@ -54,3 +54,4 @@ I've also written a series of introductory text tutorials for Kivy:
 6) `Let's draw something <{filename}/kivy_text_tutorials/006.rst>`__
 7) `Introducing kv language <{filename}/kivy_text_tutorials/007.rst>`__
 8) `More kv language <{filename}/kivy_text_tutorials/008.rst>`__
+9) `Finishing the drawing app <{filename}/kivy_text_tutorials/009.rst>`__

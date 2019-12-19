@@ -157,15 +157,15 @@ for ensuring correct event dispatching with different types of object
 <https://kivy.org/doc/stable/api-kivy.properties.html>`__.
 
 **Note:** It may look a little strange that we've defined the property
- at the class level (no reference to ``self.target_colour_rgb``), and
- it is clearly a ListProperty and not an actual list so how does
- accessing its values work? The answer is that Kivy properties are
- `descriptors <https://docs.python.org/3/howto/descriptor.html>`__,
- which are defined at the class level but here are coded to behave
- like normal lists/ints/whatever when accessed from a class
- instance. You don't need to worry about these details, just consider
- the properties as normal attributes of your objects when accessing
- them.
+at the class level (no reference to ``self.target_colour_rgb``), and
+it is clearly a ListProperty and not an actual list so how does
+accessing its values work? The answer is that Kivy properties are
+`descriptors <https://docs.python.org/3/howto/descriptor.html>`__,
+which are defined at the class level but here are coded to behave
+like normal lists/ints/whatever when accessed from a class
+instance. You don't need to worry about these details, just consider
+the properties as normal attributes of your objects when accessing
+them.
 
 As an example of what that really means, lets hook up the property to
 change so that we can respond to these events. Change your kv file
@@ -228,11 +228,11 @@ because every movement updates the value of ``target_colour_rgb``:
     target_colour_rgb changed to [0.20853658536585365, 0.6012195121951219, 0.45975609756097563]
 
 **Note:** The colour changes in this example are very small because
- you're getting an update every time the slider moves even a single pixel!
+you're getting an update every time the slider moves even a single pixel!
 
- The final step is to make the DrawingWidget use this target colour
- for the next line it draws. For this we just have to update the
- ``on_touch_down`` method:
+The final step is to make the DrawingWidget use this target colour
+for the next line it draws. For this we just have to update the
+``on_touch_down`` method:
 
  .. code-block:: python
 
@@ -327,9 +327,9 @@ currently-selected width for the new Line instruction:
                              width=self.target_width_px)
 
 **Note:** I've added not just a single Slider, but a new BoxLayout to
- the kv rule, in order to display a Label indicating what the slider
- is for. Notice how, consistent with everything so far, the Label
- automatically updates to always show the current value of the Slider.
+the kv rule, in order to display a Label indicating what the slider
+is for. Notice how, consistent with everything so far, the Label
+automatically updates to always show the current value of the Slider.
 
  Run the app and try the drawing. You should now be able to control
  both the colour and width of every line:
