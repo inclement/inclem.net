@@ -104,13 +104,12 @@ important to call ``super(...)`` if you want the touch to also be
 passed to the current Widget's children, though as it happens that's
 not actually important here.
 
-Note that although these methods are called ``on_touch_...``, and
-I've called the argument ``touch``, they relate to both mouse and
-touch handling; these events are handled in exactly the same way,
-except that the touch object may contain different information such as
-the button clicked (in the case of the mouse). I'll switch to mostly
-referring to this input as 'touch', but this always includes mouse
-interaction too.
+Note that although these methods are called ``on_touch_...``, and I've
+called the argument ``touch``, they are used for both mouse and touch
+handling; these events are handled in exactly the same way, except
+that the touch object may contain different information such as the
+button clicked (in the case of the mouse). I'll mostly refer to this
+input as 'touch', but this always includes mouse interaction too.
 
 The other methods I mentioned, ``on_touch_move`` and
 ``on_touch_up``, work the same way; they are called whenever that
@@ -160,8 +159,11 @@ including if we modified e.g. its width. Try changing
 **Note:** This way of storing the line (in ``self.line``) isn't very
 robust if there are multiple simultaneous interactions, e.g. in a
 multitouch display. This is easy to resolve by storing the reference
-more cleverly, including in the touch object itself, but I've just
-ignored the issue here.
+somewhere more appropriate, e.g. we could set ``touch.ud['line']`` to
+store a reference specific to the touch object (``ud`` stands for
+"user dictionary", see `the documentation
+<https://kivy.org/doc/stable/api-kivy.input.motionevent.html#kivy.input.motionevent.MotionEvent.ud>`__). You
+might like to try implementing this.
 
 You could continue here by experimenting with other actions in
 response to touches, such as drawing different things (e.g. a

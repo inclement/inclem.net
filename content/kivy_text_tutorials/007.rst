@@ -154,9 +154,9 @@ Slider widget, which gives its current value (changing automatically
 when the slider is moved).
 
 Run the code and you should see something like the image below. You
-can update the colour in the bottom right by moving the sliders. Cool.
+can update the colour in the bottom right by moving the sliders.
 
-.. figure:: {filename}/media/kivy_text_tutorials/07_slider_colours.png
+.. figure:: {filename}/media/kivy_text_tutorials/07_01_python_version.png
    :alt: Sliders bound to a colour change
    :align: center
    :width: 400px
@@ -170,11 +170,11 @@ following whatever coding conventions you like, but some of it is
 unavoidable given how Python works.
 
 It's for this reason that Kivy comes with *kv language*, a simple but
-powerful language specifically designed for creating Kivy widget
+powerful set of rules specifically designed for creating Kivy widget
 trees. If learning a new language sounds worrying...don't be
-concerned! Kv doesn't have much special syntax and is targeted
-specifically at Kivy widgets, and much of the code you write is
-actually normal Python (we'll see that soon).
+concerned! Kv isn't a general purpose language, it doesn't have much
+special syntax and is targeted specifically at Kivy widgets. It also
+uses normal Python code wherever possible (we'll see that soon).
 
 All of the kv language stuff discussed below is `documented on the
 Kivy website <https://kivy.org/docs/guide/lang.html>`__; I'll cover

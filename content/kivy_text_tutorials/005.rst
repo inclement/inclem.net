@@ -79,8 +79,7 @@ Time to do our own drawing. Change your code to add the following:
             super(DrawingWidget, self).__init__()
 
             with self.canvas:
-                Color(1, 0, 0, 1)  # the arguments are red, blue,
-                                   # green, alpha
+                Color(1, 0, 0, 1)  # arguments are red, green, blue, alpha
                 Rectangle(size=(300, 100),
                           pos=(300, 200))
 
@@ -95,8 +94,8 @@ Time to do our own drawing. Change your code to add the following:
 
 If you run the app now, you'll see a red rectangle. Its position in
 pixels will be 300 right and 200 up from the bottom left of the
-screen; Kivy's coordinate system follows OpenGL in having its
-coordinate origin there.
+screen; Kivy's coordinate system follows OpenGL using the bottom left
+as the (0, 0) point.
 
 .. figure:: {filename}/media/kivy_text_tutorials/05_rectangle.png
    :alt: Rectangle in example app
@@ -109,15 +108,16 @@ you can achieve any kind of gui result. In fact, anything you see
 drawn with Kivy is ultimately using canvas instructions, including all
 the built in widget classes!
 
-The basic procedure always follows this one. First, open a ``with
-self.canvas`` block - this sets an internal variable that means all
-graphics instructions are drawn to the canvas of the current
-widget. All widgets have a canvas, you can draw on e.g. a Label or
-BoxLayout if you want. Second, instantiate any graphics instructions;
-in this case we use Color (which sets the colour of any following
-instructions) and Rectangle (which draws a rectangle at the given
-position). Any instructions you add later will be drawn on top of the
-previous ones.
+To describe what actually happened here: we first opened a ``with
+self.canvas`` block. The canvas context manager sets an internal
+variable that means all graphics instructions will automatically be
+added to the canvas we just opened, in this case the canvas of the
+current DrawingWidget. All widgets have a canvas that works the same
+way, you can draw on e.g. a Label or BoxLayout if you want. Next we
+instantiated our graphics instructions; in this case we use Color
+(which sets the colour of any following instructions) and Rectangle
+(which draws a rectangle at the given position). Any instructions you
+add later will be drawn on top of the previous ones.
 
 Try changing these arguments to modify what you see. The arguments to
 Color are red, green, blue and alpha components (currently opaque
@@ -125,20 +125,24 @@ red). You can also try drawing other shapes by checking the `vertex
 instruction documentation
 <https://kivy.org/docs/api-kivy.graphics.vertex_instructions.html>`__
 (vertex instructions are shapes, other instructions like Color are
-claled context instructions and include e.g. translation and
-rotation).
+claled `context instructions
+<https://kivy.org/docs/api-kivy.graphics.context_instructions.html>`__
+and include e.g. translation and rotation).
 
 **Note:** As with several other things mentioned so far, canvas
 instructions have their own simple syntax for drawing in kv language,
-introduced in tutorial 7.
+introduced in `007: Introducing Kivy language
+<{filename}/kivy_text_tutorials/007.rst>`__.
 
 **Note:** You can also access ``self.canvas.before`` and
 ``self.canvas.after``; everything in the former is drawn first, then
 everything in ``self.canvas``, then everything in
-``self.canvas.after``. This helps you to draw in layers if necessary.
+``self.canvas.after``. These are designed to cover most basic
+requirements for layer-based drawing, but you can also introduce
+further layers if you want to.
 
-Let's now draw a Rectangle filling the whole DrawingWidget, serving as
-the background of anything we draw:
+Let's now draw a Rectangle that fills the whole DrawingWidget, to
+serve as the background for anything else we draw:
 
 .. code-block:: python
 
@@ -168,12 +172,12 @@ the background of anything we draw:
     DrawingApp().run()
 
 Surprise, it doesn't work right! Although we set the rectangle size to
-self.size (the size of the DrawingWidget), and its pos to self.pos
-(the pos of the DrawingWidget), it always appears in the bottom left
-of the window and has size 100 pixels square. This is because
-although the DrawingWidget fills the window (because it is the root
-widget), its pos and size are not set until *after* its
-``__init__`` method has finished.
+``self.size`` (the size of the DrawingWidget), and its pos to
+``self.pos`` (the pos of the DrawingWidget), it always appears in the
+bottom left of the window and has size 100 pixels square. This is
+because although the DrawingWidget automatically fills the window
+(because it is the root widget), its pos and size are not set until
+*after* its ``__init__`` method has finished.
 
 **Note:** ``pos`` and ``size`` are two more Kivy properties that all
 widgets have. They give the position of the bottom left corner (in

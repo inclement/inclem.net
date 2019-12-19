@@ -62,11 +62,10 @@ going on, then going back to modify components and see how things
 change.
 
 The plan now is that every one of these buttons should add their
-symbol to the Label at the top, except '=' which should evaluate the
+symbol to the Label at the top, except ``=`` which should evaluate the
 code and display the result. This is obviously an extremely basic
 calculator, but the point here is to showcase some Kivy basics - if
-you'd like to improve the interface, go ahead with trying to do so
-along the way.
+you'd like to improve the interface, go ahead!
 
 To make the buttons do something, we must *bind* to their events. This
 is a generic Kivy concept; whenever you want one thing to trigger
@@ -81,8 +80,7 @@ Let's start with a simple binding example:
 
     def print_button_text(self, instance):
         print(instance.text)
-    for button in button_grid.children[1:]:  # note use of the
-                                             # `children` property
+    for button in button_grid.children[1:]:
         button.bind(on_press=print_button_text)
 
     # we could also have used `button.bind(on_press=lambda instance: print(instance.text))`
@@ -95,9 +93,9 @@ with any Widget, as well as several other Kivy objects (discussed in
 later tutorials). This takes any number of keyword arguments, each
 specifying an *event name* and a *function to call*; in this case the
 event name is ``on_press``, and the function to be called is our
-new ``print_button_text`. The ``bind``` method makes sure that
+new ``print_button_text``. The ``bind`` method makes sure that
 whenever ``on_press`` occurs, the function is called. It
-automatically receives a single argument, the binded widget instance.
+automatically receives a single argument, the ``bind``-ed widget instance.
 
 Also note that we've iterated over
 ``button_grid.children[1:]`. The ``children``` property is
@@ -143,23 +141,23 @@ automatically in response to the label's height:
             label.font_size = 0.5*label.height
         output_label.bind(height=resize_label_text)
 
-Note that the event here is named ``height``. This works because
-the Label has a Kivy property named height (as do all Widgets, see the
+Note that the event here is named ``height``. This works because the
+Label has a Kivy property named height (as do all Widgets, see the
 `documentation
-<https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.height>`__,
+<https://kivy.org/docs/api-kivy.uix.widget.html#kivy.uix.widget.Widget.height>`__),
 and all Kivy properties can be bound to as an event of the same name,
-called when the property changes. In this case, you can now resize the
-window, which causes the layouts in the Widget tree to automatically
-resize their children, which in turn causes ``resize_label_text``
-to automatically be called.
+called automatically when the property changes. In this case, you can
+now resize the window, which causes the layouts in the Widget tree to
+automatically resize their children, which in turn causes
+``resize_label_text`` to automatically be called.
 
 We'll use one final binding to make the calculator interface actually
 work; when the '=' button is pressed, we can evaluate the entire label
 text as python code, and display the result.
 
-**Note:** Using eval as a calculator like this is in general a
-terrible idea, used here only to avoid dwelling on the details rather
-than the Kivy principles.
+**Note:** Using ``eval`` as a calculator like this is in general a
+terrible idea, used here only to avoid dwelling on the non-Kivy
+details.
 
 .. code-block:: python
 

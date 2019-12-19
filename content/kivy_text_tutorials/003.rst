@@ -18,14 +18,15 @@ and doing some customisation.
 
 Let's now *combine* some widgets to make a larger GUI. This tutorial
 will solely cover joining the widgets together, not making them do
-anything; this is covered in later tutorials (see `007: Introducing
-Kivy language <{filename}/kivy_text_tutorials/007.rst>`__).
+anything; this is covered in later tutorials.
 
 **Note:** This tutorial will construct the GUI using entirely Python
 code. You can always do this with Python as described here, but
 normally we recommend using the easier, clearer and more concise `kv
 language <https://kivy.org/docs/guide/lang.html>`__ to construct
-widget trees. This will be covered fully in later tutorials.
+widget trees. This will be covered fully in later tutorials (see `007:
+Introducing Kivy language
+<{filename}/kivy_text_tutorials/007.rst>`__).
 
 Our new task will be to build a simple calculator app; we'll need
 Buttons for each of the numbers and mathematical operations, and a
@@ -75,12 +76,16 @@ We're now instantiating three Widget classes; the BoxLayout and two
 Buttons. Just like with the Label, each one can be customised by
 passing properties. The only new one here is the ``orientation``
 of the BoxLayout; passing ``'vertical'`` means it will place its
-children below one another. The Buttons are internally a Label with a
-background image and touch behaviour (you can see this in the `Button
-documentation
+children below one another.
+
+**Note:** Kivy's design emphasises the composition of small components
+to achieve combined results. For instance, the Button widget is
+implemented as a Label with a background image and special
+touch-related behaviour (you can see this in the `Button documentation
 <https://kivy.org/docs/api-kivy.uix.button.html#kivy.uix.button.Button>`__,
 check the 'Bases:'), so we can use the Label's text property just like
-before.
+before. This isn't too important right now, but knowing it can help
+with navigating the documentation.
 
 After instantiating the widgets, we can *add* them to one another. You
 can almost always add any widget instance to any other in exactly this
@@ -91,7 +96,7 @@ the Buttons) is the *child widget*.
 
 This code should give you something like the following image. You can
 also now click the buttons to see their colour change; this behaviour
-is automatic, they don't do anything else yet.
+is automatic, pressing them doesn't do anything else yet.
 
 .. figure:: {filename}/media/kivy_text_tutorials/03_two_buttons.png
     :alt: App output showing 2 buttons
@@ -107,11 +112,12 @@ repositions and resizes its children when its own size changes, and
 because it is the root widget its own size tracks that of the
 window. This is **very important**! If you replace the BoxLayout with
 a plain Widget (``from kivy.uix.widget import Widget``) this will
-*not* happen, the Buttons will both have their default position and
-size in the bottom left of the window. For this reason, you'll want to
-use Layouts like BoxLayout all the time to automatically position
-things, though you can also create your own automatic bindings (see
-later tutorials on Kivy Properties).
+*not* happen, there won't be any code to place the Buttons so they
+will both have their default position and size in the bottom left of
+the window. For this reason, you'll want to use Layouts like BoxLayout
+all the time to automatically position things, though you can also
+create your own automatic bindings (see later tutorials on Kivy
+Properties).
 
 With these basic ideas in hand, let's proceed to add Widgets
 representing our entire calculator interface:
@@ -140,7 +146,8 @@ representing our entire calculator interface:
             for symbol in button_symbols:
                 button_grid.add_widget(Button(text=symbol))
 
-            clear_button = Button(text='clear', size_hint_y=None,
+            clear_button = Button(text='clear',
+                                  size_hint_y=None,
                                   height=100)
 
             root_widget.add_widget(output_label)
@@ -154,9 +161,10 @@ representing our entire calculator interface:
 
 This introduces a couple of new ideas; the GridLayout is a new layout
 class that arranges its child widgets in (you guessed it) a
-grid. We've set its ``cols` property to ``4```, which means
-that every 4 widgets we add it will start a new row. Since we add 16
-buttons altogether, that's 4 rows of 4.
+grid. We've set its ``cols`` property to ``4``, which means that after
+every 4 widgets we add it will start a new row. Since we add 16
+buttons altogether, that's 4 rows of 4. Try adding an extra button or
+two to understand exactly how it's working.
 
 The other new idea here is the ``size_hint_y`` setting for the
 output_label and button_grid. All widgets have a ``size_hint_x``
