@@ -119,11 +119,10 @@ result should now look something like the following image.
    :align: center
    :width: 400px
 
-.. note:: This is just a basic introduction to customising Kivy
-          widgets, you can use similar methods to accomplish many
-          different changes in many different scenarios. Kivy
-          properties also have other important functionality, covered
-          later in these tutorials.
+**Note:** This is just a basic introduction to customising Kivy
+widgets, you can use similar methods to accomplish many different
+changes in many different scenarios. Kivy properties also have other
+important functionality, covered later in these tutorials.
 
 
 Full code

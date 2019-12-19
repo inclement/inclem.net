@@ -154,11 +154,11 @@ the gui will automatically be updated whenever the Line changes,
 including if we modified e.g. its width. Try changing
 ``self.line.width`` in ``on_touch_move`` and see what happens.
 
-.. note:: This way of storing the line (in ``self.line``) isn't
-          very robust if there are multiple simultaneous interactions,
-          e.g. in a multitouch display. This is easy to resolve by
-          storing the reference more cleverly, including in the touch
-          object itself, but I've just ignored the issue here.
+**Note:** This way of storing the line (in ``self.line``) isn't very
+robust if there are multiple simultaneous interactions, e.g. in a
+multitouch display. This is easy to resolve by storing the reference
+more cleverly, including in the touch object itself, but I've just
+ignored the issue here.
 
 You could continue here by experimenting with other actions in
 response to touches, such as drawing different things (e.g. a

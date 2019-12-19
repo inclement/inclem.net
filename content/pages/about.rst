@@ -1,16 +1,9 @@
 About
 #####
 
-I am a scientific researcher currently based in South West England,
-with a particular interest in scientific problem solving, numerical
-computation and software engineering.
+I am a software engineer currently based in Cambridge, UK. Contact me at `alexander@inclem.net <mailto:alexander@inclem.net>`_.
 
-My CV can be found `here
-<{filename}/media/alexander_taylor_cv.pdf>`__. Contact me at
-`alexander@inclem.net <mailto:alexander@inclem.net>`_.
-
-I am currently employed as a Postdoctoral Research Associate at the
-University of Bristol. My publications and other activities include:
+My academic publications and other activities include:
 
 Scientific Publications
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -20,7 +13,7 @@ Scientific Publications
 
 Alexander Taylor, *J Phys A* **51**, 075202 (2018)
 
-   
+
 **2017**: Analysis of Quantised Vortex Tangle
 ---------------------------------------------
 
@@ -32,7 +25,7 @@ for this prize by the University of Bristol.
 
 
 **2017**: Proteins analysed as virtual knots
---------------------------------------------   
+--------------------------------------------
 
 Keith Alexander, Alexander J Taylor and Mark R Dennis, *Scientific Reports* **7**, 42300 (2017)
 
@@ -180,10 +173,11 @@ These pages are constructed using `Pelican
 Python. The source is all publicly available `on github
 <https://github.com/inclement/inclem.net>`_.
 
-The website theme is a modified version of `TuxLite ZF
-<https://github.com/getpelican/pelican-themes/tree/master/tuxlite_zf>`_. You
-can find my modifications `here
-<https://github.com/inclement/pelican-inclemnet-theme>`_.
+..
+   The website theme is a modified version of `TuxLite ZF
+   <https://github.com/getpelican/pelican-themes/tree/master/tuxlite_zf>`_. You
+   can find my modifications `here
+   <https://github.com/inclement/pelican-inclemnet-theme>`_.
 
 
 Contact

@@ -10,11 +10,6 @@ series of youtube videos, which you can find on my `youtube channel
 series starts from scratch and moves quickly through different Kivy
 features in about 10 minutes per video.
 
-I maintain a `separate github repository
-<https://github.com/inclement/kivycrashcourse>`_ with the original kivy crash
-course files and any accompanying notes. Everything relevant is linked to from
-the individual articles or videos.
-
 1) Making a simple App; `youtube
    <https://www.youtube.com/watch?v=F7UKmK9eQLY>`_ or `article
    <{filename}/kivycrashcourse/1-making_a_simple_app.rst>`__.
@@ -40,6 +35,11 @@ the individual articles or videos.
 12) Using Android APIs; `youtube <https://www.youtube.com/watch?v=8Jwp1PTvECI&feature=youtu.be>`__.
 13) Using Kivy's settings panel: `youtube <https://www.youtube.com/watch?v=oQdGWeN51EE>`__.
 14) Using a ScreenManager: `youtube <https://www.youtube.com/watch?v=xx-NLOg6x8o>`__.
+
+I maintain a `separate github repository
+<https://github.com/inclement/kivycrashcourse>`_ with the original kivy crash
+course files and any accompanying notes. Everything relevant is linked to from
+the individual articles or videos.
 
 Text tutorials
 ==============

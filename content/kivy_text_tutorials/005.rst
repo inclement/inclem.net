@@ -125,15 +125,14 @@ instruction documentation
 claled context instructions and include e.g. translation and
 rotation).
 
-.. note:: As with several other things mentioned so far, canvas
-          instructions have their own simple syntax for drawing in kv
-          language, introduced in tutorial 7.
+**Note:** As with several other things mentioned so far, canvas
+instructions have their own simple syntax for drawing in kv language,
+introduced in tutorial 7.
 
-.. note:: You can also access ``self.canvas.before`` and
-          ``self.canvas.after``; everything in the former is drawn
-          first, then everything in ``self.canvas``, then
-          everything in ``self.canvas.after``. This helps you to
-          draw in layers if necessary.
+**Note:** You can also access ``self.canvas.before`` and
+``self.canvas.after``; everything in the former is drawn first, then
+everything in ``self.canvas``, then everything in
+``self.canvas.after``. This helps you to draw in layers if necessary.
 
 Let's now draw a Rectangle filling the whole DrawingWidget, serving as
 the background of anything we draw:
@@ -173,10 +172,9 @@ although the DrawingWidget fills the window (because it is the root
 widget), its pos and size are not set until *after* its
 ``__init__`` method has finished.
 
-.. note:: ``pos`` and ``size`` are two more Kivy properties
-          that all widgets have. They give the position of the bottom
-          left corner (in pixels) and the size of the Widget (also in
-          pixels).
+**Note:** ``pos`` and ``size`` are two more Kivy properties that all
+widgets have. They give the position of the bottom left corner (in
+pixels) and the size of the Widget (also in pixels).
 
 To solve this problem, we again use *event bindings*:
 

@@ -53,10 +53,10 @@ code, and try to change the instructions to fit your modifications:
 
     YourApp().run()
 
-.. note:: This tutorial introduces some major new Kivy concepts. I
-          recommend working through it even if you don't entirely
-          follow what's going on, then going back to modify components
-          and see how things change.
+**Note:** This tutorial introduces some major new Kivy concepts. I
+recommend working through it even if you don't entirely follow what's
+going on, then going back to modify components and see how things
+change.
 
 The plan now is that every one of these buttons should add their
 symbol to the Label at the top, except '=' which should evaluate the
@@ -102,10 +102,10 @@ available on any Widget, and holds a list of all the widgets added to
 it, in reverse order. In this case, we use ``[1:]`` to skip the
 first element, '=', as we want to use this to evaluate the result.
 
-.. note:: Button also has an ``on_release`` event that is called
-          when the user releases a click or touch. You can find more
-          information in the `Button documentation
-          <https://kivy.org/docs/api-kivy.uix.button.html>`__.
+**Note:** Button also has an ``on_release`` event that is called when
+the user releases a click or touch. You can find more information in
+the `Button documentation
+<https://kivy.org/docs/api-kivy.uix.button.html>`__.
 
 This binding idea is very normal in Kivy, and you'll quickly get used
 to seeing it used in different ways, including some introduced later
@@ -154,9 +154,9 @@ We'll use one final binding to make the calculator interface actually
 work; when the '=' button is pressed, we can evaluate the entire label
 text as python code, and display the result.
 
-.. note:: Using eval as a calculator like this is in general a
-          terrible idea, used here only to avoid dwelling on the
-          details rather than the Kivy principles.
+**Note:** Using eval as a calculator like this is in general a
+terrible idea, used here only to avoid dwelling on the details rather
+than the Kivy principles.
 
 .. code-block:: python
 

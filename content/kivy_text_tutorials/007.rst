@@ -17,9 +17,9 @@ has a ColorPicker Widget for this purpose (see the `documentation
 skip that for now in order to continue demonstrating Kivy widget
 construction.
 
-.. note:: Since all Kivy widgets are built out of other Widgets and
-          canvas instructions, you might like to think about how you'd
-          build the ColorPicker from scratch.
+**Note:** Since all Kivy widgets are built out of other Widgets and
+canvas instructions, you might like to think about how you'd build the
+ColorPicker from scratch.
 
 Let's start with the code from last time, minus the now-unnecessary
 red Rectangle:

@@ -17,12 +17,11 @@ Let's now *combine* some widgets to make a larger GUI. This tutorial
 will solely cover joining the widgets together, not making them do
 anything; this is covered in later tutorials.
 
-.. note:: This tutorial will construct the GUI using entirely Python
-          code. You can always do this with Python as described here,
-          but normally we recommend using the easier, clearer and more
-          concise `kv language
-          <https://kivy.org/docs/guide/lang.html>`__ to construct
-          widget trees. This will be covered fully in later tutorials.
+**Note:** This tutorial will construct the GUI using entirely Python
+code. You can always do this with Python as described here, but
+normally we recommend using the easier, clearer and more concise `kv
+language <https://kivy.org/docs/guide/lang.html>`__ to construct
+widget trees. This will be covered fully in later tutorials.
 
 Our new task will be to build a simple calculator app; we'll need
 Buttons for each of the numbers and mathematical operations, and a
