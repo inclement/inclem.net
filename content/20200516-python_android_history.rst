@@ -51,13 +51,14 @@ Notes on the term "native"
 A key problem point around discussing Python on Android in that the
 term "native" is overloaded to mean two different things.
 
-The first refers to simply compiling CPython to run "natively"
-with the Android kernel and libraries, and this is what the ZDNet
-article refers to with e.g. the quote "Android devices are now fast
-enough, and the Android kernel permissive enough, to run CPython
-itself". This is not a recent development, it has been technically
-possible for many years, although the article is correct that it comes
-with disadvantages and not everything works the same as on desktop.
+The first refers to simply compiling CPython to run "natively" with
+the Android kernel and libraries, just as it does on desktop
+platforms, and this is what the ZDNet article refers to with e.g. the
+quote "Android devices are now fast enough, and the Android kernel
+permissive enough, to run CPython itself". This is not a recent
+development, it has been technically possible for many years, although
+the article is correct that it comes with disadvantages and not
+everything works the same as on desktop.
 
 The second is using the "native" GUI toolkit for the platform. On
 Android that means using the same widget toolkit as normal Java-based
@@ -74,7 +75,7 @@ alternative to Java for generic Android development. However, there
 are huge areas of Python development where this simply isn't a big
 concern, e.g. everything from games (Pygame, Kivy, Renpy), to
 scientific visualisation (matplotlib, Vispy, other toolkits), to
-novel user interfaces (everything from Jupyter notebooks to apps that
+novel user interfaces (Jupyter notebooks or other apps that
 don't care about the native GUI toolkit for whatever reason). All of
 these things are tremendously popular on the desktop without using the
 native GUI toolkit, because that detail is either irrelevant or
