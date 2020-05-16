@@ -16,21 +16,23 @@ some key points. In particular the article states that "apps written
 in Python may one day run natively on iOS and Android devices", but in
 fact people have been doing this since at least 2011.
 
-I thought I'd write some details about the actual history of Python on
-Android from my own perspective. It's something I've been involved in
-on some level for about 8 years, and for a significant part of that
-I've been a primary maintainer of `python-for-android
+I thought I'd write some short details about the actual history of
+Python on Android from my own perspective. It's something I've been
+involved in on some level for about 8 years, and for a significant
+part of that I've been a primary maintainer of `python-for-android
 <https://github.com/kivy/python-for-android/tree/master>`__. This is a
 build tool for creating APKs from Python applications, originally
-created for Kivy but now more generic so that it can also support
-e.g. flask running on the device with a webview gui, or more recently
-Pygame via its upcoming SDL2 support.
+created for `Kivy <https://kivy.org/#home>`__ but now more generic so
+that it can also support e.g. flask running on the device with a
+webview gui, or more recently Pygame via its upcoming SDL2 support.
 
 .. figure:: {filename}/media/example_python_android_apps.png
    :alt: Kivy app screenshots
    :align: center
 
-   Example Python apps for Android. From left to right: `Flat Jewels
+   Example Python apps for Android. `Large version
+   <{filename}/media/example_python_android_apps_large.png>`__. From
+   left to right: `Flat Jewels
    <https://play.google.com/store/apps/details?id=com.meltingrocks.flatjewels>`__,
    `ColourBlind
    <https://play.google.com/store/apps/details?id=net.inclem.colourblind>`__,
@@ -86,7 +88,8 @@ historically important in terms of creating Python applications on
 Android, in rough date order. This list undoubtedly isn't complete and
 is strongly based on events as I remember them, I might have missed
 other important projects and I'm certainly missing details from before
-about 2012!
+about 2012! I've also focused on application build tools, not the many
+individual patches and Python contributions that made them possible.
 
 Pygame Subset for Android (PGS4A)
 ---------------------------------
@@ -124,7 +127,7 @@ they were the same project at any point I remember.
 
 Renpy's Android support hasn't been static, it's evolved
 since 2011. At some point around 2014-2015 it switched to use a `fork
-of Pygame using SDL2 <https://github.com/renpy/pygame_sdl2>`, with
+of Pygame using SDL2 <https://github.com/renpy/pygame_sdl2>`__, with
 corresponding updates to the Android build process. This makes sense
 because SDL2 itself supports Android properly, removing a huge
 maintenance burden. Note that this pygame_sdl2 project is not the same
@@ -138,7 +141,7 @@ Kivy and python-for-android
 `Kivy <https://kivy.org/#home>`__ is easily the most well known
 Android-supporting Python toolkit I'm aware of, and has been since
 around 2012 when I came across it myself after failing to get a Java
-Android tutorial working. Kivy itself is a graphical toolkit that was
+Android tutorial working. Kivy is a graphical toolkit that was
 not specifically designed for mobile support, but instead focused on
 being generically cross-platform and supporting novel user
 interfaces. This turned out very timely, as these properties made it
@@ -166,8 +169,8 @@ Beeware
 -------
 
 BeeWare is a collection of tools and libraries for building Python
-applications across different platforms (both desktop and
-mobile). These projects have a particular focus on manipulating the
+applications across different platforms, both desktop and
+mobile. These projects have a particular focus on manipulating the
 native graphical toolkits of a given platform, e.g. on Android they
 want to use the same "native" GUI widgets as a normal Java-built
 application. Its `toga <https://github.com/beeware/toga>`__ toolkit
@@ -185,8 +188,7 @@ Python is still quite slow to start, and in particular that Android
 used to enforce a fairly low limit on the number of JNI references
 that could be simultaneously maintained, which makes building a full
 GUI impractical. My understanding is that a combination of these
-factors made CPython use impractical for Beeware. (In contrast, I
-think this has always worked pretty well on iOS, and is used there).
+factors made CPython use impractical for Beeware on Android.
 
 BeeWare instead switched to creating `VOC
 <https://github.com/beeware/voc>`__, a Python code to Java bytecode
@@ -195,7 +197,7 @@ that can run as a normal app without the above limitations. I haven't
 tried this for some time, but I understand it works fine. However, it
 seems the difficulty of supporting the full breadth of Python
 libraries has been a barrier (at least, that's been my impression from
-watching discussions about it, I believe it's still under active
+watching discussions about it, I think it's still under active
 development and working well).
 
 Fortunately Android itself has improved, and in particular the
@@ -222,7 +224,7 @@ pyqtdeploy
 ----------
 
 The popular Qt graphical framework `supports Android
-<https://doc.qt.io/qt-5/android.html>__`. Python bindings to this
+<https://doc.qt.io/qt-5/android.html>`__. Python bindings to this
 framework are quite popular, so it's not a huge surprise that there's
 some level of Python for Android support using Qt for the GUI. As far
 as I'm aware `pyqtdeploy
