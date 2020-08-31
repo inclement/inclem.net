@@ -78,7 +78,7 @@ Let's start with a simple binding example:
 
 .. code-block:: python
 
-    def print_button_text(self, instance):
+    def print_button_text(instance):
         print(instance.text)
     for button in button_grid.children[1:]:
         button.bind(on_press=print_button_text)
