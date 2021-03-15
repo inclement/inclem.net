@@ -29,7 +29,7 @@ Vivarium's desktop semantics are inspired by `xmonad <https://xmonad.org/>`__: e
 
 Vivarium is built using the `wlroots library <https://github.com/swaywm/wlroots>`__ and largely inherits support for different protocols and backend features from this toolkit - though not all are enabled or fully implemented yet. Vivarium is released under the GPLv3 license.
 
-For further information, see `the Github README <https://github.com/inclement/vivarium>`__.
+For further information including install and config instructions, see `Vivarium's Github <https://github.com/inclement/vivarium>`__.
 
 Vivarium's tiling model
 =======================
