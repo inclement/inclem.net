@@ -12,7 +12,7 @@ This post is to announce the existence of `Vivarium <https://github.com/inclemen
 .. figure:: {filename}/media/vivarium_readme_screenshot_20210314.png
    :alt: Screenshot of Vivarium with browser window, terminal and PDF viewer
    :align: center
-   :width: 70%
+   :width: 85%
 
 Core Vivarium features include:
 
@@ -42,7 +42,7 @@ Example layouts include (left to right): split, fullscreen, central column, and 
 .. figure:: {filename}/media/viv_layout_type_illustrations.png
    :alt: Vivarium layout illustrations
    :align: center
-   :width: 80%
+   :width: 95%
 
 Most layouts have a main panel displaying the primary window, and a secondary space for the other windows. The window order can be adjusted, including swapping out the primary window at any time.
 
@@ -51,14 +51,14 @@ Layouts have a "fill fraction" parameter, adjustable at runtime via hotkeys, whi
 .. figure:: {filename}/media/viv_layout_split_dist_illustrations.png
    :alt: Vivarium varying fill fraction illustrations
    :align: center
-   :width: 80%
+   :width: 95%
 
 Layouts also have an integer main panel "count", adjustable at runtime via hotkeys, which controls how many windows are stacked in the main panel. It can be zero so that all windows occupy the secondary space:
 
 .. figure:: {filename}/media/viv_layout_counter_illustrations.png
    :alt: Vivarium varying main panel counter illustrations
    :align: center
-   :width: 80%
+   :width: 95%
 
 Layouts further let you configure options including the display of window borders, and whether windows adhere to the excluded region of a desktop bar (or other layer surface) or instead get drawn on top of it.
 
