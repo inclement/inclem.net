@@ -1,0 +1,87 @@
+Vivarium: A dynamic tiling wayland compositor
+#############################################
+
+:date: 2021-03-12 20:00
+:tags: vivarium, wayland
+:category: wayland
+:slug: vivarium_wayland_compositor
+:author: Alexander Taylor
+
+This post is to announce the existence of `Vivarium <https://github.com/inclement/vivarium>`__, a dynamic tiling wayland compositor.
+
+.. figure:: {filename}/media/vivarium_readme_screenshot_20210314.png
+   :alt: Screenshot of Vivarium with browser window, terminal and PDF viewer
+   :align: center
+   :width: 900px
+
+Core Vivarium features include:
+
+* Automatic/dynamic tiling with your choice of layouts.
+* Per-output workspaces: each monitor can switch independently through the same set of workspaces.
+* Floating windows on demand.
+* (optional) XWayland support.
+* Layer shell support, compatible with tools like `Waybar <https://github.com/Alexays/Waybar>`__, `bemenu <https://github.com/Cloudef/bemenu>`__ and `swaybg <https://github.com/swaywm/swaybg>`__.
+* Simple static config and/or sophisticated C config.
+
+As of now Vivarium is...pretty much usable! In particular it has reached the bar of being good enough for me to use full time, for several weeks now. Vivarium has many missing or incomplete features and undoubtedly plenty of bugs, but may be of interest to anyone looking for a tiling wayland compositor / window manager. Bug reports (or code contributions!) are very welcome `via Github <https://github.com/inclement/vivarium>`__. This also marks the point of point of tagging a first numbered version, v0.0.1, and transitioning to slightly more careful development. Merges to the main branch will now not be allowed unless the build is verified passing, and main branch history will not be modified.
+
+Vivarium's desktop semantics are inspired by `xmonad <https://xmonad.org/>`__: each monitor displays a workspace, and new windows are automatically tiled within the current workspace and active layout. The order of windows within the layouts is adjustable at runtime. Each workspace may independently switch between different layouts. Each output (usually equivalent to each monitor) can independently switch between workspaces. Windows may be made floating and moved/resized smoothly, but this is generally the exception rather than the rule. That said, Vivarium makes no attempt to rigorously mimic xmonad or to replicate its internal design philosophy - not least, Vivarium is written in C and is not (for now) so directly and transparently extensible.
+
+Vivarium is built using the `wlroots library <https://github.com/swaywm/wlroots>`__, and largely inherits support for different protocols and backend features from this toolkit - though not all are enabled or fully implemented yet. Vivarium is released under the GPLv3 license.
+
+
+Vivarium's tiling model
+=======================
+
+Vivarium lets you define any number of workspaces, each with some number of tiling layouts that you can switch between at runtime. New windows are automatically tiled according to the current layout, or can be made floating to be placed anywhere you like.
+
+In a standard config you'll likely set up a small number of layouts whose parameters you adjust adjust at runtime according to your needs. For instance, if you find you need too many terminals to fit in a single stack next to a browser window then you might switch to a layout with more columns. Or if you want to focus on the browser, you might switch to a fullscreen layout.
+
+Example layouts include (left to right): split, fullscreen, central column, and recursive split:
+
+.. figure:: {filename}/media/viv_layout_type_illustrations.png
+   :alt: Vivarium layout illustrations
+   :align: center
+
+Most layouts have a main panel displaying the primary window, and a secondary space for the other windows. The window order can be adjusted, including swapping out the primary window at any time.
+
+Layouts have a "fill fraction" parameter, adjustable at runtime via hotkeys, which controls the size of the main panel:
+
+.. figure:: {filename}/media/viv_layout_split_dist_illustrations.png
+   :alt: Vivarium varying fill fraction illustrations
+   :align: center
+
+Layouts also have an integer main panel "count", adjustable at runtime via hotkeys, which controls how many windows are stacked in the main panel. It can be zero so that all windows occupy the secondary space:
+
+.. figure:: {filename}/media/viv_layout_counter_illustrations.png
+   :alt: Vivarium varying main panel counter illustrations
+   :align: center
+
+Layouts further let you configure options including the display of window borders, and whether windows adhere to the excluded region of a desktop bar (or other layer surface) or instead get drawn on top of it.
+
+This basic model is core to Vivarium and not expected to change, but it is intended to become more flexible over time. For instance, currently the list of workspaces is fixed in the config, but it would be straightforward to support dynamically adding/removing workspaces. Similarly, all workspaces currently have to use the same choice of layouts, but this too ought to be made configurable.
+
+
+Roadmap / missing features
+==========================
+
+I'm currently working through bugs or minor missing features I find in the course of using Vivarium. When these die down the following are priorities:
+
+* Better documentation, especially Vivarium needs to be able to list available layouts and commands so that these can be referenced easily in user configs.
+* Proper output configuration (DPI, scaling, positioning). Wlroots provides everything we need for this but testing it properly requires monitor hardware I don't currently have.
+* Per-application/window configuration, e.g. configuring applications to automatically be sent to a certain desktop or be made floating.
+* Damage tracking: Vivarium simply doesn't do this yet, it naively renders everything every frame. This works fine but is quite inefficient. This can be improved quickly even without a full implementation: the first step is at least to avoid rendering frames where no surface has changed.
+* Protocol support: Vivarium inherits support for many Wayland protocols from wlroots, but in general they need a little boilerplate to initialise. In some cases like the layer shell protocol, Vivarium supports enough of the protocol to basically work but doesn't handle entirely correctly according to the spec. I intend to both fix this, and make sure Vivarum supports as many protocol features as possible. Immediate goals include:
+  * Full layer shell support, especially making sure the overlay layer works correctly.
+  * Input inhibitor protocol support, to allow screen locking.
+  * Screen copy and screen share support.
+* Better configuration: The current static config should be enough for many practical purposes, and more advanced tasks can be achieved via the C config header, but a more accessible configuration-as-code would be nice. This would make it easy to support features like user-provided layouts without needing to recompile the C source. I'd like to explore providing e.g. a Python wrapper library that makes it easy to inject dynamic configurations.
+
+Alternatives
+============
+
+If you're reading this thinking "hey that's cool, but what if I want a tiling Wayland compositor that already works well?" (or simply that works differently), you may be interested in:
+
+* `Sway <https://github.com/swaywm/sway>`__: An i3-compatible Wayland compositor. Sway is easily the most popular and well supported Wayland tiling compositor, and also the origin of the wlroots library used by Vivarium.
+* `River <https://github.com/ifreund/river>`__: A dynamic tiling wayland compositor that takes inspiration from dwm and bspwm. River has a nice system of dynamic layouts based on user-provided executables, but is not as mature as Sway.
+* `Wayfire <https://github.com/WayfireWM/wayfire>`__: A 3D Wayland compositor inspired by Compiz. Wayfire doesn't provide tiling-type window management as a core feature, but there is a plugin for it.
