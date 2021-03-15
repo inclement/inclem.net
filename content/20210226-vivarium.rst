@@ -80,6 +80,8 @@ I'm currently working through bugs or minor missing features I find in the cours
   * Screen copy and screen share support.
 * Better configuration: The current static config should be enough for many practical purposes, and more advanced tasks can be achieved via the C config header, but a more accessible configuration-as-code would be nice. This would make it easy to support features like user-provided layouts without needing to recompile the C source. I'd like to explore providing e.g. a Python wrapper library that makes it easy to inject dynamic configurations.
 
+This is not a formal roadmap, the actual order of feature addition may vary.
+
 Alternatives
 ============
 
