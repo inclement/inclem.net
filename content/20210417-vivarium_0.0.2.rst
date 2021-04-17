@@ -23,6 +23,8 @@ Key improvements in this release include:
 * Improved default config values in general and fixed issues with config loading crashing on certain missing data.
 * Various minor bugfixes.
 
+Many thanks also to Arch Linux user lmartinez-mirror for contributing an `AUR package <https://aur.archlinux.org/packages/vivarium-git/>`__ for Vivarium.
+
 Next goals
 ==========
 
