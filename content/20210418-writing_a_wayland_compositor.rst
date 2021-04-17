@@ -8,17 +8,14 @@ Thoughts on writing a wayland compositor with wlroots
 :author: Alexander Taylor
 
 I recently released `Vivarium <{filename}/20210226-vivarium.rst>`__, a dynamic tiling
-wayland compositor built using the `wlroots library <https://github.com/swaywm/wlroots>`__.
-Going from zero to compositing was an interesting
-journey, I had briefly looked into it a few years ago but at the time library support was
-not very good. This was especially true when trying to write effectively the equivalent of
-an X window manager that only really cares about window layout and wants everything else
-to Just Work - the most obvious option at the time was `wlc
-<https://github.com/Cloudef/wlc>`__, but the very active `Sway <https://swaywm.org/>`__
-window manager project was clearly demonstrating its limitations and I remember things
-seeming in a state of flux.
+wayland compositor built using the `wlroots library
+<https://github.com/swaywm/wlroots>`__.  Going from zero to compositing was interesting,
+there are good libraries available but everything has moved very fast in the last couple
+of years so it can be hard to know where to start. I especially wanted to write the
+equivalent of an X window manager that only really cares about window layout and wants
+everything else to Just Work.
 
-The Sway developers created wlroots to solve these problems. To quote its own README, it
+Wlroots is a library created to support this use case. To quote its own README, it
 provides "pluggable, composable, unopinionated modules for building a Wayland compositor;
 or about 50,000 line of code you were going to write anyway". For me it's fulfilled that
 goal very well, and Vivarium probably wouldn't exist without it. Still, while there are
