@@ -1,0 +1,31 @@
+Vivarium 0.0.2 release: improved config handling, cli help, better CI and unit tests
+####################################################################################
+
+:date: 2021-04-17 18:00
+:tags: vivarium, wayland
+:category: wayland
+:slug: vivarium_wayland_compositor_0_0_2_release
+:author: Alexander Taylor
+
+I've just tagged for release `Vivarium 0.0.2 <https://github.com/inclement/vivarium>`__. This is an incremental release with many small fixes following the `first release announcement <{filename}/20210226-vivarium.rst>`__. Many thanks to those who tested it out and reported issues.
+
+Vivarium is a dynamic tiling wayland compositor, with desktop semantics inspired mostly by xmonad.
+
+Release summary
+===============
+
+Key improvements in this release include:
+
+* Improved CI to actually run Vivarium with different config types, catching issues with default values on different systems.
+* Added cli argument parsing and initial cli interface, the Vivarium binary can now output a list of available layouts and action commands for keybinds instead of having to read the code to find them.
+* Added unit tests for layout function and config loading.
+* Improved XWayland popup window detection (i.e. windows that should be made floating automatically) by properly inspecting X window properties.
+* Improved default config values in general and fixed issues with config loading crashing on certain missing data.
+* Various minor bugfixes.
+
+Next goals
+==========
+
+This release has been tagged partly because I'm working to merge damage tracking. This is a key feature that will dramatically improve performance but it has the potential to introduce tricky bugs, so this release serves as a clear stable target. I hope to merge damage tracking for the next release.
+
+Our backend library `Wlroots <https://github.com/swaywm/wlroots>`__ recently tagged the new version 0.13 and Vivarium needs a little tweaking to support it. I expect to bundle this into the next release.
