@@ -1,5 +1,5 @@
-Thoughts on writing a wayland compositor with wlroots
-#####################################################
+Thoughts on writing a wayland window manager with wlroots
+#########################################################
 
 :date: 2021-04-17 21:00
 :tags: vivarium, wayland
