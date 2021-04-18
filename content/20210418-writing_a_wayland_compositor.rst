@@ -112,16 +112,15 @@ interface. Some possibilities include:
   like writing a KWin or Gnome Shell script, but I don't know much about what these
   currently support.
 * Use an existing tiling window manager. `Sway <https://swaywm.org/>`__ is mostly a
-  drop-in replacement for the i3 window manager and is popular and well supported (wlroots
-  is created/maintained by Sway developers), with some scripting functionality. `River
-  <https://github.com/ifreund/river>`__ supports a system of user-provided executables
-  that makes its layouts quite flexible. Indeed `Vivarium
-  <https://github.com/inclement/vivarium>`__ itself supports customisable layouts, but
-  those other projects are much more established and perhaps more flexible.
+  drop-in replacement for the i3 window manager and is popular and well supported, with
+  some scripting functionality. `River <https://github.com/ifreund/river>`__ supports a
+  system of user-provided executables that makes its layouts quite flexible. Indeed
+  `Vivarium <https://github.com/inclement/vivarium>`__ itself supports customisable
+  layouts, but those other projects are much more established and perhaps more flexible.
 
   * Obviously I wrote Vivarium despite these alternative possibilities. I did that because
     I wanted to learn from the project and see how practical it was. Without that
-    motivation, I'd probably be a happy Sway or River (or other alternative) user.
+    motivation, I'd probably be a happy Sway/River/other user.
 
 * Hang around and see if wlroots grows a `higher level API
   <https://github.com/swaywm/wlroots/issues/1826>`__, or if another project/library starts
@@ -130,7 +129,7 @@ interface. Some possibilities include:
   different wlroots compositors tend to implement some things in similar ways, which
   supports the idea that a better abstraction layer isn't quite there yet. Examples
   include damage tracking and the abstraction of views to provide a consistent
-  api for views managed via different protocols (especially xdg-shell/xwayland). This isn't a
+  api for views managed via different protocols, especially xdg-shell/xwayland. This isn't a
   criticism, just a feature that I think will eventually exist but doesn't yet.
 
 I think ultimately there will naturally end up being multiple active compositor projects,
@@ -148,9 +147,9 @@ wayland, so that's the direction I'm coming from below.
 * Drew DeVault's `Writing a Wayland compositor
   <https://drewdevault.com/2018/02/17/Writing-a-Wayland-compositor-1.html>`__ blog posts
   are an excellent introduction to how to think about Wayland. Don't worry too much about
-  the code itself, it's outdated for current wlroots, but the overview of key ideas will
-  take you a long way.
-* Fork `tinywl <https://github.com/swaywm/wlroots/blob/master/tinywl/tinywl.c`__. This
+  the code itself, I think it's outdated for current wlroots and the repository is
+  archived, but the overview of key ideas will take you a long way.
+* Fork `tinywl <https://github.com/swaywm/wlroots/blob/master/tinywl/tinywl.c>`__. This
   tiny example is shipped with wlroots and is an excellent base for a serious
   compositor. Although short it implements in a basic way almost every core
   functionality you'll need, and implicitly teaches a lot about Wayland API interaction
@@ -194,4 +193,4 @@ found these by googling keywords when stuck rather than from any specific catalo
 
 And with all that...this is pretty much where I am. I'm no expert, but Vivarium works and
 it was fun to write. Thanks to the Wayland developer community for creating all these
-usful resources.
+useful resources.
