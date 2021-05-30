@@ -1,0 +1,41 @@
+Vivarium 0.0.3 release: damage tracking and wlroots 0.13 support
+################################################################
+
+:date: 2021-05-30 21:00
+:tags: vivarium, wayland
+:category: wayland
+:slug: vivarium_wayland_compositor_0_0_3_release
+:author: Alexander Taylor
+
+I've just tagged for release `Vivarium 0.0.3 <https://github.com/inclement/vivarium>`__. Vivarium is a dynamic tiling wayland compositor, with desktop semantics inspired mostly by xmonad.
+
+Release summary
+===============
+
+This release has two major new features: damage tracking, and support for wlroots 0.13. There are also various minor fixes and additions, such as new mappable functions and many semi-hidden rendering issues found during the damage tracking work.
+
+Damage tracking
+~~~~~~~~~~~~~~~
+
+Damage tracking means that instead of re-compositing everything every frame, copying all the view output buffers around into the output framebuffer, updates are only made when something has actually changed.
+
+Vivarium 0.0.3 automatically enables frame-wise damage tracking, where nothing is drawn unless something changes in one of the surfaces being displayed. This is an enormous improvement on the previous status quo of redrawing everything at the monitor refresh rate, and in cases where nothing is changing much (e.g. just text editors and terminals, no video) brings most of the damage tracking benefits.
+
+Vivarium also supports full damage tracking, in which it tracks which parts of the frame have changed and only draws these. That means for example even if a video is playing at 60fps only its subregion of the screen is repeatedly redrawn. However, this full damage tracking support is a little more experimental and is not enabled by default: it should work for single outputs, and for multiple outputs if they have the same scale, but is likely to have bugs in more complex cases such as output scaling as these cases haven't been rigorously tested.
+
+If you'd like to enable full damage tracking, set `damage-tracking-mode = "full"` in the `[debug]` section of your config.toml.
+
+I found quite a few internal Vivarium issues while making damage tracking work as it exercises the full stack of assumptions about how/where surfaces are displayed. There may still be more, if you see anything appearing to render incorrectly (or mostly likely not rendering at all) bug reports are `gratefully received <https://github.com/inclement/vivarium/issues>`__.
+
+Wlroots 0.13
+~~~~~~~~~~~~
+
+Wlroots 0.13 was released in early April but it's taken a little while to get around to supporting it as I was focusing on damage tracking at the time. For Vivarium's purposes there aren't any major new features this allows, but there are plenty of background improvements.
+
+
+Next goals
+==========
+
+The next focus is output handling. Vivarium currently works with one or more outputs, but doesn't let you configure any aspect of them including e.g. their relative position and scaling applied. It also has some issue around output destruction and creation, which affects even normal use if e.g. you switch monitors or simply suspend/resume your system in which case the output may disappear briefly.
+
+I'm not sure exactly what options Vivarium will expose, but I definitely expect to support output configuration tools like `kanshi <https://github.com/emersion/kanshi>`__.
