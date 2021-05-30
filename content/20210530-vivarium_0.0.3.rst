@@ -23,7 +23,7 @@ Vivarium 0.0.3 automatically enables frame-wise damage tracking, where nothing i
 
 Vivarium also supports full damage tracking, in which it tracks which parts of the frame have changed and only draws these. That means for example even if a video is playing at 60fps only its subregion of the screen is repeatedly redrawn. However, this full damage tracking support is a little more experimental and is not enabled by default: it should work for single outputs, and for multiple outputs if they have the same scale, but is likely to have bugs in more complex cases such as output scaling as these cases haven't been rigorously tested.
 
-If you'd like to enable full damage tracking, set `damage-tracking-mode = "full"` in the `[debug]` section of your config.toml.
+If you'd like to enable full damage tracking, set ``damage-tracking-mode = "full"`` in the ``[debug]`` section of your config.toml.
 
 I found quite a few internal Vivarium issues while making damage tracking work as it exercises the full stack of assumptions about how/where surfaces are displayed. There may still be more, if you see anything appearing to render incorrectly (or mostly likely not rendering at all) bug reports are `gratefully received <https://github.com/inclement/vivarium/issues>`__.
 
