@@ -3,7 +3,7 @@ About
 
 I am a software engineer currently based in Cambridge, UK. Contact me at `alexander@inclem.net <mailto:alexander@inclem.net>`_.
 
-My academic publications and other activities include:
+I was previously (up to mid-2018) a postgraduate student then postdoc in theoretical physics at the University of Bristol. My academic publications and other activities include:
 
 Scientific Publications
 ~~~~~~~~~~~~~~~~~~~~~~~

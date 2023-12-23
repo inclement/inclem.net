@@ -35,7 +35,8 @@ SOCIAL = (('youtube', 'https://www.youtube.com/kivycrashcourse'),
 #GITHUB_URL = 'https://github.com/inclement/inclem.net'
 
 #THEME = 'notmyidea'
-THEME = '../pelican-inclemnet-theme/'
+THEME = '../pelican-blueidea/'
+DISPLAY_CATEGORIES_ON_MENU = False  # do not add menu items for post categories
 
 DEFAULT_PAGINATION = False
 
