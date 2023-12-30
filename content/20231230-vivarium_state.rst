@@ -9,7 +9,7 @@ State of Vivarium
 
 Somehow it's been over two and a half years since my last post. Time flies when not slowed down by a global pandemic.
 
-My last few posts were about the state of `Vivarium 0.0.3 <https://github.com/inclement/vivarium>`__, my dynamic tiling wayland compositor. I had a number of feature targets and completion goals I was working on. But surprisingly something unexpected happened: Vivarium turned out to be good enough to use! I still use it every day on all my machines but since the last release I've only performed minor tweaks and fixes.
+My last few posts were about the state of `Vivarium <https://github.com/inclement/vivarium>`__, my dynamic tiling wayland compositor. I had a number of feature targets and completion goals I was working on. But surprisingly something unexpected happened: Vivarium turned out to be good enough to use! I still use it every day on all my machines but since the last release I've only performed minor tweaks and fixes.
 
 Vivarium is by no means finished, it has many missing and unsupported features including things like support for a recent wlroots release, and big wayland features like protocol support to allow screen sharing. However, it isn't missing anything that bugs me right now. I continue to fix things as they come up but it's probably unrealistic to think I'll put a lot of effort into new development any time soon.
 
