@@ -32,7 +32,7 @@ I wrote the game using `PuzzleScript <https://www.puzzlescript.net/>`__, which i
 delightful little html5 game engine for making grid-based puzzles. Its smart design makes
 it easy to throw together many kinds of puzzle rules and just get on with designing
 levels. The `gallery <https://www.puzzlescript.net/Gallery/index.html>`__ is very
-inspiring, there are some absolutely genius puzzles in there teasting out amazing
+inspiring, there are some absolutely genius puzzles in there teasing out amazing
 complexity from incredibly simple rules.
 
 The source is available `on github <https://github.com/inclement/velsokomagnet>`__, or
