@@ -12,6 +12,8 @@ I like playing puzzle games and I always wondered what it would take to make one
 `Click here to play History of the Velsokomagnet! <https://www.puzzlescript.net/play.html?p=458ac36579dda092d8760585f08da80c>`__
 
 .. figure:: {filename}/media/velsokomagnet.png
+   :alt: Image of "History of the Velsokomagnet" gameplay
+   :align: center
 
 My goal was to try to find something interesting in some fairly arbitrary simple
 rules. The core of the game is "normal" crate-pushing `sokoban
