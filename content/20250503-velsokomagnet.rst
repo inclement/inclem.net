@@ -9,7 +9,7 @@ History of the Velsokomagnet
 
 I like playing puzzle games and I always wondered what it would take to make one...so I had a go.
 
-`Click here to play! <https://www.puzzlescript.net/play.html?p=458ac36579dda092d8760585f08da80c>`__
+`Click here to play History of the Velsokomagnet! <https://www.puzzlescript.net/play.html?p=458ac36579dda092d8760585f08da80c>`__
 
 .. figure:: {filename}/media/velsokomagnet.png
 
